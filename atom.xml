@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[leadedx]]></title>
+  <link href="https://leadedx.github.io/atom.xml" rel="self"/>
+  <link href="https://leadedx.github.io/"/>
+  <updated>2024-03-31T00:17:43+08:00</updated>
+  <id>https://leadedx.github.io/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[leadedx.github.io]]></title>
+    <link href="https://leadedx.github.io/17118142266384.html"/>
+    <updated>2024-03-30T23:57:06+08:00</updated>
+    <id>https://leadedx.github.io/17118142266384.html</id>
+    <content type="html"><![CDATA[
+<p>创领智数是一家服务能源电力企业数字化转型的科技企业，创领智数以能源电力企业信息系统研发和业务能力为基础，组建了专业的数字化咨询设计、数据工程交付团队，为能源电力企业提供数据管理、数据资产运营、数据安全等解决方案和产品，以及数据中台建设、数据治理、数据产品研发等数据工程技术服务。<br />
+创领智数核心团队结合多年能源电力信息化、数字化项目实践，结合VeriSM模型、Data Mesh\DAMA、DataOps等方法论，以助力客户数据要素赋能领导决策、业务管理创新、基层效能提升为目标，为客户构建以数据治理和数据运营双轮驱动的数字化转型整体框架，支撑能源电力客户制定数据发展战略和实施路径。</p>
+
+]]></content>
+  </entry>
+  
+</feed>
