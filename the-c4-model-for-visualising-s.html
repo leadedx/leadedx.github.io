@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+    The C4 model for visualising software architecture 用于可视化软件架构的 C4 模型 - leadedx
+    
+    </title>
+    
+
+    
+    
+    <link href="atom.xml" rel="alternate" title="leadedx" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/style.min.css">
+    <link rel="stylesheet" href="asset/css/doc.css">
+    <script src="asset/app.js"></script>
+</head>
+  <body>
+    <section class="hero">
+      <div class="hero-head">
+          <nav class="navbar" role="navigation" aria-label="main navigation">
+              <div class="container">
+              <div class="navbar-brand">
+                
+                <a target="_self" class="navbar-item " href="index.html">Home</a>
+                
+                <a target="_self" class="navbar-item " href="archives.html">Archives</a>
+                
+
+                <a role="button" id="navbarSNSRssSwitchBtn" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarSNSRssButtons">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+              </div>
+            
+              <div id="navbarSNSRssButtons" class="navbar-menu">
+                <div class="navbar-start">
+                  
+                </div>
+            
+                <div class="navbar-end">
+                  <div class="navbar-item">
+                    <!--buttons start-->
+                    <div class="buttons">
+                      
+                        
+                        
+                        
+                        <a href="https://github.com/leadedx/" target="_blank" title="github">
+                            <span class="icon is-large has-text-grey-darker">
+                               <svg class="svg-inline--fa fa-github fa-w-16 fa-lg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github fa-lg"></i> -->
+                            </span>
+                          </a>
+                        
+                        
+                      
+                      <a href="atom.xml" target="_blank" title="RSS">
+                          <span class="icon is-large has-text-black-bis">
+                              <svg class="svg-inline--fa fa-rss fa-w-14 fa-lg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rss" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg><!-- <i class="fas fa-rss fa-lg"></i> -->
+                          </span>
+                      </a>
+                    </div>
+                    <!--buttons end-->
+
+                  </div>
+                </div>
+                </div>
+              </div>
+            </nav>
+      </div>
+
+ <div class="hero-body ct-body"></div>
+      
+    </section>
+    <section class="ct-body">
+      <div class="container">
+          <div class="columns is-variable bd-klmn-columns is-4 is-centered">
+              <div class="column is-four-fifths">
+                  <div class="post-body single-content">
+                    
+                    <h1 class="title">
+                            The C4 model for visualising software architecture 用于可视化软件架构的 C4 模型   
+                      </h1>
+                       
+                    
+                     
+                </div>
+                  <article class="markdown-body single-content">
+                    <h2><a id="the-c4-model%E5%AE%9A%E4%B9%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>The C4 model 定义</h2>
+<ol>
+<li>A set of hierarchical abstractions (software systems, containers, components, and code).</li>
+</ol>
+<blockquote>
+<p>翻译：一组分层抽象（软件系统、容器、组件和代码）。</p>
+</blockquote>
+<ol start="2">
+<li>A set of hierarchical diagrams (system context, containers, components, and code).</li>
+</ol>
+<blockquote>
+<p>翻译：一组分层图（系统上下文、容器、组件和代码）。</p>
+</blockquote>
+<ol start="3">
+<li>Notation independent.</li>
+</ol>
+<blockquote>
+<p>翻译：符号独立。</p>
+</blockquote>
+<ol start="4">
+<li>Tooling independent.</li>
+</ol>
+<blockquote>
+<p>翻译：工具独立。</p>
+</blockquote>
+<h2><a id="uses-and-benefits%E7%94%A8%E9%80%94%E5%92%8C%E5%A5%BD%E5%A4%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Uses and benefits 用途和好处</h2>
+<p>The C4 model is an easy to learn, developer friendly approach to software architecture diagramming. Good software architecture diagrams assist with communication inside/outside of software development/product teams, efficient onboarding of new staff, architecture reviews/evaluations, risk identification (e.g. risk-storming), threat modelling, etc.</p>
+<blockquote>
+<p>翻译： C4 模型是一种易于学习、开发人员友好的软件架构图绘制方法。良好的软件架构图有助于软件开发/产品团队内部/外部的沟通、新员工的高效入职、架构审查/评估、风险识别（例如风险风暴）、威胁建模等。</p>
+</blockquote>
+<h2><a id="introduction%E4%BB%8B%E7%BB%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction 介绍</h2>
+<p>Ask somebody in the building industry to visually communicate the architecture of a building and you'll be presented with site plans, floor plans, elevation views, cross-section views and detail drawings. In contrast, ask a software developer to communicate the software architecture of a software system using diagrams and you'll likely get a confused mess of boxes and lines ... inconsistent notation (colour coding, shapes, line styles, etc), ambiguous naming, unlabelled relationships, generic terminology, missing technology choices, mixed abstractions, etc.</p>
+<blockquote>
+<p>翻译：  请建筑行业的某个人直观地传达建筑物的建筑结构，您将看到场地平面图、平面图、立面图、横截面图和详细图纸。相比之下，让软件开发人员使用图表来传达软件系统的软件架构，您可能会得到一堆混乱的方框和线条......不一致的符号（颜色编码、形状、线条样式等）、模棱两可的命名、未标记的关系、通用术语、缺少技术选择、混合抽象等。</p>
+</blockquote>
+<p>As an industry, we do have the Unified Modeling Language (UML), ArchiMate and SysML, but asking whether these provide an effective way to communicate software architecture is often irrelevant because many teams have already thrown them out in favour of much simpler &quot;boxes and lines&quot; diagrams. Abandoning these modelling languages is one thing but, perhaps in the race for agility, many software development teams have lost the ability to communicate visually.</p>
+<blockquote>
+<p>翻译： 作为一个行业，我们确实有统一建模语言（UML）、ArchiMate和SysML，但要问它们是否提供了一种有效的方法来传达软件架构通常是无关紧要的，因为许多团队已经抛弃了它们，转而使用更简单的“方框和线”图。放弃这些建模语言是一回事，但也许在敏捷性的竞赛中，许多软件开发团队已经失去了可视化通信的能力。</p>
+</blockquote>
+<h3><a id="maps-of-your-code%E4%BB%A3%E7%A0%81%E6%98%A0%E5%B0%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maps of your code 代码映射</h3>
+<p>The C4 model was created as a way to help software development teams describe and communicate software architecture, both during up-front design sessions and when retrospectively documenting an existing codebase. It's a way to create maps of your code, at various levels of detail, in the same way you would use something like Google Maps to zoom in and out of an area you are interested in.</p>
+<blockquote>
+<p>翻译： C4 模型的创建是为了帮助软件开发团队描述和交流软件架构，无论是在前期设计会议期间还是在回顾性地记录现有代码库时。这是一种在各种细节级别上创建代码地图的方法，就像你使用谷歌地图之类的东西来放大和缩小你感兴趣的区域一样。</p>
+</blockquote>
+<p>The C4 model is an &quot;abstraction-first&quot; approach to diagramming software architecture, based upon abstractions that reflect how software architects and developers think about and build software. The small set of abstractions and diagram types makes the C4 model easy to learn and use. Please note that you don't need to use all 4 levels of diagram; only those that add value - the System Context and Container diagrams are sufficient for many software development teams.</p>
+<blockquote>
+<p>翻译：C4 模型是一种“抽象优先”的软件架构图示方法，它基于反映软件架构师和开发人员如何思考和构建软件的抽象。一小部分抽象和图表类型使 C4 模型易于学习和使用。请注意，您不需要使用所有 4 个级别的图表;只有那些能增加价值的东西 - 系统上下文和容器图对于许多软件开发团队来说就足够了。</p>
+</blockquote>
+<p>Different levels of zoom allow you to tell different stories to different audiences.<br />
+不同级别的缩放允许您向不同的受众讲述不同的故事。</p>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105955272098.jpg" alt="" /></p>
+<h2><a id="abstractions%E6%8A%BD%E8%B1%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstractions 抽象</h2>
+<p>In order to create these maps of your code, we first need a common set of abstractions to create a ubiquitous language that we can use to describe the static structure of a software system. A software system is made up of one or more containers (applications and data stores), each of which contains one or more components, which in turn are implemented by one or more code elements (classes, interfaces, objects, functions, etc). And people may use the software systems that we build.</p>
+<blockquote>
+<p>翻译： 为了创建这些代码映射，我们首先需要一组通用的抽象来创建一种通用语言，我们可以用它来描述软件系统的静态结构。软件系统由一个或多个容器（应用程序和数据存储）组成，每个容器都包含一个或多个组件，而这些组件又由一个或多个代码元素（类、接口、对象、函数等）实现。人们可能会使用我们构建的软件系统。</p>
+</blockquote>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105968643283.jpg" alt="" /></p>
+<blockquote>
+</blockquote>
+<h3><a id="person%E4%BA%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Person 人</h3>
+<p>A person represents one of the human users of your software system (e.g. actors, roles, personas, etc).</p>
+<blockquote>
+<p>翻译： 一个人代表您的软件系统的人类用户之一（例如演员、角色、角色等）。</p>
+</blockquote>
+<h3><a id="software-system%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Software System 软件系统</h3>
+<p>A software system is the highest level of abstraction and describes something that delivers value to its users, whether they are human or not. This includes the software system you are modelling, and the other software systems upon which your software system depends (or vice versa).</p>
+<blockquote>
+<p>翻译： 软件系统是最高级别的抽象，它描述了为其用户提供价值的东西，无论他们是否是人类。这包括您正在建模的软件系统，以及您的软件系统所依赖的其他软件系统（反之亦然）。</p>
+</blockquote>
+<p>Unfortunately the term &quot;software system&quot; is the hardest of the C4 model abstractions to define, and this isn't helped by the fact that each organisation will also have their own terminology for describing the same thing, typically using terms such as &quot;application&quot;, &quot;product&quot;, &quot;service&quot;, etc. One way to think about it is that a software system is something a single software development team is building, owns, has responsibility for, and can see the internal implementation details of. Perhaps the code for that software system resides in a single source code repository, and anybody on the team is entitled to modify it. In many cases, the boundary of a software system will correspond to the boundary of a single team. It may also be the case that everything inside the boundary of a software system is deployed at the same time.</p>
+<blockquote>
+<p>翻译： 不幸的是，“软件系统”这个术语是 C4 模型抽象中最难定义的，而且每个组织都有自己的术语来描述同一事物，通常使用“应用程序”、“产品”、“服务”等术语。一种思考方式是，软件系统是一个软件开发团队正在构建、拥有、负责并可以看到内部实现细节的东西。也许该软件系统的代码驻留在单个源代码存储库中，团队中的任何人都有权修改它。在许多情况下，软件系统的边界将对应于单个团队的边界。也可能是同时部署软件系统边界内的所有内容。</p>
+</blockquote>
+<h3><a id="container-applications-and-data-stores%E5%AE%B9%E5%99%A8%EF%BC%88%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%92%8C%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Container (applications and data stores) 容器（应用程序和数据存储）</h3>
+<p>Not Docker! In the C4 model, a container represents an application or a data store. A container is something that needs to be running in order for the overall software system to work. In real terms, a container is something like:</p>
+<blockquote>
+<p>翻译： 不是Docker！在 C4 模型中，容器表示应用程序或数据存储。容器是整个软件系统工作所需要运行的东西。实际上，容器是这样的：</p>
+</blockquote>
+<h4><a id="server-side-web-application" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Server-side web application:</h4>
+<p>A Java EE web application running on Apache Tomcat, an ASP.NET MVC application running on Microsoft IIS, a Ruby on Rails application running on WEBrick, a Node.js application, etc.</p>
+<blockquote>
+<p>翻译： 服务器端 Web 应用程序：运行在 Apache Tomcat 上的 Java EE Web 应用程序、运行在 Microsoft IIS 上的 ASP.NET MVC 应用程序、运行在 WEBrick 上的 Ruby on Rails 应用程序、Node.js 应用程序等。</p>
+</blockquote>
+<h4><a id="client-side-web-application" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Client-side web application:</h4>
+<p>A JavaScript application running in a web browser using Angular, Backbone.JS, jQuery, etc.</p>
+<blockquote>
+<p>翻译： 客户端 Web 应用程序：使用 Angular、Backbone.JS、jQuery 等在 Web 浏览器中运行的 JavaScript 应用程序。</p>
+</blockquote>
+<h4><a id="client-side-desktop-application" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Client-side desktop application:</h4>
+<p>A Windows desktop application written using WPF, an OS X desktop application written using Objective-C, a cross-platform desktop application written using JavaFX, etc.</p>
+<blockquote>
+<p>翻译： 客户端桌面应用程序：使用 WPF 编写的 Windows 桌面应用程序、使用 Objective-C 编写的 OS X 桌面应用程序、使用 JavaFX 编写的跨平台桌面应用程序等。</p>
+</blockquote>
+<h4><a id="mobile-app" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mobile app:</h4>
+<p>An Apple iOS app, an Android app, a Microsoft Windows Phone app, etc.</p>
+<blockquote>
+<p>翻译： 移动应用程序：Apple iOS 应用程序、Android 应用程序、Microsoft Windows Phone 应用程序等。</p>
+</blockquote>
+<h4><a id="server-side-console-application" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Server-side console application:</h4>
+<p>A standalone (e.g. &quot;public static void main&quot;) application, a batch process, etc.</p>
+<blockquote>
+<p>翻译： 服务器端控制台应用程序：独立（例如“public static void main”）应用程序、批处理等。</p>
+</blockquote>
+<h4><a id="serverless-function" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Serverless function:</h4>
+<p>A single serverless function (e.g. Amazon Lambda, Azure Function, etc).</p>
+<blockquote>
+<p>翻译： 无服务器函数：单个无服务器函数（例如 Amazon Lambda、Azure 函数等）。</p>
+</blockquote>
+<h4><a id="database" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database:</h4>
+<p>A schema or database in a relational database management system, document store, graph database, etc such as MySQL, Microsoft SQL Server, Oracle Database, MongoDB, Riak, Cassandra, Neo4j, etc.</p>
+<blockquote>
+<p>翻译： 数据库：关系数据库管理系统、文档存储、图形数据库等中的模式或数据库，如MySQL、Microsoft SQL Server、Oracle Database、MongoDB、Riak、Cassandra、Neo4j等。</p>
+</blockquote>
+<h4><a id="blob-or-content-store" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Blob or content store:</h4>
+<p>A blob store (e.g. Amazon S3, Microsoft Azure Blob Storage, etc) or content delivery network (e.g. Akamai, Amazon CloudFront, etc).</p>
+<blockquote>
+<p>翻译： 对象或内容存储：对象存储（例如 Amazon S3、Microsoft Azure 对象存储等）或内容分发网络（例如 Akamai、Amazon CloudFront 等）。</p>
+</blockquote>
+<h4><a id="file-system" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>File system:</h4>
+<p>A full local file system or a portion of a larger networked file system (e.g. SAN, NAS, etc).</p>
+<blockquote>
+<p>翻译： 文件系统：完整的本地文件系统或较大的网络文件系统（例如 SAN、NAS 等）的一部分。</p>
+</blockquote>
+<h4><a id="shell-script" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shell script:</h4>
+<p>A single shell script written in Bash, etc.</p>
+<blockquote>
+<p>翻译： Shell 脚本：用 Bash 等语言编写的单个 shell 脚本。<br />
+etc</p>
+</blockquote>
+<h3><a id="component%E7%BB%84%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Component 组件</h3>
+<p>The word &quot;component&quot; is a hugely overloaded term in the software development industry, but in this context a component is a grouping of related functionality encapsulated behind a well-defined interface. If you're using a language like Java or C#, the simplest way to think of a component is that it's a collection of implementation classes behind an interface. Aspects such as how those components are packaged (e.g. one component vs many components per JAR file, DLL, shared library, etc) is a separate and orthogonal concern.</p>
+<blockquote>
+<p>翻译： “组件”这个词在软件开发行业中是一个非常过载的术语，但在这种情况下，组件是封装在定义良好的接口后面的一组相关功能。如果您使用的是 Java 或 C# 等语言，那么考虑组件的最简单方法是它是接口后面的实现类的集合。诸如如何打包这些组件（例如，一个组件与每个 JAR 文件、DLL、共享库等的多个组件）等方面是一个单独的正交问题。</p>
+</blockquote>
+<p>An important point to note here is that all components inside a container typically execute in the same process space. In the C4 model, components are not separately deployable units.</p>
+<blockquote>
+<p>翻译： 这里需要注意的重要一点是，容器内的所有组件通常在同一个进程空间中执行。在 C4 模型中，组件不是可单独部署的单元。</p>
+</blockquote>
+<h2><a id="1-system-context-diagram%E7%B3%BB%E7%BB%9F%E4%B8%8A%E4%B8%8B%E6%96%87%E5%9B%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. System Context diagram 系统上下文图</h2>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105958584901.jpg" alt="" /></p>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105959088372.jpg" alt="" /></p>
+<p>A System Context diagram is a good starting point for diagramming and documenting a software system, allowing you to step back and see the big picture. Draw a diagram showing your system as a box in the centre, surrounded by its users and the other systems that it interacts with.</p>
+<blockquote>
+<p>翻译：系统上下文图是绘制和记录软件系统的良好起点，可让您退后一步，纵观全局。绘制一张图表，将您的系统显示为中间的一个框，周围环绕着其用户和与之交互的其他系统。</p>
+</blockquote>
+<p>Detail isn't important here as this is your zoomed out view showing a big picture of the system landscape. The focus should be on people (actors, roles, personas, etc) and software systems rather than technologies, protocols and other low-level details. It's the sort of diagram that you could show to non-technical people.</p>
+<blockquote>
+<p>翻译：细节在这里并不重要，因为这是您的缩小视图，显示了系统环境的大图。重点应该放在人（参与者、角色、角色等）和软件系统上，而不是技术、协议和其他低级细节上。这是您可以向非技术人员展示的那种图表。</p>
+</blockquote>
+<h3><a id="scope" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scope:</h3>
+<p>A single software system.</p>
+<blockquote>
+<p>翻译：范围：单个软件系统。</p>
+</blockquote>
+<h3><a id="primary-elements" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Primary elements:</h3>
+<p>The software system in scope.</p>
+<blockquote>
+<p>翻译：主要元素：范围内的软件系统。</p>
+</blockquote>
+<h3><a id="supporting-elements" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supporting elements:</h3>
+<p>People (e.g. users, actors, roles, or personas) and software systems (external dependencies) that are directly connected to the software system in scope. Typically these other software systems sit outside the scope or boundary of your own software system, and you don't have responsibility or ownership of them.</p>
+<blockquote>
+<p>翻译：支持元素：直接连接到范围内软件系统的人员（例如用户、参与者、角色或角色）和软件系统（外部依赖关系）。通常，这些其他软件系统位于您自己的软件系统的范围或边界之外，您对它们没有责任或所有权。</p>
+</blockquote>
+<h3><a id="intended-audience" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intended audience:</h3>
+<p>Everybody, both technical and non-technical people, inside and outside of the software development team.</p>
+<blockquote>
+<p>翻译：目标受众：软件开发团队内部和外部的每个人，包括技术人员和非技术人员。</p>
+</blockquote>
+<h3><a id="recommended-for-most-teams" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recommended for most teams:</h3>
+<p>Yes.</p>
+<blockquote>
+<p>翻译： 建议大多数团队：是的。</p>
+</blockquote>
+<h2><a id="2-container-diagram%E5%AE%B9%E5%99%A8%E5%9B%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Container diagram  容器图</h2>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105961609537.jpg" alt="" /><br />
+<img src="http://cdn.opendatamesh.cn/mweb/17105961703163.jpg" alt="" /></p>
+<p>Once you understand how your system fits in to the overall IT environment, a really useful next step is to zoom-in to the system boundary with a Container diagram. A &quot;container&quot; is something like a server-side web application, single-page application, desktop application, mobile app, database schema, file system, etc. Essentially, a container is a separately runnable/deployable unit (e.g. a separate process space) that executes code or stores data.</p>
+<blockquote>
+<p>翻译： 一旦您了解了系统如何适应整个 IT 环境，下一步就非常有用，就是使用容器图放大到系统边界。“容器”类似于服务器端 Web 应用程序、单页应用程序、桌面应用程序、移动应用程序、数据库架构、文件系统等。从本质上讲，容器是一个可单独运行/可部署的单元（例如，一个单独的进程空间），用于执行代码或存储数据。</p>
+</blockquote>
+<p>The Container diagram shows the high-level shape of the software architecture and how responsibilities are distributed across it. It also shows the major technology choices and how the containers communicate with one another. It's a simple, high-level technology focussed diagram that is useful for software developers and support/operations staff alike.</p>
+<blockquote>
+<p>翻译： 容器图显示了软件体系结构的高级形状以及如何在其中分配责任。它还显示了主要的技术选择以及容器之间的通信方式。这是一个以高级技术为重点的简单图表，对软件开发人员和支持/操作人员都很有用。</p>
+</blockquote>
+<h3><a id="scope" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scope:</h3>
+<p>A single software system.</p>
+<blockquote>
+<p>翻译： 范围：单个软件系统。</p>
+</blockquote>
+<h3><a id="primary-elements" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Primary elements:</h3>
+<p>Containers within the software system in scope.</p>
+<blockquote>
+<p>翻译：主要元素：范围内软件系统内的容器。</p>
+</blockquote>
+<h3><a id="supporting-elements" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supporting elements:</h3>
+<p>People and ### software systems directly connected to the containers.</p>
+<blockquote>
+<p>翻译：支持元素：直接连接到容器的人员和软件系统。</p>
+</blockquote>
+<h3><a id="intended-audience" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intended audience:</h3>
+<p>Technical people inside and outside of the software development team; including software architects, developers and operations/support staff.</p>
+<blockquote>
+<p>翻译：目标受众：软件开发团队内外的技术人员;包括软件架构师、开发人员和运营/支持人员。</p>
+</blockquote>
+<h3><a id="recommended-for-most-teams" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recommended for most teams:</h3>
+<p>Yes.</p>
+<blockquote>
+<p>翻译：建议大多数团队：是的。</p>
+</blockquote>
+<h3><a id="notes" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes:</h3>
+<p>This diagram says nothing about clustering, load balancers, replication, failover, etc because it will likely vary across different environments (e.g. production, staging, development, etc). This information is better captured via one or more deployment diagrams.</p>
+<blockquote>
+<p>翻译：注意：此图未提及群集、负载均衡器、复制、故障转移等，因为它可能因不同环境（例如生产、暂存、开发等）而异。通过一个或多个部署关系图可以更好地捕获此信息。</p>
+</blockquote>
+<h2><a id="3-component-diagram%E7%BB%84%E4%BB%B6%E5%9B%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Component diagram 组件图</h2>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105964483811.jpg" alt="" /><br />
+<img src="http://cdn.opendatamesh.cn/mweb/17105964603650.jpg" alt="" /></p>
+<p>Next you can zoom in and decompose each container further to identify the major structural building blocks and their interactions.</p>
+<blockquote>
+<p>翻译：接下来，您可以进一步放大和分解每个容器，以识别主要的结构构建块及其交互。</p>
+</blockquote>
+<p>The Component diagram shows how a container is made up of a number of &quot;components&quot;, what each of those components are, their responsibilities and the technology/implementation details.</p>
+<blockquote>
+<p>翻译：组件图显示了容器如何由许多“组件”组成，每个组件是什么，它们的职责以及技术/实现详细信息。</p>
+</blockquote>
+<h3><a id="scope" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scope:</h3>
+<p>A single container.</p>
+<blockquote>
+<p>翻译：作用域：单个容器。</p>
+</blockquote>
+<h3><a id="primary-elements" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Primary elements:</h3>
+<p>Components within the container in scope.</p>
+<blockquote>
+<p>翻译：主要元素：容器范围内的组件。</p>
+</blockquote>
+<h3><a id="supporting-elements" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supporting elements:</h3>
+<p>Containers (within the software system in scope) plus people and software systems directly connected to the components.</p>
+<blockquote>
+<p>翻译： 支持元素：容器（在软件系统范围内）以及直接连接到组件的人员和软件系统。</p>
+</blockquote>
+<h3><a id="intended-audience" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intended audience:</h3>
+<p>Software architects and developers.</p>
+<blockquote>
+<p>翻译：目标受众：软件架构师和开发人员。</p>
+</blockquote>
+<h3><a id="recommended-for-most-teams" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recommended for most teams:</h3>
+<p>No, only create component diagrams if you feel they add value, and consider automating their creation for long-lived documentation.</p>
+<blockquote>
+<p>翻译：建议大多数团队：不可以，只有在您认为组件图可以增加价值时才创建组件图，并考虑自动创建它们以获得长期文档。</p>
+</blockquote>
+<h2><a id="4-code-diagram%E4%BB%A3%E7%A0%81%E5%9B%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Code diagram 代码图</h2>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105965850683.jpg" alt="" /></p>
+<p>Finally, you can zoom in to each component to show how it is implemented as code; using UML class diagrams, entity relationship diagrams or similar.</p>
+<blockquote>
+<p>翻译：最后，您可以放大每个组件以显示它如何作为代码实现;使用 UML 类图、实体关系图或类似工具。</p>
+</blockquote>
+<p>This is an optional level of detail and is often available on-demand from tooling such as IDEs. Ideally this diagram would be automatically generated using tooling (e.g. an IDE or UML modelling tool), and you should consider showing only those attributes and methods that allow you to tell the story that you want to tell. This level of detail is not recommended for anything but the most important or complex components.</p>
+<blockquote>
+<p>翻译：这是一个可选的细节级别，通常可从 IDE 等工具中按需获得。理想情况下，此图将使用工具（例如 IDE 或 UML 建模工具）自动生成，并且您应该考虑仅显示那些允许您讲述要讲述的故事的属性和方法。除了最重要或最复杂的组件外，不建议对任何组件使用此级别的详细信息。</p>
+</blockquote>
+<h3><a id="scope" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scope:</h3>
+<p>A single component.</p>
+<blockquote>
+<p>翻译：作用域：单个组件。</p>
+</blockquote>
+<h3><a id="primary-elements" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Primary elements:</h3>
+<p>Code elements (e.g. classes, interfaces, objects, functions, database tables, etc) within the component in scope.</p>
+<blockquote>
+<p>翻译：主要元素：作用域内组件中的代码元素（例如类、接口、对象、函数、数据库表等）。</p>
+</blockquote>
+<h3><a id="intended-audience" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intended audience:</h3>
+<p>Software architects and developers.</p>
+<blockquote>
+<p>翻译：目标受众：软件架构师和开发人员。</p>
+</blockquote>
+<h3><a id="recommended-for-most-teams" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recommended for most teams:</h3>
+<p>No, particularly for long-lived documentation because most IDEs can generate this level of detail on demand.</p>
+<blockquote>
+<p>翻译：建议大多数团队使用：否，特别是对于长期文档，因为大多数 IDE 都可以按需生成此级别的详细信息。</p>
+</blockquote>
+<h2><a id="system-landscape-diagram%E7%B3%BB%E7%BB%9F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Landscape diagram 系统</h2>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105970550630.jpg" alt="" /></p>
+<p>The C4 model provides a static view of a single software system but, in the real-world, software systems never live in isolation. For this reason, and particularly if you are responsible for a collection/portfolio of software systems, it's often useful to understand how all of these software systems fit together within a given enterprise, organisation, department, etc. Essentially this is a map of the software systems within the chosen scope, with a C4 drill-down for each software system of interest.</p>
+<blockquote>
+<p>翻译：C4 模型提供了单个软件系统的静态视图，但在现实世界中，软件系统从来都不是孤立存在的。出于这个原因，特别是如果您负责软件系统的集合/组合，了解所有这些软件系统如何在给定的企业、组织、部门等中组合在一起通常很有用。从本质上讲，这是所选范围内软件系统的映射，每个感兴趣的软件系统都有 C4 向下钻取。</p>
+</blockquote>
+<p>From a practical perspective, a system landscape diagram is really just a system context diagram without a specific focus on a particular software system.</p>
+<blockquote>
+<p>翻译：从实践的角度来看，系统景观图实际上只是一个系统上下文图，没有特别关注特定的软件系统。</p>
+</blockquote>
+<h3><a id="scope" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scope:</h3>
+<p>An enterprise/organisation/department/etc.</p>
+<blockquote>
+<p>翻译：范围：企业/组织/部门/等。</p>
+</blockquote>
+<h3><a id="primary-elements" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Primary elements:</h3>
+<p>People and software systems related to the chosen scope.</p>
+<blockquote>
+<p>翻译：主要元素：与所选范围相关的人员和软件系统。</p>
+</blockquote>
+<h3><a id="intended-audience" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intended audience:</h3>
+<p>Technical and non-technical people, inside and outside of the software development team.</p>
+<blockquote>
+<p>翻译：目标受众：软件开发团队内部和外部的技术人员和非技术人员。</p>
+</blockquote>
+<h2><a id="dynamic-diagram%E5%8A%A8%E6%80%81%E5%9B%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic diagram 动态图</h2>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105972205701.jpg" alt="" /></p>
+<p>A dynamic diagram can be useful when you want to show how elements in the static model collaborate at runtime to implement a user story, use case, feature, etc. This dynamic diagram is based upon a UML communication diagram (previously known as a &quot;UML collaboration diagram&quot;). It is similar to a UML sequence diagram although it allows a free-form arrangement of diagram elements with numbered interactions to indicate ordering.</p>
+<blockquote>
+<p>翻译：当您想要显示静态模型中的元素如何在运行时协作以实现用户故事、用例、功能等时，动态图可能很有用。此动态图基于 UML 通信图（以前称为“UML 协作图”）。它类似于 UML 序列图，尽管它允许图元素的自由格式排列，并带有编号的交互来指示排序。</p>
+</blockquote>
+<h3><a id="scope" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scope:</h3>
+<p>A particular feature, story, use case, etc.</p>
+<blockquote>
+<p>翻译：范围：特定功能、故事、用例等。</p>
+</blockquote>
+<h3><a id="primary-and-supporting-elements" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Primary and supporting elements:</h3>
+<p>Your choice - you can show software systems, containers, or components interacting at runtime.</p>
+<blockquote>
+<p>翻译：主要元素和支持元素：您的选择 - 您可以显示软件系统、容器或组件在运行时进行交互。</p>
+</blockquote>
+<h3><a id="intended-audience" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intended audience:</h3>
+<p>Technical and non-technical people, inside and outside of the software development team.</p>
+<blockquote>
+<p>翻译：目标受众：软件开发团队内部和外部的技术人员和非技术人员。</p>
+</blockquote>
+<h3><a id="notes" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes:</h3>
+<p>Feel free to use a UML sequence diagram if you prefer that visual style.</p>
+<blockquote>
+<p>翻译：注意：如果您喜欢这种视觉样式，请随意使用 UML 序列图。</p>
+</blockquote>
+<h2><a id="deployment-diagram%E9%83%A8%E7%BD%B2%E5%9B%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deployment diagram 部署图</h2>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105974167128.jpg" alt="" /><br />
+<img src="http://cdn.opendatamesh.cn/mweb/17105974239254.jpg" alt="" /><br />
+<img src="http://cdn.opendatamesh.cn/mweb/17105974319719.jpg" alt="" /></p>
+<p>A deployment diagram allows you to illustrate how instances of software systems and/or containers in the static model are deployed on to the infrastructure within a given deployment environment (e.g. production, staging, development, etc). It's based upon a UML deployment diagram.</p>
+<blockquote>
+<p>翻译：部署图允许您说明静态模型中的软件系统和/或容器实例如何部署到给定部署环境（例如生产、暂存、开发等）中的基础架构上。它基于 UML 部署图。</p>
+</blockquote>
+<p>A deployment node represents where an instance of a software system/container is running; perhaps physical infrastructure (e.g. a physical server or device), virtualised infrastructure (e.g. IaaS, PaaS, a virtual machine), containerised infrastructure (e.g. a Docker container), an execution environment (e.g. a database server, Java EE web/application server, Microsoft IIS), etc. Deployment nodes can be nested.</p>
+<blockquote>
+<p>翻译：部署节点表示软件系统/容器实例的运行位置;也许是物理基础设施（例如物理服务器或设备），虚拟化基础设施（例如IaaS，PaaS，虚拟机），容器化基础设施（例如Docker容器），执行环境（例如数据库服务器，Java EE Web/应用程序服务器，Microsoft IIS）等。部署节点可以嵌套。</p>
+</blockquote>
+<p>You may also want to include infrastructure nodes such as DNS services, load balancers, firewalls, etc.</p>
+<blockquote>
+<p>翻译：您可能还希望包括基础架构节点，例如 DNS 服务、负载均衡器、防火墙等。</p>
+</blockquote>
+<p>Feel free to use icons provided by Amazon Web Services, Azure, etc to complement your deployment diagrams ... just make sure any icons you use are included in your diagram key/legend.</p>
+<blockquote>
+<p>翻译：随意使用 Amazon Web Services、Azure 等提供的图标来补充您的部署图......只需确保您使用的任何图标都包含在图表键/图例中即可。</p>
+</blockquote>
+<h3><a id="scope" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scope:</h3>
+<p>One or more software systems within a single deployment environment (e.g. production, staging, development, etc).</p>
+<blockquote>
+<p>翻译：范围：单个部署环境中的一个或多个软件系统（例如生产、暂存、开发等）。</p>
+</blockquote>
+<h3><a id="primary-elements" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Primary elements:</h3>
+<p>Deployment nodes, software system instances, and container instances.</p>
+<blockquote>
+<p>翻译：主要元素：部署节点、软件系统实例和容器实例。</p>
+</blockquote>
+<h3><a id="supporting-elements" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supporting elements:</h3>
+<p>Infrastructure nodes used in the deployment of the software system.</p>
+<blockquote>
+<p>翻译：支持元素：用于部署软件系统的基础架构节点。</p>
+</blockquote>
+<h3><a id="intended-audience" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intended audience:</h3>
+<p>Technical people inside and outside of the software development team; including software architects, developers, infrastructure architects, and operations/support staff.</p>
+<blockquote>
+<p>翻译：目标受众：软件开发团队内外的技术人员;包括软件架构师、开发人员、基础架构架构师和运营/支持人员。</p>
+</blockquote>
+<h2><a id="notation%E8%A1%A8%E7%A4%BA%E6%B3%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notation 表示法</h2>
+<p>The C4 model is notation independent, and doesn't prescribe any particular notation. As a starting point though, a simple notation that works well on whiteboards, paper, sticky notes, index cards and a variety of diagraming tools is as follows.</p>
+<blockquote>
+<p>翻译：C4 模型与符号无关，不规定任何特定的符号。不过，作为起点，一个简单的符号在白板、纸张、便笺、索引卡和各种图表工具上都适用，如下所示。</p>
+</blockquote>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105976136981.jpg" alt="" /></p>
+<p>You can then use colour and shapes to supplement the diagram, either to add additional information or simply to make the diagram more aesthetically pleasing.</p>
+<blockquote>
+<p>翻译：然后，您可以使用颜色和形状来补充图表，以添加其他信息或只是使图表更美观。</p>
+</blockquote>
+<h3><a id="c4-and-uml-c4%E5%92%8C-uml" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>C4 and UML /C4 和 UML</h3>
+<p>Although the example diagrams above are created using a &quot;boxes and lines&quot; notation, the core diagrams can be illustrated using UML with the appropriate use of packages, components and stereotypes. The resulting UML diagrams do tend to lack the same degree of descriptive text though, because adding such text isn't possible (or easy) with some UML tools.</p>
+<blockquote>
+<p>翻译：尽管上面的示例图是使用“框和线”表示法创建的，但可以使用 UML 并适当使用包、组件和构造型来说明核心图。但是，生成的 UML 图确实往往缺乏相同程度的描述性文本，因为使用某些 UML 工具无法（或轻松）添加此类文本。</p>
+</blockquote>
+<p>Here are three examples of a System Context, Container and Component diagram for comparison.</p>
+<blockquote>
+<p>翻译：以下是系统上下文、容器和组件图的三个示例，以供比较。</p>
+</blockquote>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105979187286.jpg" alt="" /><br />
+<img src="http://cdn.opendatamesh.cn/mweb/17105979323777.jpg" alt="" /><br />
+<img src="http://cdn.opendatamesh.cn/mweb/17105979429374.jpg" alt="" /></p>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105979587869.jpg" alt="" /><br />
+<img src="http://cdn.opendatamesh.cn/mweb/17105979693145.jpg" alt="" /><br />
+<img src="http://cdn.opendatamesh.cn/mweb/17105979872889.jpg" alt="" /><br />
+<img src="http://cdn.opendatamesh.cn/mweb/17105979969132.jpg" alt="" /><br />
+<img src="http://cdn.opendatamesh.cn/mweb/17105980038417.jpg" alt="" /><br />
+<img src="http://cdn.opendatamesh.cn/mweb/17105980100326.jpg" alt="" /></p>
+<h3><a id="c4-and-archimate-c4%E5%92%8C-archimate" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>C4 and ArchiMate C4 和 ArchiMate</h3>
+<p>See <a href="https://www.archimatetool.com/blog/2020/04/18/c4-model-architecture-viewpoint-and-archi-4-7/">C4 Model, Architecture Viewpoint and Archi 4.7 </a>for details of how to create C4 model diagrams with ArchiMate.</p>
+<blockquote>
+<p>翻译：请参阅 C4 模型、架构视点 和 Archi 4.7，了解如何使用 ArchiMate 创建 C4 模型图的详细信息。</p>
+</blockquote>
+<h3><a id="diagram-keylegend%E5%9B%BE%E8%A1%A8%E9%94%AE%E5%9B%BE%E4%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Diagram key/legend 图表键/图例</h3>
+<p>Any notation used should be as self-describing as possible, but all diagrams should have a key/legend to make the notation explicit. This applies to diagrams created with notations such as UML, ArchiMate and SysML too, as not everybody will know the notation being used.</p>
+<blockquote>
+<p>翻译：使用的任何符号都应尽可能自我描述，但所有图表都应具有键/图例以使符号显式。这也适用于使用 UML、ArchiMate 和 SysML 等符号创建的图表，因为不是每个人都知道所使用的符号。</p>
+</blockquote>
+<p><img src="http://cdn.opendatamesh.cn/mweb/17105961703163.jpg" alt="" /></p>
+<h3><a id="notation-notation-notation%E7%AC%A6%E5%8F%B7%EF%BC%8C%E7%AC%A6%E5%8F%B7%EF%BC%8C%E7%AC%A6%E5%8F%B7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notation, notation, notation 符号，符号，符号</h3>
+<p>Although the C4 model is an abstraction-first approach and notation independent, you still need to ensure that your diagram notation makes sense, and that the diagrams are comprehensible. A good way to think about this is to ask yourself whether each diagram can stand alone, and be (mostly) understood without a narrative. You can use this short <a href="https://c4model.com/review/">software architecture diagram review checklist </a>to help. And here are some recommendations related to notation.</p>
+<blockquote>
+<p>翻译：尽管 C4 模型是一种抽象优先的方法，并且与符号无关，但您仍然需要确保图表符号有意义，并且图表是可理解的。思考这个问题的一个好方法是问问自己，每个图表是否可以独立存在，并且（大部分）在没有叙述的情况下被理解。您可以使用这个简短的软件架构图审查清单来提供帮助。这里有一些与符号相关的建议。</p>
+</blockquote>
+<h4><a id="diagrams%E5%9B%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Diagrams 图</h4>
+<p>Every diagram should have a title describing the diagram type and scope (e.g. &quot;System Context diagram for My Software System&quot;).</p>
+<blockquote>
+<p>翻译：每个图表都应该有一个描述图表类型和范围的标题（例如，“我的软件系统的系统上下文图”）。<br />
+Every diagram should have a key/legend explaining the notation being used (e.g. shapes, colours, border styles, line types, arrow heads, etc).<br />
+翻译：每个图表都应该有一个键/图例来解释所使用的符号（例如形状、颜色、边框样式、线条类型、箭头等）。<br />
+Acronyms and abbreviations (business/domain or technology) should be understandable by all audiences, or explained in the diagram key/legend.<br />
+翻译：首字母缩略词和缩写词（业务/领域或技术）应为所有受众所理解，或在图表键/图例中解释。</p>
+</blockquote>
+<h4><a id="elements%E5%85%83%E7%B4%A0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Elements 元素</h4>
+<p>The type of every element should be explicitly specified (e.g. Person, Software System, Container or Component).</p>
+<blockquote>
+<p>翻译：应明确指定每个元素的类型（例如，人员、软件系统、容器或组件）。<br />
+Every element should have a short description, to provide an &quot;at a glance&quot; view of key responsibilities.<br />
+翻译：每个元素都应该有一个简短的描述，以提供关键职责的“一目了然”视图。<br />
+Every container and component should have a technology explicitly specified.<br />
+翻译：每个容器和组件都应具有明确指定的技术。</p>
+</blockquote>
+<h4><a id="relationships%E5%85%B3%E7%B3%BB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Relationships 关系</h4>
+<p>Every line should represent a unidirectional relationship.</p>
+<blockquote>
+<p>翻译：每条线都应该表示一个单向关系。<br />
+Every line should be labelled, the label being consistent with the direction and intent of the relationship (e.g. dependency or data flow). Try to be as specific as possible with the label, ideally avoiding single words like, &quot;Uses&quot;.<br />
+翻译：每一行都应该被标记，标签与关系的方向和意图一致（例如依赖关系或数据流）。尽量使标签更具体，最好避免使用“用途”等单个词。<br />
+Relationships between containers (typically these represent inter-process communication) should have a technology/protocol explicitly labelled.<br />
+翻译：容器之间的关系（通常表示进程间通信）应具有显式标记的技术/协议。</p>
+</blockquote>
+<h3><a id="alternative-visualisations%E6%9B%BF%E4%BB%A3%E5%8F%AF%E8%A7%86%E5%8C%96" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alternative visualisations 替代可视化</h3>
+<p>Finally, don't feel that you need to always use a traditional &quot;boxes and arrows&quot; diagram. Although this is usually the default approach, there are other, often interactive, visualisations that can be used to show the same C4 model abstractions in very different ways.</p>
+<blockquote>
+<p>翻译： 最后，不要觉得你需要总是使用传统的“方框和箭头”图。虽然这通常是默认方法，但还有其他（通常是交互式的）可视化可用于以非常不同的方式显示相同的 C4 模型抽象。</p>
+</blockquote>
+<ul>
+<li>Traditional &quot;boxes and arrows&quot; diagrams are the default approach for documentation and presentations.</li>
+</ul>
+<blockquote>
+<p>翻译：传统的“方框和箭头”图是文档和演示文稿的默认方法。</p>
+</blockquote>
+<ul>
+<li>A D3.js force-directed graph is a very concise way to visualise larger software architectures, also providing an easy way to explore dependencies.</li>
+</ul>
+<blockquote>
+<p>翻译：D3.js力导向图是可视化大型软件架构的一种非常简洁的方法，也提供了一种探索依赖关系的简单方法。</p>
+</blockquote>
+<ul>
+<li>Ilograph's interactive diagrams provide a way to selectively zoom in and out, allowing you to explore your entire software architecture model.</li>
+</ul>
+<blockquote>
+<p>翻译：Ilograph 的交互式图表提供了一种有选择地放大和缩小的方法，允许您探索整个软件架构模型。</p>
+</blockquote>
+<h3><a id="tooling%E5%B7%A5%E5%85%B7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooling 工具</h3>
+<p>For design sessions, you might find a whiteboard or flip chart paper better for collaboration, and iterating quickly. For long-lived documentation, there are a number of tools can help create software architecture diagrams based upon the C4 model.</p>
+<blockquote>
+<p>翻译：对于设计会议，您可能会发现白板或活动挂图纸更适合协作，并且可以快速迭代。对于长期文档，有许多工具可以帮助创建基于 C4 模型的软件架构图。</p>
+</blockquote>
+<p>Don't forget to ask yourself some questions when looking at tooling, to understand the features you need. Who are the diagram authors, and how technical are they? A &quot;drag and drop&quot; UI vs &quot;diagrams as code&quot;? Data stored in git next to your source code vs stored in the tool/cloud service? Closed vs open data format? Interactive vs static diagrams? Free vs paid vs open source? Short-lived vs long-lived documentation? Team only diagramming vs enterprise-wide modelling? Who is the diagram audience, and how would they access the diagrams/documentation?</p>
+<blockquote>
+<p>翻译：在查看工具时，不要忘记问自己一些问题，以了解您需要的功能。谁是图表作者，他们的技术水平如何？“拖放式”UI与“图表即代码”？存储在源代码旁边的 git 中的数据与存储在工具/云服务中的数据？封闭式数据格式与开放式数据格式？交互式图表与静态图表？免费 vs 付费 vs 开源？短期文档与长期文档？仅团队图表与企业范围的建模？谁是图表受众，他们将如何访问图表/文档？</p>
+</blockquote>
+
+                  </article>
+                 
+              </div>
+            </div><!-- end columns -->
+      </div><!-- end container -->
+    </section>
+
+
+
+   <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+              Copyright &copy; 2019
+              Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+              Theme used <a target="_blank" href="https://bulma.io/">Bulma CSS</a>.
+          </p>
+        </div>
+      </footer>
+
+<style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;}
+@media print{
+    pre, code, pre code {
+     overflow: visible !important;
+     white-space: pre-wrap !important;       /* css-3 */
+     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap !important;      /* Opera 4-6 */
+     white-space: -o-pre-wrap !important;    /* Opera 7 */
+     word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+
+
+div.code-toolbar {
+  position: relative;
+}
+
+div.code-toolbar > .toolbar {
+  position: absolute;
+  z-index: 10;
+  top: .3em;
+  right: .2em;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+div.code-toolbar:hover > .toolbar {
+  opacity: 1;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item {
+  display: inline-block;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a {
+  cursor: pointer;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+  color: inherit;
+  font-size: .8em;
+  padding: 4px .5em;
+  background: #f5f2f0;
+  background: rgba(224, 224, 224, 0.4);
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+  border-radius: .5em;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus {
+  color: inherit;
+  text-decoration: none;
+}
+</style>
+
+
+  
+    
+
+
+
+
+  </body>
+</html>
