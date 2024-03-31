@@ -4,13 +4,139 @@
   <title><![CDATA[leadedx]]></title>
   <link href="https://leadedx.github.io/atom.xml" rel="self"/>
   <link href="https://leadedx.github.io/"/>
-  <updated>2024-03-31T16:23:38+08:00</updated>
+  <updated>2024-03-31T20:06:05+08:00</updated>
   <id>https://leadedx.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[]]></title>
+    <link href="https://leadedx.github.io/17118797639579.html"/>
+    <updated>2024-03-31T18:09:23+08:00</updated>
+    <id>https://leadedx.github.io/17118797639579.html</id>
+    <content type="html"><![CDATA[
+<p>在macOS上安装和配置PostgreSQL是一个相对简单的过程，可以通过多种方法进行。以下是详细的步骤和信息，帮助您在macOS上安装和配置PostgreSQL。</p>
+<h3><a id="1%E5%AE%89%E8%A3%85-postgresql" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 安装PostgreSQL</h3>
+<h4><a id="%E4%BD%BF%E7%94%A8homebrew%E5%AE%89%E8%A3%85" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用Homebrew安装</h4>
+<p>Homebrew是macOS上的一个流行包管理器，可以用来安装PostgreSQL。以下是使用Homebrew安装PostgreSQL的步骤：</p>
+<ul>
+<li>
+<p><strong>安装Homebrew</strong>:</p>
+<pre><code class="language-bash">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
+<p>运行上述命令以安装Homebrew。</p>
+</li>
+<li>
+<p><strong>查找可用的PostgreSQL版本</strong>:</p>
+<pre><code class="language-bash">brew search postgresql
+</code></pre>
+<p>这将列出所有可用的PostgreSQL版本。</p>
+</li>
+<li>
+<p><strong>安装指定版本的PostgreSQL</strong>:</p>
+<pre><code class="language-bash">brew install postgresql@15
+</code></pre>
+<p>上述命令将安装PostgreSQL 15版本。您可以替换<code>15</code>为您需要的任何版本号。</p>
+</li>
+</ul>
+<h4><a id="%E4%BD%BF%E7%94%A8dmg%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用dmg安装包安装</h4>
+<ul>
+<li>
+<p><strong>下载PostgreSQL</strong>:<br />
+访问<a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">EnterpriseDB的下载页面</a>，下载适用于macOS的PostgreSQL安装包。</p>
+</li>
+<li>
+<p><strong>创建postgres用户</strong> (如果需要):</p>
+<pre><code class="language-bash">sudo dscl . -create /Users/postgres UserShell /bin/bash
+sudo dscl . -create /Users/postgres UniqueID &quot;5001&quot;
+sudo dscl . -create /Users/postgres RealName &quot;postgres&quot;
+sudo dscl . -passwd /Users/postgres 1024
+</code></pre>
+<p>上述命令将创建一个名为<code>postgres</code>的用户，设置用户ID为5001，并设置初始密码为<code>1024</code>。</p>
+</li>
+<li>
+<p><strong>启动安装向导</strong>:<br />
+双击下载的dmg文件并启动安装向导。</p>
+</li>
+<li>
+<p><strong>按照安装向导进行安装</strong>:</p>
+<ul>
+<li>选择安装目录</li>
+<li>选择要安装的组件</li>
+<li>指定数据存储目录</li>
+<li>设置<code>postgres</code>用户密码</li>
+<li>指定服务器监听端口（默认为5432）</li>
+<li>选择区域设置</li>
+<li>查看并确认安装信息</li>
+<li>开始安装</li>
+</ul>
+</li>
+</ul>
+<h3><a id="2%E9%85%8D%E7%BD%AE-postgresql" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 配置PostgreSQL</h3>
+<h4><a id="%E4%BD%BF%E7%94%A8homebrew%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用Homebrew安装后的配置</h4>
+<ul>
+<li>
+<p><strong>启动PostgreSQL服务</strong>:</p>
+<pre><code class="language-bash">brew services start postgresql@15
+</code></pre>
+<p>上述命令将启动PostgreSQL服务。确保使用您安装的版本号替换<code>15</code>。</p>
+</li>
+<li>
+<p><strong>添加环境变量</strong>:</p>
+<pre><code class="language-bash">echo 'export PATH=&quot;/opt/homebrew/opt/postgresql@15/bin:$PATH&quot;' &gt;&gt; ~/.zshrc
+source ~/.zshrc
+</code></pre>
+<p>上述命令将PostgreSQL的bin目录添加到您的PATH环境变量中，以便在任何位置都能访问<code>psql</code>和其他PostgreSQL工具。</p>
+</li>
+</ul>
+<h4><a id="%E4%BD%BF%E7%94%A8dmg%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用dmg安装包安装后的配置</h4>
+<ul>
+<li><strong>添加环境变量</strong>:
+<pre><code class="language-bash">echo 'export PATH=&quot;/Library/PostgreSQL/15/bin:$PATH&quot;' &gt;&gt; ~/.zshrc
+source ~/.zshrc
+</code></pre>
+上述命令将PostgreSQL的bin目录添加到您的PATH环境变量中。</li>
+</ul>
+<h3><a id="3%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 基础使用</h3>
+<ul>
+<li>
+<p><strong>连接到PostgreSQL</strong>:</p>
+<pre><code class="language-bash">psql -U postgres
+</code></pre>
+<p>使用上述命令连接到PostgreSQL数据库。如果您创建了<code>postgres</code>用户，您需要使用该用户的密码进行登录。</p>
+</li>
+<li>
+<p><strong>创建新数据库</strong>:</p>
+<pre><code class="language-sql">CREATE DATABASE mydatabase;
+</code></pre>
+<p>在PostgreSQL提示符下运行上述SQL命令以创建新数据库。</p>
+</li>
+<li>
+<p><strong>切换数据库</strong>:</p>
+<pre><code class="language-sql">\c mydatabase
+</code></pre>
+<p>使用<code>\c</code>命令切换到指定的数据库。</p>
+</li>
+</ul>
+<h3><a id="4%E5%8A%A0%E8%BD%BD%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 加载示例数据库</h3>
+<ul>
+<li>
+<p><strong>下载示例数据库</strong>:<br />
+访问<a href="https://www.rockdata.net/zh-cn/tutorial/sample-database/">Rockdata.net的示例数据库页面</a>下载示例数据库。</p>
+</li>
+<li>
+<p><strong>恢复示例数据库</strong>:<br />
+使用pgAdmin或<code>psql</code>工具恢复下载的示例数据库。</p>
+</li>
+</ul>
+<h3><a id="%E7%BB%93%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>结论</h3>
+<p>以上步骤和信息涵盖了在macOS上安装、配置和使用PostgreSQL的基本过程。无论是通过Homebrew还是dmg安装包，都可以方便地在macOS上设置和运行PostgreSQL。如果您在安装或配置过程中遇到任何问题，请参考官方文档或搜索相关社区和论坛获取帮助。</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[macOS Homebrew 部署 Flash]]></title>
