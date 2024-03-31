@@ -125,7 +125,8 @@
 
       <div class="article-content">
       <p>在代码中描述一个数据产品通常会使用一种结构化语言或格式，比如 JSON。以下是一个简单的示例，使用 JSON 格式来描述一个数据产品的元数据：</p>
-<pre><code class="language-{">  &quot;dataProduct&quot;: {
+<pre><code class="language-json">{
+  &quot;dataProduct&quot;: {
     &quot;id&quot;: &quot;product-123&quot;,
     &quot;title&quot;: &quot;Customer Engagement Metrics&quot;,
     &quot;description&quot;: &quot;A comprehensive set of metrics for tracking customer engagement across multiple platforms.&quot;,
@@ -161,9 +162,23 @@
     &quot;lastModified&quot;: &quot;2023-11-01T12:00:00Z&quot;
   }
 }
-
 </code></pre>
-<p>请注意，这个 JSON 对象只是一个模板，实际的元数据可能会根据具体的数据产品而有所不同。在实际应用中，数据产品的元数据可能会包含更多的详细信息，例如数据质量指标、依赖关系、数据版本等。</p>
+<p>在这个 JSON 对象中，我们定义了一个数据产品的元数据，包括：</p>
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：数据产品的友好名称</li>
+<li><code>description</code>：数据产品的描述</li>
+<li><code>owner</code>：数据产品的所有者</li>
+<li><code>businessUnit</code>：数据产品所属的业务单元</li>
+<li><code>status</code>：数据产品的当前状态（例如：active, inactive）</li>
+<li><code>dataSource</code>：数据来源</li>
+<li><code>frequency</code>：数据更新频率</li>
+<li><code>schema</code>：数据结构的定义</li>
+<li><code>termsOfUse</code>：数据的使用条款</li>
+<li><code>access</code>：数据的访问权限</li>
+<li><code>lastModified</code>：数据产品最后修改的时间戳<br />
+请注意，这个 JSON 对象只是一个模板，实际的元数据可能会根据具体的数据产品而有所不同。在实际应用中，数据产品的元数据可能会包含更多的详细信息，例如数据质量指标、依赖关系、数据版本等。</li>
+</ul>
 
 
     
@@ -173,6 +188,9 @@
       <div class="row">
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="17118895145158.html" 
+          title="Previous Post: 用代码描述数据产品的数据集">&laquo; 用代码描述数据产品的数据集</a>
       
         </p>
         </div>
@@ -257,33 +275,41 @@
 	      
 		      
 			      <li class="post">
+			        <a href="17118900696788.html">用代码描述数据产品的数据接口</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17118898908130.html">用代码描述数据产品中的程序代码</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17118897042956.html">用代码描述数据集的元数据</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17118895145158.html">用代码描述数据产品的数据集</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="17118893429905.html">用代码描述数据产品</a>
 			      </li>
 		     
 		  
 		      
-			      <li class="post">
-			        <a href="17118891531585.html">Data Product Canvas</a>
-			      </li>
-		     
 		  
 		      
-			      <li class="post">
-			        <a href="17118888075897.html">数据产品画布</a>
-			      </li>
-		     
 		  
 		      
-			      <li class="post">
-			        <a href="17118887373917.html">数据产品的内部结构</a>
-			      </li>
-		     
 		  
 		      
-			      <li class="post">
-			        <a href="17118884631387.html">Data Mesh 实践</a>
-			      </li>
-		     
 		  
 		      
 		  
@@ -404,7 +430,7 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
   color: inherit;
   text-decoration: none;
 }
-</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script><script>!function(){if("undefined"!=typeof Prism&&"undefined"!=typeof document){var e=[],t={},n=function(){};Prism.plugins.toolbar={};var a=Prism.plugins.toolbar.registerButton=function(n,a){var r;r="function"==typeof a?a:function(e){var t;return"function"==typeof a.onClick?((t=document.createElement("button")).type="button",t.addEventListener("click",(function(){a.onClick.call(this,e)}))):"string"==typeof a.url?(t=document.createElement("a")).href=a.url:t=document.createElement("span"),a.className&&t.classList.add(a.className),t.textContent=a.text,t},n in t?console.warn('There is a button with the key "'+n+'" registered already.'):e.push(t[n]=r)},r=Prism.plugins.toolbar.hook=function(a){var r=a.element.parentNode;var l=a.element.classList;if(l.contains('language-mermaid') || l.contains('language-echarts') || l.contains('language-plantuml')){return;} if(r&&/pre/i.test(r.nodeName)&&!r.parentNode.classList.contains("code-toolbar")){var o=document.createElement("div");o.classList.add("code-toolbar"),r.parentNode.insertBefore(o,r),o.appendChild(r);var i=document.createElement("div");i.classList.add("toolbar");var l=e,d=function(e){for(;e;){var t=e.getAttribute("data-toolbar-order");if(null!=t)return(t=t.trim()).length?t.split(/\s*,\s*/g):[];e=e.parentElement}}(a.element);d&&(l=d.map((function(e){return t[e]||n}))),l.forEach((function(e){var t=e(a);if(t){var n=document.createElement("div");n.classList.add("toolbar-item"),n.appendChild(t),i.appendChild(n)}})),o.appendChild(i)}};a("label",(function(e){var t=e.element.parentNode;if(t&&/pre/i.test(t.nodeName)&&t.hasAttribute("data-label")){var n,a,r=t.getAttribute("data-label");try{a=document.querySelector("template#"+r)}catch(e){}return a?n=a.content:(t.hasAttribute("data-url")?(n=document.createElement("a")).href=t.getAttribute("data-url"):n=document.createElement("span"),n.textContent=r),n}})),Prism.hooks.add("complete",r)}}();</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.css"><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script><style>div.code-toolbar > .toolbar > .toolbar-item > a, div.code-toolbar > .toolbar > .toolbar-item > button, div.code-toolbar > .toolbar > .toolbar-item > span {padding: 4px .5em; background: #f5f2f0; background: rgba(224, 224, 224, 0.4);}</style>
+</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script><script>!function(){if("undefined"!=typeof Prism&&"undefined"!=typeof document){var e=[],t={},n=function(){};Prism.plugins.toolbar={};var a=Prism.plugins.toolbar.registerButton=function(n,a){var r;r="function"==typeof a?a:function(e){var t;return"function"==typeof a.onClick?((t=document.createElement("button")).type="button",t.addEventListener("click",(function(){a.onClick.call(this,e)}))):"string"==typeof a.url?(t=document.createElement("a")).href=a.url:t=document.createElement("span"),a.className&&t.classList.add(a.className),t.textContent=a.text,t},n in t?console.warn('There is a button with the key "'+n+'" registered already.'):e.push(t[n]=r)},r=Prism.plugins.toolbar.hook=function(a){var r=a.element.parentNode;var l=a.element.classList;if(l.contains('language-mermaid') || l.contains('language-echarts') || l.contains('language-plantuml')){return;} if(r&&/pre/i.test(r.nodeName)&&!r.parentNode.classList.contains("code-toolbar")){var o=document.createElement("div");o.classList.add("code-toolbar"),r.parentNode.insertBefore(o,r),o.appendChild(r);var i=document.createElement("div");i.classList.add("toolbar");var l=e,d=function(e){for(;e;){var t=e.getAttribute("data-toolbar-order");if(null!=t)return(t=t.trim()).length?t.split(/\s*,\s*/g):[];e=e.parentElement}}(a.element);d&&(l=d.map((function(e){return t[e]||n}))),l.forEach((function(e){var t=e(a);if(t){var n=document.createElement("div");n.classList.add("toolbar-item"),n.appendChild(t),i.appendChild(n)}})),o.appendChild(i)}};a("label",(function(e){var t=e.element.parentNode;if(t&&/pre/i.test(t.nodeName)&&t.hasAttribute("data-label")){var n,a,r=t.getAttribute("data-label");try{a=document.querySelector("template#"+r)}catch(e){}return a?n=a.content:(t.hasAttribute("data-url")?(n=document.createElement("a")).href=t.getAttribute("data-url"):n=document.createElement("span"),n.textContent=r),n}})),Prism.hooks.add("complete",r)}}();</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.css"><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script><style>div.code-toolbar > .toolbar > .toolbar-item > a, div.code-toolbar > .toolbar > .toolbar-item > button, div.code-toolbar > .toolbar > .toolbar-item > span {padding: 4px .5em; background: #f5f2f0; background: rgba(224, 224, 224, 0.4);}</style><script>window.MathJax = {     tex: { tags: 'ams', displayMath: [ ['\\[', '\\]'] ] } ,     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>window.MathJax = { tex: { tags: 'ams', displayMath: [ ['\\[', '\\]'] ] } }; </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
 
 <style type="text/css">
 figure{margin: 0;padding: 0;}

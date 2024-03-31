@@ -104,6 +104,366 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
+                <a class="clearlink" href="17118900696788.html">
+                
+                  <h1>用代码描述数据产品的数据接口</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>在数据产品的上下文中，输入端口（Input Port）和输出端口（Output Port）是用于数据传输的关键组件。以下是一个 JSON 示例，用于描述数据产品的输入和输出端口：</p>
+<pre><code class="language-json">{
+  &quot;inputPorts&quot;: [
+    {
+      &quot;id&quot;: &quot;input-port-1&quot;,
+      &quot;title&quot;: &quot;Raw Data Ingestion&quot;,
+      &quot;description&quot;: &quot;Incoming raw data from various sources.&quot;,
+      &quot;source&quot;: &quot;Data ingestion pipelines&quot;,
+      &quot;format&quot;: &quot;JSON and CSV&quot;,
+      &quot;schema&quot;: {
+        &quot;columns&quot;: [
+          {
+            &quot;name&quot;: &quot;timestamp&quot;,
+            &quot;type&quot;: &quot;datetime&quot;,
+            &quot;description&quot;: &quot;The time when the data was generated&quot;
+          },
+          {
+            &quot;name&quot;: &quot;source&quot;,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;The source of the data&quot;
+          },
+          // ... other columns
+        ]
+      },
+      &quot;security&quot;: {
+        &quot;access&quot;: &quot;restricted&quot;,
+        &quot;authentication&quot;: &quot;OAuth 2.0&quot;
+      }
+    }
+    // ... other input ports
+  ],
+  &quot;outputPorts&quot;: [
+    {
+      &quot;id&quot;: &quot;output-port-1&quot;,
+      &quot;title&quot;: &quot;Transformed Data&quot;,
+      &quot;description&quot;: &quot;Transformed data ready for consumption.&quot;,
+      &quot;destination&quot;: &quot;Data lake and BI tools&quot;,
+      &quot;format&quot;: &quot;Parquet and CSV&quot;,
+      &quot;schema&quot;: {
+        &quot;columns&quot;: [
+          {
+            &quot;name&quot;: &quot;transformed_timestamp&quot;,
+            &quot;type&quot;: &quot;datetime&quot;,
+            &quot;description&quot;: &quot;The time when the data was transformed&quot;
+          },
+          {
+            &quot;name&quot;: &quot;transformed_source&quot;,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;The source of the transformed data&quot;
+          },
+          // ... other columns
+        ]
+      },
+      &quot;security&quot;: {
+        &quot;access&quot;: &quot;public&quot;,
+        &quot;authentication&quot;: &quot;None&quot;
+      }
+    }
+    // ... other output ports
+  ]
+}
+</code></pre>
+<p>在这个 JSON 对象中，我们定义了一个数据产品的输入和输出端口，包括：</p>
+<ul>
+<li><code>inputPorts</code>：数据产品的输入端口列表
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：输入端口的友好名称</li>
+<li><code>description</code>：输入端口的描述</li>
+<li><code>source</code>：输入端口的数据来源</li>
+<li><code>format</code>：输入端口的数据格式</li>
+<li><code>schema</code>：输入端口的数据结构定义</li>
+<li><code>security</code>：输入端口的安全配置</li>
+</ul>
+</li>
+<li><code>outputPorts</code>：数据产品的输出端口列表
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：输出端口的友好名称</li>
+<li><code>description</code>：输出端口的描述</li>
+<li><code>destination</code>：输出端口的数据目的地</li>
+<li><code>format</code>：输出端口的数据格式</li>
+<li><code>schema</code>：输出端口的数据结构定义</li>
+<li><code>security</code>：输出端口的安全配置<br />
+请注意，这个 JSON 对象也是一个模板，实际的输入和输出端口元数据可能会根据具体的数据产品而有所不同。在实际应用中，端口的元数据可能会包含更多的详细信息，例如端口的吞吐量、数据处理能力、性能指标等。</li>
+</ul>
+</li>
+</ul>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2024/03/31</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='datamesh.html'>Data Mesh</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="17118898908130.html">
+                
+                  <h1>用代码描述数据产品中的程序代码</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>在数据产品中，代码（或称为元代码）是指描述数据产品及其组件的代码。这通常用于自动化数据产品的生命周期管理，包括数据摄取、处理、存储和共享。以下是一个 JSON 示例，用于描述数据产品中的代码：</p>
+<pre><code class="language-json">{
+  &quot;code&quot;: {
+    &quot;id&quot;: &quot;code-123&quot;,
+    &quot;title&quot;: &quot;Data Transformation Script&quot;,
+    &quot;description&quot;: &quot;A script for transforming raw data into a format suitable for analysis.&quot;,
+    &quot;owner&quot;: &quot;Engineering Team&quot;,
+    &quot;ownerEmail&quot;: &quot;engineering@example.com&quot;,
+    &quot;source&quot;: &quot;Custom-built script using Python&quot;,
+    &quot;frequency&quot;: &quot;hourly&quot;,
+    &quot;executionTime&quot;: &quot;5 minutes&quot;,
+    &quot;lastRun&quot;: &quot;2023-11-01T12:00:00Z&quot;,
+    &quot;dependencies&quot;: [
+      &quot;Dataset-A&quot;,
+      &quot;Dataset-B&quot;
+    ],
+    &quot;output&quot;: &quot;Transformed data stored in Dataset-C&quot;
+  }
+}
+</code></pre>
+<p>在这个 JSON 对象中，我们定义了一个数据产品中的代码，包括：</p>
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：代码的友好名称</li>
+<li><code>description</code>：代码的描述</li>
+<li><code>owner</code>：代码的所有者</li>
+<li><code>source</code>：代码的来源或使用的编程语言</li>
+<li><code>frequency</code>：代码的执行频率</li>
+<li><code>executionTime</code>：代码执行所需的时间</li>
+<li><code>lastRun</code>：代码上一次运行的时间戳</li>
+<li><code>dependencies</code>：代码依赖的其他数据产品或组件</li>
+<li><code>output</code>：代码的输出，即处理后的数据存储位置<br />
+请注意，这个 JSON 对象也是一个模板，实际的代码元数据可能会根据具体的代码而有所不同。在实际应用中，代码的元数据可能会包含更多的详细信息，例如代码的版本控制、执行日志、错误处理机制等。</li>
+</ul>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2024/03/31</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='datamesh.html'>Data Mesh</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="17118897042956.html">
+                
+                  <h1>用代码描述数据集的元数据</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>在描述数据集的元数据时，我们通常会包括数据集的基本信息、数据源、数据质量、数据更新频率、数据结构以及与数据集相关的任何其他关键信息。以下是一个 JSON 示例，用于描述一个数据集的元数据：</p>
+<pre><code class="language-json">{
+  &quot;metadata&quot;: {
+    &quot;id&quot;: &quot;dataset-789&quot;,
+    &quot;title&quot;: &quot;Sales Data&quot;,
+    &quot;description&quot;: &quot;A comprehensive dataset containing sales transactions from various stores.&quot;,
+    &quot;owner&quot;: &quot;Jane Smith&quot;,
+    &quot;ownerEmail&quot;: &quot;jane.smith@example.com&quot;,
+    &quot;source&quot;: &quot;Point of Sale (POS) systems and online sales platforms&quot;,
+    &quot;frequency&quot;: &quot;daily&quot;,
+    &quot;dataType&quot;: &quot;structured&quot;,
+    &quot;format&quot;: &quot;CSV&quot;,
+    &quot;size&quot;: &quot;100GB&quot;,
+    &quot;quality&quot;: {
+      &quot;accuracy&quot;: &quot;99%&quot;,
+      &quot;completeness&quot;: &quot;98%&quot;,
+      &quot;consistency&quot;: &quot;95%&quot;
+    },
+    &quot;updated&quot;: &quot;2023-11-01T12:00:00Z&quot;,
+    &quot;accessibility&quot;: {
+      &quot;internal&quot;: true,
+      &quot;external&quot;: false
+    },
+    &quot;columns&quot;: [
+      {
+        &quot;name&quot;: &quot;transactionId&quot;,
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;Unique identifier for each transaction&quot;
+      },
+      {
+        &quot;name&quot;: &quot;storeId&quot;,
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;Identifier for the store where the transaction occurred&quot;
+      },
+      {
+        &quot;name&quot;: &quot;productId&quot;,
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;Identifier for the product being sold&quot;
+      },
+      // ... other columns
+    ]
+  }
+}
+</code></pre>
+<p>在这个 JSON 对象中，我们定义了一个数据集的元数据，包括：</p>
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：数据集的友好名称</li>
+<li><code>description</code>：数据集的描述</li>
+<li><code>owner</code>：数据集的所有者</li>
+<li><code>source</code>：数据集的来源</li>
+<li><code>frequency</code>：数据集更新的频率</li>
+<li><code>dataType</code>：数据集的数据类型</li>
+<li><code>format</code>：数据集的格式</li>
+<li><code>size</code>：数据集的大小</li>
+<li><code>quality</code>：数据集的质量指标</li>
+<li><code>updated</code>：数据集最后更新的时间戳</li>
+<li><code>accessibility</code>：数据集的访问权限</li>
+<li><code>columns</code>：数据集的结构定义，包括列名、数据类型和描述<br />
+请注意，这个 JSON 对象也是一个模板，实际的元数据可能会根据具体的数据集而有所不同。在实际应用中，数据集的元数据可能会包含更多的详细信息，例如数据集的生成过程、数据处理的步骤、数据的处理方法等。</li>
+</ul>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2024/03/31</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='datamesh.html'>Data Mesh</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="17118895145158.html">
+                
+                  <h1>用代码描述数据产品的数据集</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>在一个数据产品中，数据集（Dataset）是核心组成部分，它包含了实际的数据内容。数据集的描述通常包括元数据，这些元数据提供了关于数据集的结构、内容、来源和质量的信息。以下是一个简单的 JSON 示例，用于描述一个数据集：</p>
+<pre><code class="language-json">{
+  &quot;dataset&quot;: {
+    &quot;id&quot;: &quot;dataset-456&quot;,
+    &quot;title&quot;: &quot;Customer Engagement Data&quot;,
+    &quot;description&quot;: &quot;A collection of customer engagement data from various platforms.&quot;,
+    &quot;owner&quot;: &quot;John Doe&quot;,
+    &quot;ownerEmail&quot;: &quot;john.doe@example.com&quot;,
+    &quot;source&quot;: &quot;CRM system and social media APIs&quot;,
+    &quot;frequency&quot;: &quot;daily&quot;,
+    &quot;schema&quot;: {
+      &quot;columns&quot;: [
+        {
+          &quot;name&quot;: &quot;customerId&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;Unique identifier for each customer&quot;
+        },
+        {
+          &quot;name&quot;: &quot;engagementScore&quot;,
+          &quot;type&quot;: &quot;numeric&quot;,
+          &quot;description&quot;: &quot;A weighted score representing customer engagement&quot;
+        },
+        {
+          &quot;name&quot;: &quot;platform&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;The platform on which the engagement occurred&quot;
+        },
+        // ... other columns
+      ]
+    },
+    &quot;dataQuality&quot;: {
+      &quot;accuracy&quot;: &quot;98%&quot;,
+      &quot;completeness&quot;: &quot;95%&quot;,
+      &quot;consistency&quot;: &quot;90%&quot;
+    },
+    &quot;lastUpdated&quot;: &quot;2023-11-01T12:00:00Z&quot;
+  }
+}
+
+</code></pre>
+<p>请注意，这个 JSON 对象也是一个模板，实际的元数据可能会根据具体的数据集而有所不同。在实际应用中，数据集的元数据可能会包含更多的详细信息，例如数据集的大小、数据的生成过程、数据处理的步骤等。</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2024/03/31</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='datamesh.html'>Data Mesh</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
                 <a class="clearlink" href="17118893429905.html">
                 
                   <h1>用代码描述数据产品</h1>
@@ -112,7 +472,8 @@
                       <div class="a-content-text">
                         
                         	<p>在代码中描述一个数据产品通常会使用一种结构化语言或格式，比如 JSON。以下是一个简单的示例，使用 JSON 格式来描述一个数据产品的元数据：</p>
-<pre><code class="language-{">  &quot;dataProduct&quot;: {
+<pre><code class="language-json">{
+  &quot;dataProduct&quot;: {
     &quot;id&quot;: &quot;product-123&quot;,
     &quot;title&quot;: &quot;Customer Engagement Metrics&quot;,
     &quot;description&quot;: &quot;A comprehensive set of metrics for tracking customer engagement across multiple platforms.&quot;,
@@ -148,9 +509,23 @@
     &quot;lastModified&quot;: &quot;2023-11-01T12:00:00Z&quot;
   }
 }
-
 </code></pre>
-<p>请注意，这个 JSON 对象只是一个模板，实际的元数据可能会根据具体的数据产品而有所不同。在实际应用中，数据产品的元数据可能会包含更多的详细信息，例如数据质量指标、依赖关系、数据版本等。</p>
+<p>在这个 JSON 对象中，我们定义了一个数据产品的元数据，包括：</p>
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：数据产品的友好名称</li>
+<li><code>description</code>：数据产品的描述</li>
+<li><code>owner</code>：数据产品的所有者</li>
+<li><code>businessUnit</code>：数据产品所属的业务单元</li>
+<li><code>status</code>：数据产品的当前状态（例如：active, inactive）</li>
+<li><code>dataSource</code>：数据来源</li>
+<li><code>frequency</code>：数据更新频率</li>
+<li><code>schema</code>：数据结构的定义</li>
+<li><code>termsOfUse</code>：数据的使用条款</li>
+<li><code>access</code>：数据的访问权限</li>
+<li><code>lastModified</code>：数据产品最后修改的时间戳<br />
+请注意，这个 JSON 对象只是一个模板，实际的元数据可能会根据具体的数据产品而有所不同。在实际应用中，数据产品的元数据可能会包含更多的详细信息，例如数据质量指标、依赖关系、数据版本等。</li>
+</ul>
 
                         
                       </div>
@@ -710,793 +1085,6 @@ Messflix 是一家电影和电视节目流媒体平台，面临有效利用其�
                 </div>
               </div><!-- article -->
         
-			<div class="article">
-                <a class="clearlink" href="shu-ju-chan-pin-shi-shen-meyua.html">
-                
-                  <h1>数据产品是什么？</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p><a href="https://www.innoq.com/en/articles/2023/07/what-is-a-data-product/">原文地址</a></p>
-<h2><a id="kimi%E5%BD%92%E7%BA%B3%E6%80%BB%E7%BB%93" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kimi 归纳总结</h2>
-<p>此文的核心内容是对数据产品的概念、架构、实现以及数据网格管理器的介绍和解释。以下是对这些核心内容的总结归纳：</p>
-<ol>
-<li>
-<p><strong>数据产品定义</strong>：数据产品是一种技术实现，它包含所有必要的组件来处理和存储领域数据，以供分析或数据密集型用例。它是从消费者的角度设计的，以提供最佳的用户体验，并可能具有消费者愿意支付的价值。</p>
-</li>
-<li>
-<p><strong>数据产品与数据即产品的区别</strong>：数据产品遵循数据即产品的原则，但它们并不是同义词。数据产品更侧重于技术实现和内部数据处理，而数据即产品强调的是从消费者需求出发的产品设计理念。</p>
-</li>
-<li>
-<p><strong>数据产品架构</strong>：数据产品由多个组件构成，包括输出端口、输入端口、发现端口、所有权、转换代码、数据存储、测试、文档、成本管理和策略即代码等。这些组件共同工作，确保数据产品的质量和可用性。</p>
-</li>
-<li>
-<p><strong>数据产品示例</strong>：文中提供了几个数据产品的例子，如搜索查询、文章管理、订单处理和实时业务仪表板等，展示了数据产品在实际业务中的应用。</p>
-</li>
-<li>
-<p><strong>数据网格管理器</strong>：这是一个工具，用于发现、管理和治理数据产品。它利用数据产品的元数据构建一个全面的数据产品清单，帮助用户导航复杂的数据网格，并找到相关的、值得信赖的数据产品。数据网格管理器还支持数据合同的全生命周期管理，并通过REST-API与数据平台集成，自动化IAM权限的创建。</p>
-</li>
-<li>
-<p><strong>数据产品实现</strong>：文中还介绍了如何使用AWS S3和Athena技术栈实现数据产品，包括使用Terraform模块配置必要的服务，以及如何通过CI/CD流水线进行部署和元数据管理。</p>
-</li>
-</ol>
-<p>整体而言，这篇文章详细阐述了数据产品的理论基础、组成部分、实际应用案例以及如何通过数据网格管理器进行有效管理。这些内容对于理解和实施现代数据驱动的业务策略具有重要意义。</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%8D%B3%E4%BA%A7%E5%93%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据产品与数据即产品</h2>
-<p>“产品”一词来源于近年来进入软件开发的产品思维方法。Zhamak Dehghani 在数据网格的第二核心原则中应用了这个术语：数据即产品。这意味着软件，或者说现在数据，始终是从消费者的角度进行设计的，以便他们获得最佳的用户体验。就像实物产品一样，这些产品应该为满足消费者的需求而持续开发。它们应该以易于理解的方式（直观地或通过说明书）向客户解释，应该优化以便以最适合用户的方式轻松访问，也许还在组织内部进行宣传以展示潜力。因此，它们也可能有一个消费者愿意支付的价格。现在，数据被视为对公司有价值的资产，而不仅仅是软件开发的副产品。</p>
-<p>数据产品这一术语源自数据即产品原则，并遵循其理念，但不应视为同义词。让我们尝试一个定义：</p>
-<blockquote>
-<p>“数据产品是一个逻辑单元，包含了处理和存储领域数据以供分析或数据密集型用例的所有组件，并通过输出端口将其提供给其他团队。”<br />
-—— JOCHEN CHRIST<br />
-datamesh-architecture.com</p>
-</blockquote>
-<p>因此，数据产品是一种技术性的东西，由数据产品开发者实现。它使用数据技术来存储和处理大量数据集，通常是数百万条记录以上。数据产品的大小设计是为了涵盖连贯的领域概念或用例，它们本身就具有价值。最大尺寸由一个团队可以处理的范围定义。数据产品可以大致与微服务或自包含系统相比较，但使用的是数据技术，并服务于分析需求。尽管称之为产品，但数据产品的消费通常是其他内部团队，而不是外部客户。<br />
-接下来是第二部分的翻译：</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E7%A4%BA%E4%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据产品示例</h2>
-<p>产品搜索团队提供了一个名为“搜索查询”的数据产品，其中包含了用户在搜索栏输入的所有查询、结果数量以及用户点击的条目信息。<br />
-文章管理团队提供了一个名为“文章”的数据产品，包含文章的主数据，包括当前状态和历史记录。<br />
-结账团队提供了一个名为“订单”的数据产品，包含自2020年以来的所有订单。它有两个输出端口：一个包含个人身份信息（PII），一个删除了个人身份信息。<br />
-履约团队有一个名为“货架空位”的数据产品，包含过去3个月未售出的所有文章。<br />
-管理支持团队使用其他数据产品创建了一个实时业务仪表板数据产品供CEO使用。它不共享数据，也没有输出端口。<br />
-推荐团队使用其他数据产品来训练一个用于推荐的机器学习模型。机器学习模型以Tensorflow SavedModel目录的形式共享在对象存储上。营销团队使用这个模型在通讯中为特定客户做出推荐。</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E6%9E%B6%E6%9E%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据产品架构</h2>
-<p>数据产品包含多个组件，构建成一个连贯的单元，通常在一个Git仓库中定义。下图展示了数据产品的典型组件。<br />
-<img src="media/17117975915421/17117981379407.jpg" alt="" /><br />
-<strong>数据产品组件</strong></p>
-<p>数据产品应用了信息隐藏的设计原则。它有对外的接口和内部组件。组件的实际实现可能因用例和数据平台而异。</p>
-<h3><a id="%E8%BE%93%E5%87%BA%E7%AB%AF%E5%8F%A3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>输出端口</h3>
-<p>输出端口代表数据产品的主要API：它们代表以表格、文件或主题形式对结构化数据集的只读访问。一个数据产品可以有多个输出端口：它们可能以不同技术提供相同的数据集或同一技术中的不同数据集，例如，一个输出端口包含个人身份信息数据，第二个输出端口删除了个人身份信息。当需要结构性变更以随时间发展数据产品时，也可以添加新的输出端口。<br />
-<img src="media/17117975915421/17117981487528.jpg" alt="" /><br />
-<strong>作为输出端口的表格示例</strong></p>
-<p>输出端口的主要接口技术是SQL。它允许简单访问大型数据集，并受到几乎所有分析工具的支持。输出端口通常实现为SQL视图，作为抽象层，使得在不影响数据消费者的情况下可以更改底层数据结构。输出端口的其他接口技术包括文件，或用于流处理的主题，或作为与操作系统的异步API。</p>
-<p>输出端口定义了所提供数据集的模型。这个模型在一个模式中定义，包含所有表格、属性和类型。典型技术包括SQL DDL、dbt模型、Protobuf、Avro或JSON模式。模型也可以在数据目录条目中描述。</p>
-<pre><code class="language-models:">    - name: stock_last_updated_v1
-      description: &gt;
-        Current state of the stock.
-        One record per SKU and location with the last updated timestamp.
-      columns:
-        - name: sku
-          type: string
-          description: Stock Keeping Unit (SKU), the business key of an article.
-          tests:
-            - not_null
-        - name: location
-          type: string
-          description: The ID of the warehouse location.
-          tests:
-            - not_null
-        - name: available
-          type: number
-          description: The number of articles with this SKU that are available at this location.
-          tests:
-            - not_null
-            - dbt_utils.expression_is_true:
-                expression: &quot;col_a &gt;= 0&quot;
-        - name: updated_at
-          type: timestamptz
-          description: The business timestamp in UTC when the available was changed.
-          tests:
-            - not_null
-</code></pre>
-<p>如果数据产品仅用于团队内部的分析用例，输出端口是可选的或可能是私有的。</p>
-<p>通过数据合同管理对输出端口的访问。</p>
-<h3><a id="%E8%BE%93%E5%85%A5%E7%AB%AF%E5%8F%A3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>输入端口</h3>
-<p>数据产品可以有两种类型的数据源：操作系统或其他数据产品。</p>
-<p>在数据网格中，开发操作系统的团队也在数据产品中提供其相关的领域数据。通常这是通过异步主题实现的，最好是通过使用定义的领域事件。然而，最终如何将领域数据摄取到其数据产品中，取决于领域团队的决定。</p>
-<p>数据产品也可以通过其输出端口使用其他数据产品，当它们有商定的数据合同时。它们可以由同一个团队或其他团队拥有。这对于面向消费者的数据处理产品或聚合数据产品是典型的，但源数据处理产品也可能链接其他领域数据，当有用时，例如，查询主数据。</p>
-<h3><a id="%E5%8F%91%E7%8E%B0%E7%AB%AF%E5%8F%A3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>发现端口</h3>
-<p>数据消费者需要找到对他们相关的数据产品。由于数据通常具有特定领域的涵义，因此提供数据模型语义的详细描述非常重要。</p>
-<p>进一步的元数据，如联系方式、成熟度水平、通过其他人使用的数据产品、数据质量测试或服务水平目标，对于数据消费者来说是重要的，以便他们可以决定一个数据产品是否值得信赖且适合他们的用例。</p>
-<p>使用CI/CD流水线步骤自动将元数据发布到数据目录和数据产品清单中，如数据网格管理器，是一个好的做法。</p>
-<h3><a id="%E6%89%80%E6%9C%89%E6%9D%83" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>所有权</h3>
-<p>一个数据产品由一个理解业务领域、业务流程和数据的单个团队开发和维护。该团队负责提供承诺的数据质量和服务水平目标。一个数据产品有一个专门的联系人，即团队的产品所有者，他最终负责数据产品及其质量。</p>
-<p>产品所有者负责数据产品的生命周期和演变，结合（潜在）消费者的需求和领域内部的分析需求。他们还设定了对使用数据产品收取的价格。</p>
-<h3><a id="%E8%BD%AC%E6%8D%A2%E4%BB%A3%E7%A0%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>转换代码</h3>
-<p>数据需要被清洗、聚合、组合和转换，以实现输出端口模式或回答分析问题。</p>
-<p>使用什么技术，以及代码如何内部组织，是数据产品的一个实现细节。它取决于数据平台，实现细节由开发团队决定。</p>
-<p>在许多情况下，使用SQL查询进行简单转换，使用Apache Spark进行复杂流水线。</p>
-<p>使用调度和编排工具，如Airflow，来运行转换代码。</p>
-<h3><a id="%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据存储</h3>
-<p>数据产品通常需要在某种数据存储中存储大量数据，如对象存储中的表格或文件。数据存储通过数据平台作为自助服务提供。一个数据产品有自己的私有领域，与其他数据产品隔离。</p>
-<p>使用什么技术和数据如何内部组织，是数据产品的一个实现细节。它取决于数据平台，由开发团队决定。在许多情况下，使用列式存储技术。</p>
-<h3><a id="%E6%B5%8B%E8%AF%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>测试</h3>
-<p>数据产品提供管理和高质量的数据集，所以就像任何软件工程学科一样，测试是必不可少的。有不同类型的测试：</p>
-<p>单元测试测试转换代码本身。它们使用固定的输入数据，并定义预期的输出数据。</p>
-<p>期望测试在部署期间对实际数据模型进行，并验证输入端口、中间模型和输出端口的源数据符合定义的期望。</p>
-<p>质量测试定期在真实数据上运行，以监控服务水平目标。</p>
-<h3><a id="%E6%96%87%E6%A1%A3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>文档</h3>
-<p>当领域数据与其他团队共享时，描述数据的语义和数据创建的业务背景非常重要。</p>
-<p>除了对数据模型属性的描述，良好的文档还提供了一个介绍，关于数据集可以期待什么，以及哪些数据可能有趣，以及如何访问它们的初步提示。</p>
-<p>实现文档的一个好方法是提供一个带有示例查询的交互式笔记本（Jupyter、Google Collab、Databricks Notebook）。</p>
-<h3><a id="%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>成本管理</h3>
-<p>数据技术在规模化使用时很快变得昂贵。因此，监控数据产品的成本非常重要。它们可能是向数据消费者开具的价格的基础，如数据合同中所商定的。</p>
-<h3><a id="%E7%AD%96%E7%95%A5%E5%8D%B3%E4%BB%A3%E7%A0%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>策略即代码</h3>
-<p>全局策略是数据网格中的游戏规则，由联邦治理组定义，如命名约定、数据分类方案或访问控制。</p>
-<p>虽然大多数策略应在数据平台级别实现，但某些策略需要在数据产品级别配置，特别是当需要领域知识或产品所有者需要决定权限时。例如，领域数据的列级分类、PII标记或访问控制。</p>
-<h3><a id="cicd%E6%B5%81%E6%B0%B4%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>CI/CD流水线</h3>
-<p>数据产品有自己的CI/CD流水线和基础设施资源定义。CI/CD流水线在转换代码或数据模型更改时触发，执行测试，并将数据产品部署到数据平台，与全球策略保持一致。数据平台团队可能为数据产品团队提供模块或模板以供使用。</p>
-<h3><a id="%E5%8F%AF%E8%A7%82%E5%AF%9F%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>可观察性</h3>
-<p>数据产品可以具有额外的端口和功能，这些端口和功能不是由数据消费者直接使用，但对于数据产品的运营非常重要。这些包括用于监控、日志记录和管理员功能的端口。</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E8%A7%84%E8%8C%83" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据产品规范</h2>
-<p>为了描述数据产品的元数据，在数据产品的仓库中通常有一个数据产品规范文件，或者通过数据平台的部署过程生成。</p>
-<pre><code class="language-dataProductSpecification:" data-meta="0.0.1">info:
-  id: &quot;shelf_warmers&quot;
-  name: &quot;Shelf Warmers&quot;
-  description: &quot;Shelf warmers are products that are not selling for 3 months and are taking up space on the shelf.&quot;
-  status: &quot;active&quot;
-  archetype: &quot;source-aligned&quot;
-  maturity: &quot;managed&quot;
-owner:
-  teamId: &quot;fulfillment&quot;
-inputPorts:
-  - id: &quot;stock-service&quot;
-    operationalSystemId: &quot;stock-service&quot;
-    type: &quot;Kafka Topic&quot;
-    location: &quot;fulfillment.stock.events.v1&quot;
-outputPorts:
-  - id: &quot;shelf_warmers_v1_sql&quot;
-    name: &quot;shelf_warmers_v1_sql&quot;
-    description: &quot;All articles that are not selling for 3 months and are taking up space on the shelf.&quot;
-    type: &quot;SQL&quot;
-    location: &quot;fulfillment.shelf_warmers_v1&quot;
-    links:
-      catalog: &quot;https://datacatalog.example.com/fulfillment/shelf_warmers/shelf_warmers_v1&quot;
-      jdbc_endpoint: &quot;jdbc:awsathena://AWSRegion=...&quot;
-    containsPii: false
-    serviceLevelObjectives: []
-    tags:
-    - &quot;AWS&quot;
-  - id: &quot;shelf_warmers_v1_s3&quot;
-    name: &quot;shelf_warmers_v1_s3&quot;
-    description: &quot;All articles that are not selling for 3 months and are taking up space on the shelf. Provided as parquet files on s3.&quot;
-    type: &quot;S3&quot;
-    status: &quot;active&quot;
-links:
-  repository: &quot;https://git.example.com/fulfillment/dataproducts/shelf_warmers&quot;
-  dataCatalog: &quot;https://datacatalog.example.com/fulfillment/shelf_warmers&quot;
-tags: [&quot;AWS&quot;, &quot;S3&quot;, &quot;Athena&quot;]
-</code></pre>
-<h2><a id="%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E5%AE%9E%E7%8E%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据产品实现</h2>
-<p>现在让我们来看一个例子，如何使用AWS S3和Athena技术栈实现一个实际的数据产品。</p>
-<p>在这个例子中，数据平台团队提供了一个Terraform模块，该模块在数据平台上配置所有必要的服务以运行数据产品，这些服务符合治理组中定义的政策和惯例。</p>
-<p>数据产品开发者为每个数据产品都有一个Git仓库。他们使用提供的Terraform模块，并为其数据产品进行配置。在同一仓库中，他们将转换代码定义为SQL查询和包含输出端口模型的JSON模式文件，以及数据模型的详细描述。</p>
-<pre><code class="language-#" data-meta="dataproduct.tf">module shelf_warmers {
-  source = &quot;git@github.com:datamesh-architecture/terraform-dataproduct-aws-athena.git&quot;
-  version = &quot;0.2.1&quot;
-
-  domain   = &quot;fulfillment&quot;
-  name     = &quot;shelf_warmers&quot;
-  description = &quot;Shelf warmers are products that are not selling for 3 months and are taking up space on the shelf.&quot;
-
-  schedule = &quot;0 0 * * ? *&quot; # Run at 00:00 am (UTC) every day
-
-  transform = {
-    query = &quot;sql/transform.sql&quot;
-  }
-
-  output = {
-    format   = &quot;PARQUET&quot;
-    schema   = &quot;schema/shelf_warmers.schema.json&quot;
-    roles_allowed = [&quot;coo&quot;] # Policy as code
-  }
-}
-</code></pre>
-<p>通过通常由CI/CD流水线触发的terraform apply，所有所需资源都被配置，如S3存储桶、AWS Athena资源和lambda函数。此外，在AWS IAM中也创建了权限。</p>
-<p>该流水线还将元数据推送到数据目录和数据产品清单中。</p>
-<p>在GitHub上找到一个Terraform模块实现的示例。</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E7%BD%91%E6%A0%BC%E7%AE%A1%E7%90%86%E5%99%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据网格管理器</h2>
-<p>在我们的数据网格项目中，我们注意到，缺乏良好的工具来发现、管理和治理数据产品。这就是为什么我们创建了数据网格管理器。它使用数据产品的元数据构建一个全面的数据产品清单。这个清单是导航复杂数据网格的强大入口，可以找到对数据消费者相关的值得信赖的数据产品。数据网格地图可视化了数据网格，并帮助理解数据网格拓扑。</p>
-<p>数据网格管理器还支持数据合同的全生命周期作为自助服务：请求并接受对数据产品的访问，以同意双边数据合同。定期的重新评估日期允许数据合同被续订或终止，例如，当一个数据产品版本被弃用时。</p>
-<p>通过REST-API，数据网格管理器可以完全集成到所有数据平台中，并在创建或更新数据合同时触发数据平台中自动化创建IAM权限。</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2024/03/30</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='datamesh.html'>Data Mesh</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="shu-ju-wang-ge-ruan-jian-gong.html">
-                
-                  <h1>数据网格：软件工程师的去中心化数据分析</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>Data Mesh: Decentralized Data Analytics for Software Engineers<br />
-<a href="https://www.innoq.com/en/articles/2022/04/data-mesh-decentralized-data-analytics-for-software-engineers/">原文地址</a></p>
-<blockquote>
-<h2><a id="kimi%E6%80%BB%E7%BB%93%E5%BD%92%E7%BA%B3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kimi 总结归纳</h2>
-<p>数据网格是一种新兴的数据架构方法，它为软件工程师提供了一种新的、去中心化的方式来进行数据分析。这种方法的核心在于将数据分析的责任和能力下放到更接近业务和用户行为数据的领域团队。通过这种方式，数据网格使组织能够更快速地做出基于数据的决策，并促进了数据驱动的创新。</p>
-</blockquote>
-<blockquote>
-<h3><a id="%E6%95%B0%E6%8D%AE%E7%BD%91%E6%A0%BC%E7%9A%84%E5%85%B3%E9%94%AE%E5%8E%9F%E5%88%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据网格的关键原则</h3>
-</blockquote>
-<blockquote>
-<ol>
-<li><strong>领域所有权</strong>：领域团队负责管理和分析与他们领域相关的数据。这种所有权模式确保了数据在有界上下文中的清晰定义和最佳理解。</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="2">
-<li><strong>数据即产品</strong>：数据被视为产品，领域团队负责将数据清洗、转换并提供给其他团队使用。这要求数据具有高质量、易于访问和理解的特性。</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="3">
-<li><strong>自助服务平台</strong>：领域团队可以使用自助服务平台来获取、清洗和分析数据，而不需要依赖中央数据团队。这种平台提供了必要的工具和接口，使领域团队能够独立地进行数据分析。</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="4">
-<li><strong>联邦治理</strong>：在数据网格中，治理是跨领域的协作过程。领域团队共同定义和遵守全局政策，以确保数据的互操作性、安全性和合规性。</li>
-</ol>
-</blockquote>
-<blockquote>
-<h3><a id="%E6%95%B0%E6%8D%AE%E7%BD%91%E6%A0%BC%E5%AF%B9%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E6%84%8F%E4%B9%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据网格对软件工程师的意义</h3>
-</blockquote>
-<blockquote>
-<ul>
-<li><strong>提高数据可访问性</strong>：软件工程师可以直接访问与他们的领域相关的数据，而不需要通过中央数据团队。这大大提高了数据处理的速度和效率。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li><strong>增强数据质量</strong>：由于领域团队最了解自己的数据，他们可以更有效地清洗和维护数据，从而提高数据质量。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li><strong>促进跨领域合作</strong>：数据网格鼓励领域团队之间的协作，共享数据和见解，从而推动整个组织的创新和增长。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li><strong>提升决策质量</strong>：软件工程师可以利用领域数据进行更深入的分析，从而做出更明智的技术和业务决策。</li>
-</ul>
-</blockquote>
-<blockquote>
-<h3><a id="%E5%AE%9E%E6%96%BD%E6%95%B0%E6%8D%AE%E7%BD%91%E6%A0%BC%E7%9A%84%E6%8C%91%E6%88%98" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>实施数据网格的挑战</h3>
-</blockquote>
-<blockquote>
-<ul>
-<li><strong>文化和组织变革</strong>：数据网格要求组织文化和结构进行相应的调整，以支持去中心化的数据管理和协作。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li><strong>技术和工具的选择</strong>：领域团队需要选择合适的技术和工具来管理和分析数据，这可能需要额外的培训和支持。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li><strong>数据安全和隐私</strong>：在去中心化的数据环境中，确保数据安全和隐私的挑战更大，需要制定严格的安全策略和控制措施。</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>通过实施数据网格架构，软件工程师可以更好地利用数据资源，提高业务效率和竞争力。同时，也需要认识到这一转变带来的挑战，并采取相应的措施来克服。</p>
-</blockquote>
-<p>运营IT系统的数据中包含有价值的信息。这些信息可以让我们推断用户行为，并帮助我们更好地理解软件系统。然而，软件开发人员经常在他们的项目中忽视数据分析。对于许多项目经理和产品所有者来说，数据在评估特性和用户故事时处于次要地位，主要是因为数据很少以分析准备好的形式提供。</p>
-<p>传统上，数据由数据团队在数据仓库系统和数据湖中收集和分析。然而，在评估这些数据时，重点通常在于企业管理和营销，而不是开发新特性的团队。此外，这些评估的结果通常令人失望。这往往是由于连接的源系统中数据质量不足，以及由中央组织的数据团队缺乏解释这些数据的专业知识。此外，这样的集中式系统和团队在不断增长的数据分析需求面前无法快速扩展。</p>
-<p>数据网格是一种相对较新的、去中心化的数据架构方法，旨在使开发团队能够独立地进行跨领域数据分析，以更好地理解他们的用户和系统的行为。通过向其他团队提供精选数据，创建了一个有价值的去中心化数据网络。</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84%E4%B8%AD%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据架构中的模块化</h2>
-<p>近年来，软件开发取得了重大进展。战略性领域驱动设计（DDD）有助于组织和描述系统中的技术功能。可以通过上下文映射等方式确定各个领域的明确责任，并识别和描述社会技术关系和接口。</p>
-<p>组织结构中的自治产品团队负责一个明确的领域，并作为回报，他们拥有高度的自由度，从编程语言的选择到团队人员配置。因此，这些团队构建的软件系统反映了他们有界上下文的技术范围。为此，他们使用模块化软件架构方法，如微服务（按照Sam Newman在2015年已经制定的意义）或自包含系统，以避免单体系统，并最好地实现可靠性和可维护性等质量目标。与其他领域的交互通过明确定义的接口进行，尽可能异步作为领域事件，例如通过Apache Kafka或HTTP feed。</p>
-<p>根据数据网格原则，现在也可以将单体结构拆分为单独的技术领域。前提是基于领域边界对团队进行划分。而不是由数据团队管理的中央数据仓库汇集所有数据，领域团队为自己的特定领域进行分析评估，并通过明确定义的接口访问其他领域的数据集。</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E7%BD%91%E6%A0%BC%E7%9A%84%E5%8E%9F%E5%88%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据网格的原则</h2>
-<p>“数据网格”一词由Zhamak Dehghani在2019年的文章“如何从单体数据湖走向分布式数据网格”中创造。定义通常包括以下四个原则：</p>
-<ul>
-<li>领域所有权</li>
-<li>数据即产品</li>
-<li>自助服务平台</li>
-<li>联邦治理</li>
-</ul>
-<p>领域所有权意味着负责操作系统的团队也提供他们的分析数据。这背后的核心思想是，数据只有在其有界的上下文中才有明确的定义，各自团队最了解自己的数据。因此，每个团队独立决定哪些数据重要以及如何为分析目的准备它们。每个团队对其数据负全部责任。<br />
-<img src="http://cdn.opendatamesh.cn/mweb/17117960294113.jpg" alt="" /></p>
-<p>数据即产品的原则是，分析相关的数据应该以便于其他团队轻松访问的方式进行管理和存储。数据在团队内经过通常的开发过程，从产品所有者描述用户故事和关于数据访问和各个字段重要性的可理解文档，到包括监控在内的运营责任。凭借其数据，团队为其他团队提供了宝贵的贡献。</p>
-<p>自助服务平台描述了一个数据平台，团队用它来提供分析数据、数据评估和可视化，以及轻松访问其他领域的数据。重点是自助服务特性：所有活动都应该在不需要另一个团队介入的情况下进行。</p>
-<p>联邦治理指的是跨领域的协议，它规定了如何设计有效的交互以及如何长期保证数据领域的质量。为此，领域的代表共同定义了必要的全局策略（比较宏观架构指南），这些策略对于互操作性和安全性至关重要。在更高层次的扩展中，平台也可以自动确保遵守这些规则。</p>
-<p>这些原则适用于描述去中心化数据架构中的责任。但对于领域团队中的软件开发人员来说，它们意味着什么呢？</p>
-<h2><a id="%E9%9D%A2%E5%90%91%E6%95%B4%E4%BD%93%E7%BB%93%E6%9E%9C%E7%9A%84%E9%A2%86%E5%9F%9F%E7%89%B9%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>面向整体结果的领域特定数据分析</h2>
-<p>首先，领域团队特别关注的是自助服务平台。到目前为止，操作系统的开发者通常不进行数据分析，因为它们通常不能在操作数据库上高效执行，并且会影响生产应用的性能。然而，现在提供了一个易于使用的数据平台，使团队能够独立地准备数据进行分析。<br />
-<img src="http://cdn.opendatamesh.cn/mweb/17117960816836.jpg" alt="" /></p>
-<p>数据网格架构（图2）。<br />
-数据网格架构（图2）。<br />
-数据平台通常由专门的数据平台团队管理，包括存储、数据摄取、处理、分析、可视化以及元数据和权限的管理。使用数据目录来定位和记录数据产品——通常是数据、AI模型和结果展示的组合——并遵守约定的指导方针。</p>
-<p>通过所描述的数据平台，团队现在能够为分析目的提供数据。一旦数据被传输到平台上，它们仍然需要被准备和清洗。为此，建议首先将数据以源格式（例如JSON）导入到CLOB（字符大对象）字段中，这样数据库模式就不必考虑。接下来，开发人员应将数据转换为结构化的SQL表格式，去重，并在必要时缓解结构变化和空值。鉴于数据保护要求，他们还应尽早删除或至少匿名敏感信息（个人数据、信用卡信息），最好在将其存储在平台之前。这种清洗可以由了解自己运营数据的领域团队比缺乏技术上下文的中央数据团队更有效地完成。这种有针对性的数据准备有助于提高数据质量。</p>
-<p>有了清洗后的数据，团队可以自己进行分析。最初，这些通常是简单的SQL查询。使用JOIN操作，可以合并和整合来自不同源系统（例如不同的微服务）的数据记录，并使用聚合函数。窗口函数对于执行分区的多行评估特别有帮助。可视化有助于识别趋势和异常。领域团队可以使用自己的数据来解释过去的系统性能并跟踪用户行为。当涉及到从发现中推导新特性并早期评估用户故事的好处时，这特别有帮助，而不是仅仅基于直觉进行优先级排序。识别系统错误也更容易，例如总是在特定事件发生后不久发生的那些错误。有了数据网格，领域团队可以独立进行评估，并将洞察力更快地纳入运营改进。</p>
-<p>仍然缺少的是对整体结果的概述，例如网页商店首页UI更改对后续购买的影响。另一个电子商务的例子可能与转化率有关。衡量实际购买的数量是有趣的，但最初被忽视的问题是，客户是否退回了订购的商品。这是不同领域数据联网的地方：如果购买完成领域将一次会话的结果和产品退货领域将退回的物品作为数据记录在平台上可用，相关性——甚至使用A/B测试等有意义的因果关系——可以立即被识别。这种方法符合数据网格的数据即产品原则。一个领域以可访问和有文档记录的形式提供某些相关的数据集。因此，跨领域数据的使用和链接导致越来越有意义的分析。</p>
-<p>然而，在跨领域链接数据时，会出现一个问题，即一个领域的数据和术语仅在其有界上下文中有效。这是领域驱动设计中的上下文映射方法有助于描述领域模型之间的关系的地方。例如，遵循开放主机服务模式的数据集必须比作为双边客户/供应商协议结果创建的数据集描述得更精确。</p>
-<p>共同协议有助于确保技术和语义互操作性，例如通过所有相关方同意格式（SQL、JSON等）、语言（德语、英语等）以及领域密钥的名称和形式。领域团队和平台团队的代表共同达成必要的协议，并将它们记录为全局策略。<br />
-<img src="http://cdn.opendatamesh.cn/mweb/17117961488498.jpg" alt="数据产品除了实际的数据集外，还包括元数据。像API一样，数据产品也持续进行监控（图3）" /></p>
-<p><strong>数据产品除了实际的数据集外，还包括元数据。像API一样，数据产品也持续进行监控（图3）</strong>。</p>
-<p>数据即产品更进一步：如果一个数据集对其他团队可用，它可以与生产API进行比较。因此，团队还必须持续确保数据的可用性和质量。所有数据集都必须有清晰的文档并可查找。然而，现在对数据模型的更改要困难得多。需要监控，以监督数据的可用性、质量和完整性。分析数据因此加入了一个领域的接口——类似于UI和API。</p>
-<p>产品所有者负责确保从领域和商业角度来看，数据的提供仍然具有经济可行性。由于通常不将所有领域数据作为数据产品提供给其他团队并不是有效的（即使使用数据的团队可能希望这样做），必须做出明确的决定：哪些内部数据仅用于内部分析目的，哪些应该作为数据产品提供给其他团队？例如，经常引用的领域事件和主数据通常也应该提供给其他领域团队。如果有疑虑，团队必须相互协商并就所需的数据产品达成一致。</p>
-<h2><a id="%E5%AE%9E%E8%B7%B5%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BD%91%E6%A0%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>实践中的数据网格</h2>
-<p>数据网格最适合作为自下而上的方法，但如何实际实施呢？理想情况下，它是由一个或（最好）多个表示对数据分析感兴趣的团队开始的。他们就一个数据平台达成一致——如今常见的云服务，如Google BigQuery、AWS S3、Azure Synapse Analytics或Snowflake。然而，为了入门，一个PostgreSQL数据库结合像Metabase或Redash这样的可视化工具也足够了。每个团队在其自己的区域（项目/账户/工作区等）中独立创建资源，如数据库和表格。逻辑结构定义了应该位于不同类型分析数据的区域（见图4）。<br />
-<img src="http://cdn.opendatamesh.cn/mweb/17117961488498.jpg" alt="数据网格中逻辑信息架构的示例（图4" /><br />
-<strong>数据网格中逻辑信息架构的示例（图4<br />
-）</strong><br />
-接下来，团队将运营系统的数据输入到数据平台中。这些数据通常以原始形式杂乱无章地出现在一个原始区域。可以使用Kafka Connect等集成进行此操作，或者团队实现自己的消费者调用各自平台的流式摄取API。通常，领域事件（如果有的话）非常适合作为主要的分析数据基础，因为它们代表业务流程的事实。另一方面，应尽可能避免使用ETL批次导出数据库，以便实现实时分析，而不暴露操作数据库模式。</p>
-<p>然后对数据进行清洗，例如作为原始数据的SQL查询。这些数据被创建为视图，如下所示的列表。去重并将JSON映射到各个字段。公共表表达式非常适合结构化。</p>
-<pre><code class="language---" data-meta="Step 1: Deduplicate">WITH inventory_deduplicated AS (
-   SELECT *
-   EXCEPT (row_number)
-   FROM (
-            SELECT *,
-                   ROW_NUMBER() OVER (PARTITION BY id ORDER BY time DESC) row_number
-            FROM `datameshexample-fulfillment.raw.inventory`)
-   WHERE row_number = 1
-),
--- Step 2: Parse JSON to columns
-inventory_parsed AS (
-   SELECT
-       json_value(data, &quot;$.sku&quot;)                            AS sku,
-       json_value(data, &quot;$.location&quot;)                       AS location,
-       CAST(json_value(data, &quot;$.available&quot;) AS int64)      AS available,
-       CAST(json_value(data, &quot;$.updated_at&quot;) AS timestamp) AS updated_at,
-   FROM inventory_deduplicated
-)
--- Step 3: Actual Query
-SELECT sku, location, available, updated_at
-FROM inventory_parsed
-ORDER BY sku, location, updated_at
-</code></pre>
-<p>清洗后的数据集为团队的内部数据分析提供了基础。通常需要区分不变的事件和随时间变化的主数据实体。使用SQL查询，团队现在可以分析这些数据。Jupyter Notebook通常用于建立和记录探索性发现。<br />
-<img src="http://cdn.opendatamesh.cn/mweb/17117964745691.jpg" alt="" /></p>
-<p><strong>推荐使用Jupyter Notebook进行探索性数据分析（图5）。</strong></p>
-<p>可视化有助于使数据更易于人们理解。数据平台应该为此提供适当的工具——图6以Google Data Studio为例。可视化的前提是访问表格或相应的查询。另一方面，数据的聚合也可以直接在工具中控制。<br />
-<img src="http://cdn.opendatamesh.cn/mweb/17117963636654.jpg" alt="" /><br />
-<strong>Google Data Studio条形图的示例（图6）</strong><br />
-最后，数据也应该作为数据产品提供给其他团队。建议在这里使用视图，以确保即使底层数据集发生变化，数据的外部视图也保持一致。这样的迁移可以在视图的查询中进行跟踪。现在授予其他团队对此视图的权限，并通过SQL查询访问它。此外，必须根据约定的程序记录数据集。在最简单的情况下，可以在wiki或Git存储库中完成。然而，在更高级的发展阶段，应该使用提供有关数据集的元信息以及质量的数据目录，并精确记录各个字段（见图7）。<br />
-<img src="http://cdn.opendatamesh.cn/mweb/17117965030623.jpg" alt="" /></p>
-<p><strong>数据产品可以在数据目录中记录，例如（图7）</strong></p>
-<p>随着时间的推移，这将创建一个不同领域数据产品网格，可以在整个组织中使用。理想情况下，数据网格鼓励其他团队也使用提供的数据平台，并最终自己提供分析数据。</p>
-<p>这里描述的方法对软件开发人员来说是实用的，因为可以使用SQL——大多数IT专家应该熟悉的工具。另一方面，数据的可视化处理以及统计方法可能需要重新学习。更复杂的数据准备工具，如Apache Spark、Apache Beam或NumPy，在最初阶段并不绝对必要。</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E7%BD%91%E6%A0%BC%E4%BD%9C%E4%B8%BA%E6%96%B0%E9%A2%86%E5%9F%9F%E7%9A%84%E5%88%9B%E6%96%B0%E9%A9%B1%E5%8A%A8%E5%99%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据网格作为新领域的创新驱动器</h2>
-<p>数据网格主要是关于领域团队能够自己进行数据分析。但是，在许多组织中已经存在的中央数据团队会发生什么变化呢？</p>
-<p>由于其知识，数据团队注定要运营和管理上述数据平台，因为在使用自助云服务时仍需要设置权限并控制成本。该团队还可以作为使能者和大使，鼓励并帮助其他领域团队使用数据平台。通过为常见用例提供模板和最佳实践，他们使平台具有吸引力。专家还可以以顾问身份进入领域团队一段时间，以建立必要的技能。</p>
-<p>必须继续提供现有的数据产品，例如用于企业管理的报告。这项任务最初仍然由现有的数据工程师承担。然而，他们的工作变得更加容易：如果领域团队以清晰约定的格式和一贯的高质量提供清洗后的数据集，那么繁琐的数据提取和准备步骤就被消除了。还应考虑为数据密集型领域建立单独的领域团队，例如用于企业管理或营销的团队。数据科学团队也可以为基于数据评估和机器学习模型的运营和分析服务提供客户画像或销售预测等专业领域，这些团队基于数据评估和机器学习模型提供运营和分析服务。</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2024/03/30</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='datamesh.html'>Data Mesh</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="shu-ju-wang-ge-yuan-ze-yu-luo.html">
-                
-                  <h1>数据网格原则与逻辑架构</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<blockquote>
-<p>数据网格原则与逻辑架构是一种现代的数据管理方法，旨在提高数据的可访问性、可维护性和价值创造。以下是数据网格的核心原则和逻辑架构的总结归纳：</p>
-</blockquote>
-<blockquote>
-<h3><a id="%E6%A0%B8%E5%BF%83%E5%8E%9F%E5%88%99" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>核心原则</h3>
-</blockquote>
-<blockquote>
-<ol>
-<li><strong>面向领域的分散式数据所有权和架构</strong>：
-<ul>
-<li>数据管理的责任和控制权分散到各个业务领域，每个领域都有专门的团队负责数据的收集、存储、处理和分发。这种分散化的方法有助于提高数据的可访问性和可维护性，同时促进跨领域的协作和数据共享。</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="2">
-<li><strong>数据即产品</strong>：
-<ul>
-<li>数据被视为一种产品，需要关注其质量、可用性和用户体验。数据产品化鼓励团队像对待商业产品一样对待数据，包括品牌化、营销和持续改进，确保数据对消费者来说是有用和可信赖的。</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="3">
-<li><strong>自助式数据基础设施作为平台</strong>：
-<ul>
-<li>建立一个自助服务平台，使得用户能够轻松地发现、访问和使用数据，而无需深入了解底层技术和复杂的数据处理流程。这种基础设施降低了技术门槛，提高了数据的可消费性。</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="4">
-<li><strong>联合计算治理</strong>：
-<ul>
-<li>计算治理是分散的，但是通过联合的方式进行协调和管理。不同的数据领域可以独立地进行计算和分析，同时保持整体的数据一致性和合规性。这种治理模式提高了数据处理的效率和响应速度，同时确保数据的安全和隐私。</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-<blockquote>
-<h3><a id="%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>逻辑架构</h3>
-</blockquote>
-<blockquote>
-<ol>
-<li><strong>领域导向的数据分解和所有权</strong>：
-<ul>
-<li>组织根据业务领域进行分解，每个领域负责管理自己的数据和计算资源。这种架构支持领域内的自治和领域间的协作，同时减少了数据孤岛和提高了数据的流动性。</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="2">
-<li><strong>数据产品作为架构量子</strong>：
-<ul>
-<li>数据产品是最小的独立部署单元，具有高功能内聚性，并包括所有必要的结构元素，如代码、数据和元数据、基础设施等。这种设计使得数据产品可以独立于其他领域进行开发和维护。</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="3">
-<li><strong>多平面数据平台</strong>：
-<ul>
-<li>数据平台由多个平面组成，每个平面服务于不同的用户配置文件和需求。这些平面可能包括数据基础设施配置平面、数据产品开发者体验平面和数据网格监管平面等，每个平面都提供了一组相关的自助式服务和工具。</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-<blockquote>
-<p>通过这些原则和逻辑架构，数据网格方法论旨在构建一个灵活、可扩展且可持续发展的数据生态系统，以适应不断变化的技术和市场需求。这种方法有助于组织更好地利用数据资源，推动数据驱动的决策和创新，最终实现业务增长和竞争优势。<br />
-我们渴望利用数据来增强和改善商业和生活的每一个方面，这要求我们在大规模数据管理方面进行范式转变。尽管过去十年的技术进步已经解决了数据量和数据处理计算的规模问题，但它们未能解决其他维度的规模问题：数据景观的变化、数据来源的激增、数据用例和用户的多样性以及对变化响应的速度。数据网格针对这些维度提供了解决方案，建立在四个原则之上：面向领域的分散式数据所有权和架构、数据即产品、自助式数据基础设施作为平台、以及联合计算治理。每个原则都推动了技术架构和组织结构的新逻辑视角的形成。</p>
-</blockquote>
-<blockquote>
-<ol>
-<li><strong>面向领域的分散式数据所有权和架构</strong>：这一原则强调数据应该根据其业务领域进行管理和组织，每个领域都有其负责人和团队，他们对数据的收集、存储、处理和分发负有完全的责任。这种分散化的方法有助于提高数据的可访问性和可维护性，同时促进跨领域的协作和数据共享。</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="2">
-<li><strong>数据即产品</strong>：将数据视为一种产品，意味着我们需要关注数据的质量、可用性和用户体验。数据产品化鼓励团队像对待任何其他商业产品一样对待数据，包括对其进行品牌化、营销和持续改进。</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="3">
-<li><strong>自助式数据基础设施作为平台</strong>：这一原则提倡建立一个平台，使得用户能够轻松地发现、访问和使用数据，而无需深入了解底层技术和复杂的数据处理流程。这种基础设施的自助服务特性，可以降低技术门槛，提高数据的可消费性。</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="4">
-<li><strong>联合计算治理</strong>：在数据网格中，计算治理是分散的，但是通过联合的方式进行协调和管理。这意味着不同的数据领域可以独立地进行计算和分析，同时保持整体的数据一致性和合规性。这种治理模式有助于提高数据处理的效率和响应速度，同时确保数据的安全和隐私。</li>
-</ol>
-</blockquote>
-<blockquote>
-<p>通过这些原则，组织可以更好地管理和利用其数据资源，以支持快速决策、创新和业务增长。同时，这也有助于构建一个更加灵活和可扩展的数据生态系统，以适应不断变化的技术和市场需求。</p>
-</blockquote>
-<p>本文旨在作为后续跟进文章，总结了数据网格方法，列举了其支撑原则和原则所驱动的高级逻辑架构。在我未来的文章中深入探讨数据网格核心组件的详细架构之前，建立高级逻辑模型是一个必要的基础。因此，如果你在寻找关于数据网格确切工具和方法的具体处方，本文可能会让你失望。如果你寻求的是一个简单且与技术无关的模型，该模型建立了共同的语言，请加入我们。</p>
-<p>在上一篇文章《如何从单一数据湖迈向分布式数据网格》中，我强调了当今在架构和组织挑战方面的痛点，以便成为数据驱动型企业，利用数据竞争，或利用大规模数据创造价值。它提供了一种替代视角，自那以后吸引了许多组织的注意，并为不同的未来带来了希望。虽然原文描述了这种方法，但它将许多设计和实施的细节留给了读者的想象。在本文中，我没有意图过于规定性，扼杀围绕数据网格实施的想象和创造力。但我认为，为了推动范式向前发展，阐明数据网格的架构方面是负责任的。</p>
-<p>本文的写作目的是为了提供一个后续的总结。它通过列举数据网格方法的基本原则和这些原则所推动的高级逻辑架构来概括数据网格方法。在我未来的文章中深入探讨数据网格核心组件的详细架构之前，建立高级逻辑模型是一个必要的基础。因此，如果你正在寻找关于数据网格确切工具和方法的具体处方，本文可能会让你失望。如果你寻求的是一个简单且与技术无关的模型，该模型建立了共同的语言，那么请继续阅读。</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E7%9A%84%E9%B8%BF%E6%B2%9F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据的鸿沟</h2>
-<p>我们所说的“数据”究竟指的是什么？这个问题的答案取决于你询问的对象。如今的数据景观被划分为操作数据和分析数据。操作数据存放在支持微服务的业务能力背后的数据库中，具有交易性质，保持当前状态并满足运行业务的应用程序的需求。分析数据是随时间变化的业务事实的聚合视图，通常被建模以提供回顾性或前瞻性的洞察；它用于训练机器学习模型或提供分析报告。</p>
-<p>目前的技术、架构和组织设计反映了这两个数据平面的分歧——两种存在层面，虽然集成但又是分离的。这种分歧导致了脆弱的架构。对于许多试图连接这两个平面的人来说，持续失败的ETL（提取、转换、加载）作业和日益增长的复杂数据管道迷宫，是一个熟悉的景象，数据从操作数据平面流向分析数据平面，然后再流回操作数据平面。</p>
-<p>这种数据鸿沟的存在，不仅在技术上造成了挑战，也在组织结构和文化上造成了隔阂。操作团队和分析团队往往有着不同的目标、工具集和工作流程，这导致了数据孤岛的出现和数据治理的困难。操作数据的关注点在于确保数据的实时性和准确性，以支持日常业务运作；而分析数据则更侧重于数据的深度挖掘和长期价值的发现。<br />
-为了克服这些挑战，我们需要重新思考数据管理的方式，寻找能够更好地整合操作和分析数据的方法。这就需要我们采用新的思维模式和架构设计，比如数据网格，它提倡将数据分散到各个领域，并通过产品化、自助服务和联合治理的方式，来提高数据的可用性和价值创造。<br />
-通过这种方式，我们可以更好地利用数据来驱动业务创新和竞争优势，同时也能够提高数据的质量和治理水平，实现数据的可持续发展。<br />
-<img src="media/17117904284058/17117905657166.jpg" alt="" />图1：数据的鸿沟</p>
-<p>分析数据平面本身已经分化为两种主要的架构和技术栈：数据湖和数据仓库；数据湖支持数据科学的访问模式，而数据仓库支持分析和商业智能报告的访问模式。在这次讨论中，我将搁置这两种技术栈之间的互动：数据仓库试图引入数据科学工作流程，而数据湖试图服务于数据分析师和商业智能。<br />
-原始的关于数据网格的讨论探索了现有分析数据平面架构的挑战。</p>
-<p>在当前的数据管理和分析实践中，数据湖和数据仓库各自扮演着重要的角色，但它们也面临着一些挑战和限制。</p>
-<p>数据湖旨在存储大量的非结构化和半结构化数据，提供了灵活的数据存储和处理能力，以支持数据科学和大数据分析。然而，数据湖的灵活性也带来了一些挑战，比如数据的治理和质量控制难度较大，以及对于数据分析师和业务智能用户来说，直接从数据湖中获取数据并进行分析的门槛较高。</p>
-<p>另一方面，数据仓库则专注于为结构化数据提供高效的查询和报告能力，支持商业智能和数据分析应用。但是，数据仓库对于处理非结构化数据和实时数据的能力有限，而且在快速变化的业务需求和新兴技术面前，数据仓库的可扩展性和灵活性可能不足。</p>
-<p>因此，我们需要一种新的方法来解决这些挑战，这正是数据网格方法所提倡的。数据网格通过将数据分解为更小、更易于管理的单元，并将这些单元分配给特定的业务领域，使得数据的所有权和责任更加明确。这种方法不仅能够提高数据的可访问性和可用性，还能够促进跨领域的协作和数据共享，从而更好地支持数据驱动的决策和创新。<br />
-在未来的文章中，我们将深入探讨数据网格核心组件的详细架构，以及如何将这些原则和技术应用到实际的业务场景中，以实现数据管理和分析的现代化。<br />
-<img src="media/17117904284058/17117906858675.jpg" alt="" /><br />
-Figure 2: Further divide of analytical data - warehouse<br />
-<img src="media/17117904284058/17117907021605.jpg" alt="" /><br />
-Figure 3: Further divide of analytical data - lake</p>
-<p>数据网格认可并尊重这两个平面之间的差异：数据的性质和拓扑结构、不同的用例、数据消费者的个体特征，以及最终他们多样化的访问模式。然而，它试图在一个不同的结构下连接这两个平面——一个基于领域的倒置模型和拓扑结构，而不是基于技术栈，并专注于分析数据平面。当今可用于管理这两种数据原型的技术差异，不应导致组织、团队和从事这些工作的人员的分离。在我看来，操作性和交易性数据技术和拓扑已相对成熟，并且在很大程度上由微服务架构推动；数据隐藏在每个微服务的内部，通过微服务的API进行控制和访问。是的，在实现真正的多云原生操作数据库解决方案方面，创新的空间仍然存在，但从架构的角度来看，它满足了业务的需求。然而，正是对分析数据的管理和访问，在大规模上仍然是一个摩擦点。这正是数据网格关注的地方。</p>
-<p>我确实相信，在未来的某个时候，我们的技术将发展到使这两个平面更加紧密地结合在一起，但就目前而言，我建议我们保持它们各自的关注点分开。</p>
-<p>数据网格的方法论提供了一种新的视角，以领域为中心来组织和管理数据，而不是依赖于传统的技术栈。这种方法强调了数据的领域属性，将数据视为独立的、自治的实体，每个实体都有自己的生命周期、治理和访问模式。通过这种方式，数据网格试图弥合操作数据平面和分析数据平面之间的鸿沟，同时保持它们的独立性和专业化。<br />
-数据网格鼓励在组织内部建立一个更加分散的数据治理模型，其中数据团队和业务团队共同负责数据的质量、安全性和可用性。这种模型不仅能够提高数据的效率和响应速度，还能够促进跨部门和团队的协作，从而更好地支持数据驱动的决策和创新。<br />
-尽管我们期待着未来技术的进步能够进一步缩小操作数据和分析数据之间的差距，但在目前阶段，数据网格提供了一种切实可行的解决方案，以应对大规模分析数据管理的挑战。通过采用数据网格原则，组织可以更好地利用数据来推动业务增长和创新，同时确保数据的质量和合规性。</p>
-<h3><a id="%E6%95%B0%E6%8D%AE%E7%BD%91%E6%A0%BC%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8E%9F%E5%88%99%E5%92%8C%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据网格的核心原则和逻辑架构</h3>
-<p>数据网格的目标是在大规模上从分析数据和历史事实中获取价值——这里的“规模”指的是数据景观的不断变化、数据来源和消费者的激增、使用案例所需的多样性转换和处理，以及对变化的快速响应。为了实现这一目标，我认为有四个基本原则是任何数据网格实施所体现的，以实现规模的承诺，同时提供必要的质量和完整性保证，使数据可用：1）面向领域的分散式数据所有权和架构，2）数据即产品，3）自助式数据基础设施作为平台，4）联合计算治理。</p>
-<p>虽然我预期这些原则的实践、技术和实施会随着时间的推移而变化和成熟，但这些原则本身保持不变。</p>
-<p>我期望这四个原则是集体必要且充分的；在实现规模和弹性的同时，解决关于数据孤岛化或运营成本增加的担忧。让我们深入探讨每个原则，然后设计支持它的概念架构。</p>
-<ol>
-<li>
-<p><strong>面向领域的分散式数据所有权和架构</strong>：这一原则强调数据应该根据其业务领域进行管理和组织，每个领域都有其负责人和团队，他们对数据的收集、存储、处理和分发负有完全的责任。这种分散化的方法有助于提高数据的可访问性和可维护性，同时促进跨领域的协作和数据共享。</p>
-</li>
-<li>
-<p><strong>数据即产品</strong>：将数据视为一种产品，意味着我们需要关注数据的质量、可用性和用户体验。数据产品化鼓励团队像对待任何其他商业产品一样对待数据，包括对其进行品牌化、营销和持续改进。</p>
-</li>
-<li>
-<p><strong>自助式数据基础设施作为平台</strong>：这一原则提倡建立一个平台，使得用户能够轻松地发现、访问和使用数据，而无需深入了解底层技术和复杂的数据处理流程。这种基础设施的自助服务特性，可以降低技术门槛，提高数据的可消费性。</p>
-</li>
-<li>
-<p><strong>联合计算治理</strong>：在数据网格中，计算治理是分散的，但是通过联合的方式进行协调和管理。这意味着不同的数据领域可以独立地进行计算和分析，同时保持整体的数据一致性和合规性。这种治理模式有助于提高数据处理的效率和响应速度，同时确保数据的安全和隐私。</p>
-</li>
-</ol>
-<p>通过这些原则，组织可以更好地管理和利用其数据资源，以支持快速决策、创新和业务增长。同时，这也有助于构建一个更加灵活和可扩展的数据生态系统，以适应不断变化的技术和市场需求。在未来的文章中，我们将深入探讨数据网格核心组件的详细架构，以及如何将这些原则和技术应用到实际的业务场景中，以实现数据管理和分析的现代化。</p>
-<h2><a id="%E9%A2%86%E5%9F%9F%E6%89%80%E6%9C%89%E6%9D%83" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>领域所有权</h2>
-<p>数据网格的核心理念在于分散化和分布责任，将责任交给最接近数据的人，以支持持续的变革和可扩展性。问题在于，我们如何分解和分散数据生态系统的组件及其所有权。这里的组件由分析数据、其元数据以及提供服务所需的计算组成。</p>
-<p>数据网格遵循组织单元的接缝作为分解的轴线。我们今天的组织是基于其业务领域进行分解的。这种分解将连续变化和演变的影响局部化，大部分局限于领域的有界上下文中。因此，将业务领域有界上下文作为数据所有权分布的良好候选者。</p>
-<p>在本文中，我将继续使用原始文档中的相同用例——“一家数字媒体公司”。可以想象，媒体公司根据领域如“播客”（管理播客发布及其主持人的团队和系统）、“艺术家”（管理艺术家入职和支付的团队和系统）等，划分其运营以及支持运营的系统和团队。数据网格主张，分析数据的所有权和服务应尊重这些领域。例如，管理“播客”的团队在提供发布播客的API的同时，也应负责提供随时间变化的“已发布播客”的历史数据，以及其他事实，如随时间变化的“听众人数”。有关此原则的更深入探讨，请参见面向领域的数据分解和所有权。</p>
-<h3><a id="%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84%EF%BC%9A%E9%9D%A2%E5%90%91%E9%A2%86%E5%9F%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%92%8C%E8%AE%A1%E7%AE%97" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>逻辑架构：面向领域的数据和计算</h3>
-<p>为了促进这种分解，我们需要构建一个按领域排列分析数据的架构。在这个架构中，领域对组织的其余部分的接口不仅包括运营能力，还包括领域所服务的分析数据的访问。例如，“播客”领域提供了“创建新的播客剧集”的运营API，但也提供了检索“过去<n>个月所有播客剧集数据”的分析数据端点。这意味着架构必须消除任何摩擦或耦合，让领域能够服务其分析数据，并独立于其他领域发布计算数据的代码。为了实现扩展，架构必须支持领域团队在其运营或分析数据系统的发布和部署方面的自主性。</p>
-<p>以下示例展示了面向领域数据所有权的原则。这些图表仅为逻辑表示和示例性展示，并不旨在完整。</p>
-<p>每个领域可以公开一个或多个运营API，以及一个或多个分析数据端点。<br />
-<img src="media/17117904284058/17117909976695.jpg" alt="" /></p>
-<p>图4：符号表示：领域、其分析数据和运营能力</p>
-<p>自然地，每个领域可能依赖于其他领域的运营和分析数据端点。在以下示例中，“播客”领域消费了来自“用户”领域的“用户更新”分析数据，以便通过其“播客听众人口统计”数据集提供播客听众的人口统计图像。<br />
-<img src="media/17117904284058/17117910105411.jpg" alt="" /></p>
-<p>图5：示例：领域导向的分析数据所有权以及运营能力的示例</p>
-<p>注意：在示例中，我使用了命令式语言来访问运营数据或能力，例如“支付给艺术家”。这仅仅是为了强调访问运营数据与分析数据意图之间的区别。我确实认识到，在实践中，运营API是通过更声明式的接口实现的，例如访问RESTful资源或GraphQL查询。</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E5%8D%B3%E4%BA%A7%E5%93%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据即产品</h2>
-<p>现有分析数据架构面临的挑战之一是发现、理解、信任以及最终使用高质量数据的高摩擦和成本。如果不加以解决，随着提供数据的领域（即数据的去中心化）数量和团队的增加，这个问题只会加剧。这将是我们第一个原则——去中心化——的后果。数据即产品原则旨在解决数据质量和长期存在的数据孤岛问题；或者正如Gartner所称的“暗数据”——“组织在正常业务活动中收集、处理和存储的信息资产，但通常未能用于其他目的”。领域提供的分析数据必须被视为一种产品，而该数据的使用者应被视为客户——快乐且满意的客户。</p>
-<p>原始文章列举了一系列能力，包括可发现性、安全性、可探索性、可理解性、可信度等，这些都是数据网格实施应支持的能力，以使领域数据被视为一种产品。文章还详细介绍了组织必须引入的角色，如领域数据产品所有者，负责确保数据作为产品交付的客观措施。这些措施包括数据质量、数据消费的缩短前置时间，以及通过净推荐者得分等方式提高数据用户满意度。领域数据产品所有者必须深刻了解数据使用者是谁、他们如何使用数据，以及他们舒适地消费数据的本地方法是什么。对数据使用者如此亲密的了解，导致了满足他们需求的数据产品界面的设计。实际上，对于网格上的大多数数据产品，有一些传统的人物角色，他们有独特的工具和期望，数据分析师和数据科学家。所有数据产品都可以开发标准化的接口来支持他们。数据使用者和产品所有者之间的对话是建立数据产品界面的必要环节。</p>
-<p>每个领域将包括数据产品开发人员角色，负责构建、维护和服务领域的数据产品。数据产品开发人员将与领域中的其他开发人员一起工作。每个领域团队可能提供一个或多个数据产品。也可以组建新的团队来服务那些不适合现有运营领域的数据产品。</p>
-<p>注意：与过去的范式相比，这是一个倒置的责任模型。数据质量的责任尽可能地向上游转移，接近数据的来源。</p>
-<h3><a id="%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E4%BD%9C%E4%B8%BA%E6%9E%B6%E6%9E%84%E9%87%8F%E5%AD%90" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>逻辑架构：数据产品作为架构量子</h3>
-<p>为了支持领域可以自主服务或消费的数据即产品，数据网格引入了数据产品作为其架构量子的概念。架构量子，如进化架构所定义，是架构中可以独立部署的最小单元，具有高功能内聚性，并包括其功能所需的所有结构元素。</p>
-<p>数据产品是网格上的节点，封装了其功能所需的三个结构组件，作为产品提供对领域分析数据的访问。</p>
-<ul>
-<li>代码：包括(a) 负责消费、转换和服务上游数据的数据管道代码——从领域的运营系统或上游数据产品接收到的数据；(b) 提供数据访问的API代码，语义和语法模式，可观察性指标和其他元数据；(c) 执行访问控制策略、合规性、来源等特征的代码。</li>
-<li>数据和元数据：嗯，这就是我们所有人都在寻求的，以多语言形式存在的底层分析和历史数据。根据领域数据的性质和消费模型，数据可以作为事件、批处理文件、关系表、图表等提供，同时保持相同的语义。为了使数据可用，有一套相关的元数据，包括数据计算文档、语义和语法声明、质量指标等；数据固有的元数据，例如其语义定义，以及传达计算治理用于实现预期行为的特征的元数据，例如访问控制策略。</li>
-<li>基础设施：基础设施组件支持构建、部署和运行数据产品的代码，以及对大数据和元数据的存储和访问。<br />
-<img src="media/17117904284058/17117912145754.jpg" alt="" /></li>
-</ul>
-<p>图6：数据产品组件作为一个架构量子</p>
-<p>以下示例建立在前一节的基础上，展示了数据产品作为架构量子。图表仅包括示例内容，不旨在完整或包含所有设计和实施细节。虽然这仍然是一个逻辑表示，但它更接近物理实现。<br />
-<img src="media/17117904284058/17117912273416.jpg" alt="" /></p>
-<p>图7：符号表示：领域、其（分析）数据产品和运营系统<br />
-<img src="media/17117904284058/17117912365436.jpg" alt="" /></p>
-<p>图8：数据产品服务面向领域的分析数据</p>
-<p>注意：数据网格模型与过去的范式不同，过去的范式中管道（代码）作为独立组件从它们产生的数据中管理；而且基础设施，如仓库实例或湖泊存储账户，通常在许多数据集之间共享。数据产品是所有组件——代码、数据和基础设施——在领域有界上下文的粒度上的组合。</p>
-<h2><a id="%E8%87%AA%E5%8A%A9%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>自助式数据平台</h2>
-<p>正如你所想象的，要构建、部署、执行、监控和访问一个简单的六边形——一个数据产品——需要配置和运行相当多的基础设施；配置这些基础设施所需的技能是专业的，并且在每个领域都难以复制。最重要的是，团队能够自主拥有其数据产品的唯一途径是访问一个高级抽象的基础设施，该基础设施消除了配置和管理数据产品生命周期的复杂性和摩擦。这就呼唤了一个新的原则，即自助式数据基础设施作为平台，以实现领域自治。</p>
-<p>数据平台可以被视为已经存在的用于运行和监控服务的交付平台的扩展。然而，如今运营数据产品的底层技术栈与服务的交付平台看起来非常不同。这仅仅是由于大数据技术栈与运营平台的分歧。例如，领域团队可能将其服务部署为Docker容器，交付平台使用Kubernetes进行编排；然而，相邻的数据产品可能正在Databricks集群上以Spark作业的形式运行其管道代码。这就要求配置和连接两套非常不同的基础设施，而在数据网格之前，并不要求这种级别的互操作性和互联性。我个人的希望是，我们开始看到运营和数据基础设施的融合，这在有意义的地方是可能的。例如，也许在同一个编排系统上运行Spark，例如Kubernetes。</p>
-<p>实际上，为了使分析数据产品开发对通用开发者可访问，对领域现有的开发者配置来说，自助式平台需要提供一类新工具和接口，除了简化配置。自助式数据平台必须创建支持领域数据产品开发者以较少的专业知识创建、维护和运行数据产品的工具；自助式基础设施必须包括降低当前构建数据产品所需的成本和专业化的能力。原始文档包括了自助式数据平台提供的一系列能力，包括可扩展的多语言数据存储、数据产品模式、数据管道声明和编排、数据产品血统、计算和数据本地性等。</p>
-<h3><a id="%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84%EF%BC%9A%E5%A4%9A%E5%B9%B3%E9%9D%A2%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>逻辑架构：多平面数据平台</h3>
-<p>自助式平台的能力分为多个类别或平面，如模型中所称。注意：平面代表了一种存在层次——集成但独立。类似于物理和意识平面，或网络中的控制和数据平面。平面既不是层，也不意味着强烈的层次访问模型。<br />
-<img src="media/17117904284058/17117914607286.jpg" alt="" /></p>
-<p>图9：符号表示：平台平面通过自助式接口提供一系列相关能力</p>
-<p>自助式平台可以有多个平面，每个平面为不同配置的用户提供服务。在以下示例中，列出了三个不同的数据平台平面：</p>
-<ul>
-<li>数据基础设施配置平面：支持配置运行数据产品组件和产品网格所需的底层基础设施。这包括配置分布式文件存储、存储帐户、访问控制管理系统、运行数据产品内部代码的编排、在数据产品图上配置分布式查询引擎等。我预计只有其他数据平台平面或仅高级数据产品开发者直接使用此接口。这是一个相当低级别的数据基础设施生命周期管理平面。</li>
-<li>数据产品开发者体验平面：这是典型数据产品开发者使用的主要接口。此接口抽象了许多支持数据产品开发者工作流程的复杂性。它比“配置平面”提供了更高级别的抽象。它使用简单的声明式接口来管理数据产品的生命周期。它自动实现了作为一组标准和全球约定定义的跨切面关注点，应用于所有数据产品及其接口。</li>
-<li>数据网格监管平面：有一些能力最好在网格级别——连接的数据产品图——全局提供。虽然每个接口的实现可能依赖于单个数据产品的能力，但在网格级别提供这些能力更为方便。例如，发现特定用例的数据产品的能力，最好通过搜索或浏览数据产品网格来提供；或者通过执行可以在网格上的多个数据产品上操作的数据语义查询来关联多个数据产品以创建更高阶的洞察力，这是最佳提供的。<br />
-以下模型仅是示例性的，并不旨在完整。虽然平面的层次结构是可取的，但下面并没有严格的分层含义。<br />
-<img src="media/17117904284058/17117914960065.jpg" alt="" /></li>
-</ul>
-<p>图10：自助式数据平台的多个平面 *DP代表数据产品</p>
-<h2><a id="%E8%81%94%E9%82%A6%E8%AE%A1%E7%AE%97%E6%B2%BB%E7%90%86" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>联邦计算治理</h2>
-<p>如您所见，数据网格遵循分布式系统架构；一系列独立的数据产品，具有独立的生命周期，由可能是独立的团队构建和部署。然而，对于大多数用例来说，为了获得更高阶数据集、洞察力或机器智能等形式的价值，需要这些独立的数据产品进行互操作；能够关联它们，创建联合，找到交集，或在大规模上对它们执行其他图形或集合操作。为了使这些操作成为可能，数据网格实施需要一个治理模型，该模型拥抱去中心化和领域自主权，通过全球标准化实现互操作性，动态拓扑，最重要的是平台自动执行决策。我称这为联合计算治理。这是一个由领域数据产品所有者和数据平台产品所有者组成的联邦决策模型，具有自治权和领域本地决策权，同时创建并遵守一套全球规则——适用于所有数据产品及其接口的规则——以确保健康和互操作的生态系统。这个组织的任务很艰巨：在集中化和去中心化之间保持平衡；哪些决策需要本地化到每个领域，哪些决策应该为所有领域全球制定。最终，全球决策有一个目的，即通过数据产品的发现和组合创造互操作性和复合网络效应。</p>
-<p>数据网格中的治理优先级与传统的分析数据管理系统的治理不同。尽管它们都最终旨在从数据中获取价值，但传统的数据治理试图通过集中决策制定来实现这一目标，并建立数据的全球规范表示，对变化的支持最小。相比之下，数据网格的联合计算治理拥抱变化和多种解释性背景。</p>
-<blockquote>
-<p>将系统置于恒定的紧身衣中可能会导致脆弱性的演变。<br />
--- C.S. Holling，生态学家</p>
-</blockquote>
-<h3><a id="%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84%EF%BC%9A%E7%BD%91%E6%A0%BC%E4%B8%AD%E5%B5%8C%E5%85%A5%E7%9A%84%E8%AE%A1%E7%AE%97%E6%94%BF%E7%AD%96" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>逻辑架构：网格中嵌入的计算政策</h3>
-<p>支持性的组织结构、激励模型和架构是联合治理模型运作所必需的：在全球范围内为互操作性达成决策和标准，同时尊重本地领域的自治，并有效地实施全球政策。<br />
-<img src="media/17117904284058/17117917044528.jpg" alt="" /></p>
-<p>图11：符号表示：联合计算治理模型</p>
-<p>如前所述，在全球范围内应该标准化、实施和强制执行哪些内容，以及哪些内容应该留给领域自行决定，这是一种艺术。例如，领域数据模型是一个应该本地化到最熟悉它的领域的关注点。例如，'播客听众'数据模型的语义和语法定义必须留给'播客领域'团队。然而，相比之下，如何识别'播客听众'的决定是一个全球关注点。播客听众是'用户'人口的一员——其上游有界上下文——他可以跨越领域的边界，并在其他领域如'用户播放流'中被发现。统一识别允许关联关于既是'播客听众'又是'流媒体听众'的'用户'的信息。</p>
-<p>以下是数据网格治理模型中涉及的元素的示例。这不是一个全面的示例，只是展示了在全球层面相关的关注点。<br />
-<img src="media/17117904284058/17117917140620.jpg" alt="" /></p>
-<p>图12：联合计算治理的元素示例：团队、激励、自动化实施和数据网格的全球标准化方面</p>
-<p>许多数据网格治理之前的实践，作为集中功能，不再适用于数据网格范式。例如，过去强调认证黄金数据集——经过集中的质量控制和认证过程并被标记为可信的——作为治理的中心功能，现在不再相关。这源于在以前的数据管理范式中，数据——无论质量和格式如何——从运营领域的数据库中提取出来，然后集中存储在需要一个集中团队对其应用清洗、协调和加密过程的数据仓库或数据湖中；通常在集中治理小组的管理下。数据网格完全去中心化了这个关注点。领域数据集只有在领域内部根据预期的数据产品质量指标和全球标准化规则经过质量保证过程后，才能成为数据产品。领域数据产品所有者最有能力决定如何衡量他们领域的数据质量，因为他们了解首先产生数据的领域运营的细节。尽管有这样的本地化决策和自治，但他们需要遵守全球联合治理团队定义的质量和SLO规范的建模，并由平台自动化。</p>
-<p>以下表格显示了集中式（数据湖、数据仓库）数据治理模型与数据网格之间的对比。<br />
-在数据网格治理方面，与传统的集中式数据治理相比，有几个关键的差异和转变。以下是数据网格治理的一些主要方面，以及它们如何与传统的数据治理相比较：</p>
-<ol>
-<li>
-<p><strong>团队结构</strong>：</p>
-<ul>
-<li>传统的数据治理通常由一个集中的团队负责，而数据网格治理则采用联合团队的模式，这个团队由各个领域的代表组成。这样的结构更强调领域自治和领域间的协作。</li>
-</ul>
-</li>
-<li>
-<p><strong>数据质量</strong>：</p>
-<ul>
-<li>集中式治理模式下，团队负责数据质量的维护。而在数据网格中，团队负责定义如何建模和衡量质量，而不是直接负责数据质量本身。</li>
-</ul>
-</li>
-<li>
-<p><strong>数据安全</strong>：</p>
-<ul>
-<li>在集中式治理中，团队负责整体的数据安全。而在数据网格中，团队负责定义数据安全的不同方面，例如数据的敏感性级别，以便平台能够自动构建和监控。</li>
-</ul>
-</li>
-<li>
-<p><strong>法规遵从</strong>：</p>
-<ul>
-<li>传统的数据治理模式要求团队负责遵守所有相关法规。在数据网格中，团队负责定义法规要求，以便平台能够自动构建和监控合规性。</li>
-</ul>
-</li>
-<li>
-<p><strong>数据管理</strong>：</p>
-<ul>
-<li>集中式治理模式下，数据的保管权集中在一个团队手中。而在数据网格中，数据的保管权由各个领域共同承担，实行联合保管。</li>
-</ul>
-</li>
-<li>
-<p><strong>数据模型</strong>：</p>
-<ul>
-<li>集中式治理模式下，团队负责全局规范的数据建模。而在数据网格中，团队负责对多义性数据元素进行建模，这些数据元素跨越多个领域的边界。</li>
-</ul>
-</li>
-<li>
-<p><strong>技术使用</strong>：</p>
-<ul>
-<li>传统的数据治理通常依赖于集中式技术，如单一的数据湖或数据仓库。而在数据网格中，每个领域使用自助服务平台技术，以支持其独特的需求和工作流程。</li>
-</ul>
-</li>
-<li>
-<p><strong>成功衡量</strong>：</p>
-<ul>
-<li>在集中式治理中，成功的衡量通常基于治理数据的数量或体积。而在数据网格中，成功的衡量基于网络效应——即表示网格上数据消费的连接数量。</li>
-</ul>
-</li>
-<li>
-<p><strong>错误处理</strong>：</p>
-<ul>
-<li>传统的数据治理依赖于人工干预的手动流程来预防错误。而在数据网格中，平台通过自动化流程来检测错误并实现恢复。</li>
-</ul>
-</li>
-</ol>
-<p>数据网格治理的目标是支持网格的有效运作，同时适应不断变化和动态拓扑结构的网格。这种治理模式鼓励领域间的协作和自治，通过自动化和标准化来提高效率和互操作性，从而实现数据的最大价值。<br />
-<img src="media/17117904284058/17117918380731.jpg" alt="" /></p>
-<h2><a id="%E5%9B%9B%E4%B8%AA%E5%8E%9F%E5%88%99%E6%80%BB%E7%BB%93%E5%92%8C%E9%AB%98%E7%BA%A7%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>四个原则总结和高级逻辑架构</h2>
-<p>让我们总结一下，我们讨论了支撑数据网格的四个原则：</p>
-<ol>
-<li>
-<p><strong>面向领域的分散式数据所有权和架构</strong>：这一原则强调数据应该根据其业务领域进行管理和组织，每个领域都有其负责人和团队，他们对数据的收集、存储、处理和分发负有完全的责任。这种分散化的方法有助于提高数据的可访问性和可维护性，同时促进跨领域的协作和数据共享。</p>
-</li>
-<li>
-<p><strong>数据即产品</strong>：将数据视为一种产品，意味着我们需要关注数据的质量、可用性和用户体验。数据产品化鼓励团队像对待任何其他商业产品一样对待数据，包括对其进行品牌化、营销和持续改进。</p>
-</li>
-<li>
-<p><strong>自助式数据基础设施作为平台</strong>：这一原则提倡建立一个平台，使得用户能够轻松地发现、访问和使用数据，而无需深入了解底层技术和复杂的数据处理流程。这种基础设施的自助服务特性，可以降低技术门槛，提高数据的可消费性。</p>
-</li>
-<li>
-<p><strong>联合计算治理</strong>：在数据网格中，计算治理是分散的，但是通过联合的方式进行协调和管理。这意味着不同的数据领域可以独立地进行计算和分析，同时保持整体的数据一致性和合规性。这种治理模式有助于提高数据处理的效率和响应速度，同时确保数据的安全和隐私。</p>
-</li>
-</ol>
-<p>这些原则共同构成了数据网格的高级逻辑架构，它们指导着数据网格的设计和实施，旨在实现数据管理和分析的现代化，支持快速决策、创新和业务增长。通过这些原则，组织可以更好地利用数据资源，构建一个灵活、可扩展且可持续发展的数据生态系统，以适应不断变化的技术和市场需求。</p>
-<p>这些原则推动了一个逻辑架构模型的发展，该模型在将分析数据和操作数据更紧密地结合在同一个领域下的同时，尊重它们的基础技术差异。这些差异包括分析数据可能托管的位置、处理操作性与分析服务的不同计算技术、查询和访问数据的不同方式等。</p>
-<p>在这个逻辑架构模型中，以下几个关键点被特别强调：</p>
-<ol>
-<li>
-<p><strong>领域驱动的数据集成</strong>：</p>
-<ul>
-<li>数据不是简单地聚集在一起，而是根据业务领域进行组织和集成。领域团队负责管理和维护与其领域相关的数据，无论是操作数据还是分析数据。这种集成方式确保了数据的上下文相关性和业务连贯性。</li>
-</ul>
-</li>
-<li>
-<p><strong>技术异构性的管理</strong>：</p>
-<ul>
-<li>尽管操作数据和分析数据在同一个领域内被管理，但它们可能需要不同的技术栈和平台来最有效地处理和分析。逻辑架构模型允许这种异构性，同时提供了必要的抽象和接口，以确保不同技术之间的兼容性和互操作性。</li>
-</ul>
-</li>
-<li>
-<p><strong>数据的可访问性和治理</strong>：</p>
-<ul>
-<li>逻辑架构模型提供了一种机制，使得数据消费者可以轻松地发现、查询和访问所需的数据。同时，它也确保了数据治理的一致性，包括安全性、合规性和数据质量控制，无论数据是操作性的还是分析性的。</li>
-</ul>
-</li>
-<li>
-<p><strong>自动化和自助服务</strong>：</p>
-<ul>
-<li>为了降低技术复杂性并提高效率，逻辑架构模型鼓励使用自动化工具和服务，以及自助服务平台。这些工具和平台使得领域团队能够独立地管理和优化他们的数据产品，同时也支持数据消费者自助获取和使用数据。</li>
-</ul>
-</li>
-</ol>
-<p>通过这种逻辑架构模型，数据网格不仅能够弥合操作数据和分析数据之间的鸿沟，还能够充分利用各自的技术优势，为组织提供更加灵活、高效和创新的数据管理解决方案。这种方法有助于构建一个可持续发展的数据生态系统，支持组织在快速变化的市场中保持竞争力。</p>
-<p><img src="media/17117904284058/17117921263102.jpg" alt="" /></p>
-<p>确实，通过前面的讨论，我们已经建立了一个共同的语言框架和逻辑心智模型，这将帮助我们共同推进数据网格的组件蓝图的详细规划，包括数据产品、平台以及所需的标准化等方面。</p>
-<ol>
-<li>
-<p><strong>数据产品（Data Product）</strong>：</p>
-<ul>
-<li>数据产品是数据网格中的核心构建块，它封装了数据内容、相关的元数据以及为数据提供服务的代码。数据产品应该被设计成易于发现、理解和使用，同时保证数据的质量和安全性。数据产品的创建、维护和分发需要遵循一系列标准化的流程和接口，以确保跨领域的一致性和互操作性。</li>
-</ul>
-</li>
-<li>
-<p><strong>平台（Platform）</strong>：</p>
-<ul>
-<li>数据平台提供了支持数据产品开发、部署、运行和监管的基础设施和服务。这包括数据存储、计算资源、数据处理管道、API服务等。平台应该提供自助式的服务，使领域团队能够高效地管理和优化他们的数据产品，同时降低技术复杂性和提高自动化程度。</li>
-</ul>
-</li>
-<li>
-<p><strong>标准化（Standardizations）</strong>：</p>
-<ul>
-<li>为了实现数据网格中的互操作性和一致性，需要制定一系列全球标准和约定。这些标准化包括数据模型、数据安全级别、数据质量指标、API设计原则等。标准化不仅有助于简化数据产品的设计和实现，还能够提高数据的可发现性和可访问性。</li>
-</ul>
-</li>
-</ol>
-<p>通过这些组件的详细规划和实施，我们可以确保数据网格能够有效地支持组织的数据战略，促进数据驱动的决策和创新。这种基于领域的、产品化的数据管理方法有助于打破数据孤岛，提高数据的流动性和价值，最终推动组织的整体发展和竞争力。</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2024/03/30</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='datamesh.html'>Data Mesh</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
               
 
 
@@ -1508,7 +1096,7 @@ Figure 3: Further divide of analytical data - lake</p>
 			  </div>
 			  <div class="large-6 columns">
 			<p class="text-right" style="padding-top:25px;">
-			
+			 <a href="datamesh_1.html">&raquo; Next Page</a> 
 			</p>
 			  </div>
 			</div>
@@ -1572,33 +1160,41 @@ Figure 3: Further divide of analytical data - lake</p>
 	      
 		      
 			      <li class="post">
+			        <a href="17118900696788.html">用代码描述数据产品的数据接口</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17118898908130.html">用代码描述数据产品中的程序代码</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17118897042956.html">用代码描述数据集的元数据</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17118895145158.html">用代码描述数据产品的数据集</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="17118893429905.html">用代码描述数据产品</a>
 			      </li>
 		     
 		  
 		      
-			      <li class="post">
-			        <a href="17118891531585.html">Data Product Canvas</a>
-			      </li>
-		     
 		  
 		      
-			      <li class="post">
-			        <a href="17118888075897.html">数据产品画布</a>
-			      </li>
-		     
 		  
 		      
-			      <li class="post">
-			        <a href="17118887373917.html">数据产品的内部结构</a>
-			      </li>
-		     
 		  
 		      
-			      <li class="post">
-			        <a href="17118884631387.html">Data Mesh 实践</a>
-			      </li>
-		     
 		  
 		      
 		  
@@ -1719,7 +1315,7 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
   color: inherit;
   text-decoration: none;
 }
-</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script><script>!function(){if("undefined"!=typeof Prism&&"undefined"!=typeof document){var e=[],t={},n=function(){};Prism.plugins.toolbar={};var a=Prism.plugins.toolbar.registerButton=function(n,a){var r;r="function"==typeof a?a:function(e){var t;return"function"==typeof a.onClick?((t=document.createElement("button")).type="button",t.addEventListener("click",(function(){a.onClick.call(this,e)}))):"string"==typeof a.url?(t=document.createElement("a")).href=a.url:t=document.createElement("span"),a.className&&t.classList.add(a.className),t.textContent=a.text,t},n in t?console.warn('There is a button with the key "'+n+'" registered already.'):e.push(t[n]=r)},r=Prism.plugins.toolbar.hook=function(a){var r=a.element.parentNode;var l=a.element.classList;if(l.contains('language-mermaid') || l.contains('language-echarts') || l.contains('language-plantuml')){return;} if(r&&/pre/i.test(r.nodeName)&&!r.parentNode.classList.contains("code-toolbar")){var o=document.createElement("div");o.classList.add("code-toolbar"),r.parentNode.insertBefore(o,r),o.appendChild(r);var i=document.createElement("div");i.classList.add("toolbar");var l=e,d=function(e){for(;e;){var t=e.getAttribute("data-toolbar-order");if(null!=t)return(t=t.trim()).length?t.split(/\s*,\s*/g):[];e=e.parentElement}}(a.element);d&&(l=d.map((function(e){return t[e]||n}))),l.forEach((function(e){var t=e(a);if(t){var n=document.createElement("div");n.classList.add("toolbar-item"),n.appendChild(t),i.appendChild(n)}})),o.appendChild(i)}};a("label",(function(e){var t=e.element.parentNode;if(t&&/pre/i.test(t.nodeName)&&t.hasAttribute("data-label")){var n,a,r=t.getAttribute("data-label");try{a=document.querySelector("template#"+r)}catch(e){}return a?n=a.content:(t.hasAttribute("data-url")?(n=document.createElement("a")).href=t.getAttribute("data-url"):n=document.createElement("span"),n.textContent=r),n}})),Prism.hooks.add("complete",r)}}();</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.css"><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script><style>div.code-toolbar > .toolbar > .toolbar-item > a, div.code-toolbar > .toolbar > .toolbar-item > button, div.code-toolbar > .toolbar > .toolbar-item > span {padding: 4px .5em; background: #f5f2f0; background: rgba(224, 224, 224, 0.4);}</style>
+</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script><script>!function(){if("undefined"!=typeof Prism&&"undefined"!=typeof document){var e=[],t={},n=function(){};Prism.plugins.toolbar={};var a=Prism.plugins.toolbar.registerButton=function(n,a){var r;r="function"==typeof a?a:function(e){var t;return"function"==typeof a.onClick?((t=document.createElement("button")).type="button",t.addEventListener("click",(function(){a.onClick.call(this,e)}))):"string"==typeof a.url?(t=document.createElement("a")).href=a.url:t=document.createElement("span"),a.className&&t.classList.add(a.className),t.textContent=a.text,t},n in t?console.warn('There is a button with the key "'+n+'" registered already.'):e.push(t[n]=r)},r=Prism.plugins.toolbar.hook=function(a){var r=a.element.parentNode;var l=a.element.classList;if(l.contains('language-mermaid') || l.contains('language-echarts') || l.contains('language-plantuml')){return;} if(r&&/pre/i.test(r.nodeName)&&!r.parentNode.classList.contains("code-toolbar")){var o=document.createElement("div");o.classList.add("code-toolbar"),r.parentNode.insertBefore(o,r),o.appendChild(r);var i=document.createElement("div");i.classList.add("toolbar");var l=e,d=function(e){for(;e;){var t=e.getAttribute("data-toolbar-order");if(null!=t)return(t=t.trim()).length?t.split(/\s*,\s*/g):[];e=e.parentElement}}(a.element);d&&(l=d.map((function(e){return t[e]||n}))),l.forEach((function(e){var t=e(a);if(t){var n=document.createElement("div");n.classList.add("toolbar-item"),n.appendChild(t),i.appendChild(n)}})),o.appendChild(i)}};a("label",(function(e){var t=e.element.parentNode;if(t&&/pre/i.test(t.nodeName)&&t.hasAttribute("data-label")){var n,a,r=t.getAttribute("data-label");try{a=document.querySelector("template#"+r)}catch(e){}return a?n=a.content:(t.hasAttribute("data-url")?(n=document.createElement("a")).href=t.getAttribute("data-url"):n=document.createElement("span"),n.textContent=r),n}})),Prism.hooks.add("complete",r)}}();</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.css"><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script><style>div.code-toolbar > .toolbar > .toolbar-item > a, div.code-toolbar > .toolbar > .toolbar-item > button, div.code-toolbar > .toolbar > .toolbar-item > span {padding: 4px .5em; background: #f5f2f0; background: rgba(224, 224, 224, 0.4);}</style><script>window.MathJax = {     tex: { tags: 'ams', displayMath: [ ['\\[', '\\]'] ] } ,     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>window.MathJax = { tex: { tags: 'ams', displayMath: [ ['\\[', '\\]'] ] } }; </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
 
 <style type="text/css">
 figure{margin: 0;padding: 0;}

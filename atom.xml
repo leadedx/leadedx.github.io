@@ -4,7 +4,7 @@
   <title><![CDATA[leadedx]]></title>
   <link href="https://leadedx.github.io/atom.xml" rel="self"/>
   <link href="https://leadedx.github.io/"/>
-  <updated>2024-03-31T20:50:14+08:00</updated>
+  <updated>2024-03-31T21:03:52+08:00</updated>
   <id>https://leadedx.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -13,13 +13,278 @@
   <generator uri="http://www.mweb.im/">MWeb</generator>
   
   <entry>
+    <title type="html"><![CDATA[用代码描述数据产品的数据接口]]></title>
+    <link href="https://leadedx.github.io/17118900696788.html"/>
+    <updated>2024-03-31T21:01:09+08:00</updated>
+    <id>https://leadedx.github.io/17118900696788.html</id>
+    <content type="html"><![CDATA[
+<p>在数据产品的上下文中，输入端口（Input Port）和输出端口（Output Port）是用于数据传输的关键组件。以下是一个 JSON 示例，用于描述数据产品的输入和输出端口：</p>
+<pre><code class="language-json">{
+  &quot;inputPorts&quot;: [
+    {
+      &quot;id&quot;: &quot;input-port-1&quot;,
+      &quot;title&quot;: &quot;Raw Data Ingestion&quot;,
+      &quot;description&quot;: &quot;Incoming raw data from various sources.&quot;,
+      &quot;source&quot;: &quot;Data ingestion pipelines&quot;,
+      &quot;format&quot;: &quot;JSON and CSV&quot;,
+      &quot;schema&quot;: {
+        &quot;columns&quot;: [
+          {
+            &quot;name&quot;: &quot;timestamp&quot;,
+            &quot;type&quot;: &quot;datetime&quot;,
+            &quot;description&quot;: &quot;The time when the data was generated&quot;
+          },
+          {
+            &quot;name&quot;: &quot;source&quot;,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;The source of the data&quot;
+          },
+          // ... other columns
+        ]
+      },
+      &quot;security&quot;: {
+        &quot;access&quot;: &quot;restricted&quot;,
+        &quot;authentication&quot;: &quot;OAuth 2.0&quot;
+      }
+    }
+    // ... other input ports
+  ],
+  &quot;outputPorts&quot;: [
+    {
+      &quot;id&quot;: &quot;output-port-1&quot;,
+      &quot;title&quot;: &quot;Transformed Data&quot;,
+      &quot;description&quot;: &quot;Transformed data ready for consumption.&quot;,
+      &quot;destination&quot;: &quot;Data lake and BI tools&quot;,
+      &quot;format&quot;: &quot;Parquet and CSV&quot;,
+      &quot;schema&quot;: {
+        &quot;columns&quot;: [
+          {
+            &quot;name&quot;: &quot;transformed_timestamp&quot;,
+            &quot;type&quot;: &quot;datetime&quot;,
+            &quot;description&quot;: &quot;The time when the data was transformed&quot;
+          },
+          {
+            &quot;name&quot;: &quot;transformed_source&quot;,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;The source of the transformed data&quot;
+          },
+          // ... other columns
+        ]
+      },
+      &quot;security&quot;: {
+        &quot;access&quot;: &quot;public&quot;,
+        &quot;authentication&quot;: &quot;None&quot;
+      }
+    }
+    // ... other output ports
+  ]
+}
+</code></pre>
+<p>在这个 JSON 对象中，我们定义了一个数据产品的输入和输出端口，包括：</p>
+<ul>
+<li><code>inputPorts</code>：数据产品的输入端口列表
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：输入端口的友好名称</li>
+<li><code>description</code>：输入端口的描述</li>
+<li><code>source</code>：输入端口的数据来源</li>
+<li><code>format</code>：输入端口的数据格式</li>
+<li><code>schema</code>：输入端口的数据结构定义</li>
+<li><code>security</code>：输入端口的安全配置</li>
+</ul>
+</li>
+<li><code>outputPorts</code>：数据产品的输出端口列表
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：输出端口的友好名称</li>
+<li><code>description</code>：输出端口的描述</li>
+<li><code>destination</code>：输出端口的数据目的地</li>
+<li><code>format</code>：输出端口的数据格式</li>
+<li><code>schema</code>：输出端口的数据结构定义</li>
+<li><code>security</code>：输出端口的安全配置<br />
+请注意，这个 JSON 对象也是一个模板，实际的输入和输出端口元数据可能会根据具体的数据产品而有所不同。在实际应用中，端口的元数据可能会包含更多的详细信息，例如端口的吞吐量、数据处理能力、性能指标等。</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[用代码描述数据产品中的程序代码]]></title>
+    <link href="https://leadedx.github.io/17118898908130.html"/>
+    <updated>2024-03-31T20:58:10+08:00</updated>
+    <id>https://leadedx.github.io/17118898908130.html</id>
+    <content type="html"><![CDATA[
+<p>在数据产品中，代码（或称为元代码）是指描述数据产品及其组件的代码。这通常用于自动化数据产品的生命周期管理，包括数据摄取、处理、存储和共享。以下是一个 JSON 示例，用于描述数据产品中的代码：</p>
+<pre><code class="language-json">{
+  &quot;code&quot;: {
+    &quot;id&quot;: &quot;code-123&quot;,
+    &quot;title&quot;: &quot;Data Transformation Script&quot;,
+    &quot;description&quot;: &quot;A script for transforming raw data into a format suitable for analysis.&quot;,
+    &quot;owner&quot;: &quot;Engineering Team&quot;,
+    &quot;ownerEmail&quot;: &quot;engineering@example.com&quot;,
+    &quot;source&quot;: &quot;Custom-built script using Python&quot;,
+    &quot;frequency&quot;: &quot;hourly&quot;,
+    &quot;executionTime&quot;: &quot;5 minutes&quot;,
+    &quot;lastRun&quot;: &quot;2023-11-01T12:00:00Z&quot;,
+    &quot;dependencies&quot;: [
+      &quot;Dataset-A&quot;,
+      &quot;Dataset-B&quot;
+    ],
+    &quot;output&quot;: &quot;Transformed data stored in Dataset-C&quot;
+  }
+}
+</code></pre>
+<p>在这个 JSON 对象中，我们定义了一个数据产品中的代码，包括：</p>
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：代码的友好名称</li>
+<li><code>description</code>：代码的描述</li>
+<li><code>owner</code>：代码的所有者</li>
+<li><code>source</code>：代码的来源或使用的编程语言</li>
+<li><code>frequency</code>：代码的执行频率</li>
+<li><code>executionTime</code>：代码执行所需的时间</li>
+<li><code>lastRun</code>：代码上一次运行的时间戳</li>
+<li><code>dependencies</code>：代码依赖的其他数据产品或组件</li>
+<li><code>output</code>：代码的输出，即处理后的数据存储位置<br />
+请注意，这个 JSON 对象也是一个模板，实际的代码元数据可能会根据具体的代码而有所不同。在实际应用中，代码的元数据可能会包含更多的详细信息，例如代码的版本控制、执行日志、错误处理机制等。</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[用代码描述数据集的元数据]]></title>
+    <link href="https://leadedx.github.io/17118897042956.html"/>
+    <updated>2024-03-31T20:55:04+08:00</updated>
+    <id>https://leadedx.github.io/17118897042956.html</id>
+    <content type="html"><![CDATA[
+<p>在描述数据集的元数据时，我们通常会包括数据集的基本信息、数据源、数据质量、数据更新频率、数据结构以及与数据集相关的任何其他关键信息。以下是一个 JSON 示例，用于描述一个数据集的元数据：</p>
+<pre><code class="language-json">{
+  &quot;metadata&quot;: {
+    &quot;id&quot;: &quot;dataset-789&quot;,
+    &quot;title&quot;: &quot;Sales Data&quot;,
+    &quot;description&quot;: &quot;A comprehensive dataset containing sales transactions from various stores.&quot;,
+    &quot;owner&quot;: &quot;Jane Smith&quot;,
+    &quot;ownerEmail&quot;: &quot;jane.smith@example.com&quot;,
+    &quot;source&quot;: &quot;Point of Sale (POS) systems and online sales platforms&quot;,
+    &quot;frequency&quot;: &quot;daily&quot;,
+    &quot;dataType&quot;: &quot;structured&quot;,
+    &quot;format&quot;: &quot;CSV&quot;,
+    &quot;size&quot;: &quot;100GB&quot;,
+    &quot;quality&quot;: {
+      &quot;accuracy&quot;: &quot;99%&quot;,
+      &quot;completeness&quot;: &quot;98%&quot;,
+      &quot;consistency&quot;: &quot;95%&quot;
+    },
+    &quot;updated&quot;: &quot;2023-11-01T12:00:00Z&quot;,
+    &quot;accessibility&quot;: {
+      &quot;internal&quot;: true,
+      &quot;external&quot;: false
+    },
+    &quot;columns&quot;: [
+      {
+        &quot;name&quot;: &quot;transactionId&quot;,
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;Unique identifier for each transaction&quot;
+      },
+      {
+        &quot;name&quot;: &quot;storeId&quot;,
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;Identifier for the store where the transaction occurred&quot;
+      },
+      {
+        &quot;name&quot;: &quot;productId&quot;,
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;Identifier for the product being sold&quot;
+      },
+      // ... other columns
+    ]
+  }
+}
+</code></pre>
+<p>在这个 JSON 对象中，我们定义了一个数据集的元数据，包括：</p>
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：数据集的友好名称</li>
+<li><code>description</code>：数据集的描述</li>
+<li><code>owner</code>：数据集的所有者</li>
+<li><code>source</code>：数据集的来源</li>
+<li><code>frequency</code>：数据集更新的频率</li>
+<li><code>dataType</code>：数据集的数据类型</li>
+<li><code>format</code>：数据集的格式</li>
+<li><code>size</code>：数据集的大小</li>
+<li><code>quality</code>：数据集的质量指标</li>
+<li><code>updated</code>：数据集最后更新的时间戳</li>
+<li><code>accessibility</code>：数据集的访问权限</li>
+<li><code>columns</code>：数据集的结构定义，包括列名、数据类型和描述<br />
+请注意，这个 JSON 对象也是一个模板，实际的元数据可能会根据具体的数据集而有所不同。在实际应用中，数据集的元数据可能会包含更多的详细信息，例如数据集的生成过程、数据处理的步骤、数据的处理方法等。</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[用代码描述数据产品的数据集]]></title>
+    <link href="https://leadedx.github.io/17118895145158.html"/>
+    <updated>2024-03-31T20:51:54+08:00</updated>
+    <id>https://leadedx.github.io/17118895145158.html</id>
+    <content type="html"><![CDATA[
+<p>在一个数据产品中，数据集（Dataset）是核心组成部分，它包含了实际的数据内容。数据集的描述通常包括元数据，这些元数据提供了关于数据集的结构、内容、来源和质量的信息。以下是一个简单的 JSON 示例，用于描述一个数据集：</p>
+<pre><code class="language-json">{
+  &quot;dataset&quot;: {
+    &quot;id&quot;: &quot;dataset-456&quot;,
+    &quot;title&quot;: &quot;Customer Engagement Data&quot;,
+    &quot;description&quot;: &quot;A collection of customer engagement data from various platforms.&quot;,
+    &quot;owner&quot;: &quot;John Doe&quot;,
+    &quot;ownerEmail&quot;: &quot;john.doe@example.com&quot;,
+    &quot;source&quot;: &quot;CRM system and social media APIs&quot;,
+    &quot;frequency&quot;: &quot;daily&quot;,
+    &quot;schema&quot;: {
+      &quot;columns&quot;: [
+        {
+          &quot;name&quot;: &quot;customerId&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;Unique identifier for each customer&quot;
+        },
+        {
+          &quot;name&quot;: &quot;engagementScore&quot;,
+          &quot;type&quot;: &quot;numeric&quot;,
+          &quot;description&quot;: &quot;A weighted score representing customer engagement&quot;
+        },
+        {
+          &quot;name&quot;: &quot;platform&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;The platform on which the engagement occurred&quot;
+        },
+        // ... other columns
+      ]
+    },
+    &quot;dataQuality&quot;: {
+      &quot;accuracy&quot;: &quot;98%&quot;,
+      &quot;completeness&quot;: &quot;95%&quot;,
+      &quot;consistency&quot;: &quot;90%&quot;
+    },
+    &quot;lastUpdated&quot;: &quot;2023-11-01T12:00:00Z&quot;
+  }
+}
+
+</code></pre>
+<p>请注意，这个 JSON 对象也是一个模板，实际的元数据可能会根据具体的数据集而有所不同。在实际应用中，数据集的元数据可能会包含更多的详细信息，例如数据集的大小、数据的生成过程、数据处理的步骤等。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[用代码描述数据产品]]></title>
     <link href="https://leadedx.github.io/17118893429905.html"/>
     <updated>2024-03-31T20:49:02+08:00</updated>
     <id>https://leadedx.github.io/17118893429905.html</id>
     <content type="html"><![CDATA[
 <p>在代码中描述一个数据产品通常会使用一种结构化语言或格式，比如 JSON。以下是一个简单的示例，使用 JSON 格式来描述一个数据产品的元数据：</p>
-<pre><code class="language-{">  &quot;dataProduct&quot;: {
+<pre><code class="language-json">{
+  &quot;dataProduct&quot;: {
     &quot;id&quot;: &quot;product-123&quot;,
     &quot;title&quot;: &quot;Customer Engagement Metrics&quot;,
     &quot;description&quot;: &quot;A comprehensive set of metrics for tracking customer engagement across multiple platforms.&quot;,
@@ -55,9 +320,23 @@
     &quot;lastModified&quot;: &quot;2023-11-01T12:00:00Z&quot;
   }
 }
-
 </code></pre>
-<p>请注意，这个 JSON 对象只是一个模板，实际的元数据可能会根据具体的数据产品而有所不同。在实际应用中，数据产品的元数据可能会包含更多的详细信息，例如数据质量指标、依赖关系、数据版本等。</p>
+<p>在这个 JSON 对象中，我们定义了一个数据产品的元数据，包括：</p>
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：数据产品的友好名称</li>
+<li><code>description</code>：数据产品的描述</li>
+<li><code>owner</code>：数据产品的所有者</li>
+<li><code>businessUnit</code>：数据产品所属的业务单元</li>
+<li><code>status</code>：数据产品的当前状态（例如：active, inactive）</li>
+<li><code>dataSource</code>：数据来源</li>
+<li><code>frequency</code>：数据更新频率</li>
+<li><code>schema</code>：数据结构的定义</li>
+<li><code>termsOfUse</code>：数据的使用条款</li>
+<li><code>access</code>：数据的访问权限</li>
+<li><code>lastModified</code>：数据产品最后修改的时间戳<br />
+请注意，这个 JSON 对象只是一个模板，实际的元数据可能会根据具体的数据产品而有所不同。在实际应用中，数据产品的元数据可能会包含更多的详细信息，例如数据质量指标、依赖关系、数据版本等。</li>
+</ul>
 
 ]]></content>
   </entry>

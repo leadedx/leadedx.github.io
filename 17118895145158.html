@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  数据产品画布 - leadedx
+  用代码描述数据产品的数据集 - leadedx
   
   </title>
   
@@ -104,7 +104,7 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-          <h1>数据产品画布</h1>
+          <h1>用代码描述数据产品的数据集</h1>
      
         <div class="read-more clearfix">
           <span class="date">2024/03/31</span>
@@ -124,134 +124,47 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <p>数据产品画布是一种用于组织和描述数据产品的工具，它帮助确保数据产品从概念到实现的过程中，所有关键方面都被充分考虑。一个典型的数据产品画布应该包含以下内容：</p>
-<table>
-<thead>
-<tr>
-<th>序号</th>
-<th>内容</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>名称</td>
-<td>数据产品的名称。</td>
-</tr>
-<tr>
-<td>2</td>
-<td>描述</td>
-<td>数据产品的详细描述，包括其目的和功能。</td>
-</tr>
-<tr>
-<td>3</td>
-<td>数据产品所有者</td>
-<td>负责该数据产品的人员或团队。</td>
-</tr>
-<tr>
-<td>4</td>
-<td>业务能力/领域</td>
-<td>数据产品所属的业务领域或能力范围。</td>
-</tr>
-<tr>
-<td>5</td>
-<td>系统</td>
-<td>与数据产品相关的系统或平台。</td>
-</tr>
-<tr>
-<td>6</td>
-<td>分类</td>
-<td>数据产品的分类，如源对齐、消费者对齐、共享核心、虚拟、物化等。</td>
-</tr>
-<tr>
-<td>7</td>
-<td>生命周期分类</td>
-<td>数据产品的生命周期阶段，如实验性、稳定等。</td>
-</tr>
-<tr>
-<td>8</td>
-<td>输入接口</td>
-<td>数据产品接收数据的接口。</td>
-</tr>
-<tr>
-<td>9</td>
-<td>输出端口</td>
-<td>数据产品提供数据的端口。</td>
-</tr>
-<tr>
-<td>10</td>
-<td>安全</td>
-<td>数据产品的安全规则和策略。</td>
-</tr>
-<tr>
-<td>11</td>
-<td>入站流</td>
-<td>进入数据产品的事务或数据流。</td>
-</tr>
-<tr>
-<td>12</td>
-<td>出站流</td>
-<td>从数据产品出来的事务或数据流。</td>
-</tr>
-<tr>
-<td>13</td>
-<td>数据量</td>
-<td>数据产品处理或存储的数据量。</td>
-</tr>
-<tr>
-<td>14</td>
-<td>数据集</td>
-<td>构成数据产品的一个或多个数据集。</td>
-</tr>
-<tr>
-<td>15</td>
-<td>业务元数据</td>
-<td>描述数据产品业务上下文和用例的元数据。</td>
-</tr>
-<tr>
-<td>16</td>
-<td>技术元数据</td>
-<td>描述数据产品技术细节的元数据，如数据结构、接口定义等。</td>
-</tr>
-<tr>
-<td>17</td>
-<td>操作元数据</td>
-<td>描述数据产品操作层面的元数据，如访问策略、使用统计等。</td>
-</tr>
-<tr>
-<td>18</td>
-<td>物理架构描述</td>
-<td>数据产品的物理存储和数据结构描述。</td>
-</tr>
-<tr>
-<td>19</td>
-<td>语义元数据</td>
-<td>将数据产品的物理模型链接到标准化词汇和逻辑模型的元数据。</td>
-</tr>
-<tr>
-<td>20</td>
-<td>本地血统</td>
-<td>数据产品直接来源的数据源信息。</td>
-</tr>
-<tr>
-<td>21</td>
-<td>完整血统</td>
-<td>显示数据如何在数据产品中创建的整个序列链接信息。</td>
-</tr>
-<tr>
-<td>22</td>
-<td>质量度量</td>
-<td>与数据质量相关的度量，如正确和错误数据的数量、缺失数据等。</td>
-</tr>
-<tr>
-<td>23</td>
-<td>操作度量</td>
-<td>数据产品的可用性、用户数量、使用统计数据和SLA度量等。</td>
-</tr>
-</tbody>
-</table>
-<p>这个表格提供了一个全面的数据产品画布内容概览，确保在开发和管理数据产品时，所有关键方面都被充分考虑和记录。</p>
+      <p>在一个数据产品中，数据集（Dataset）是核心组成部分，它包含了实际的数据内容。数据集的描述通常包括元数据，这些元数据提供了关于数据集的结构、内容、来源和质量的信息。以下是一个简单的 JSON 示例，用于描述一个数据集：</p>
+<pre><code class="language-json">{
+  &quot;dataset&quot;: {
+    &quot;id&quot;: &quot;dataset-456&quot;,
+    &quot;title&quot;: &quot;Customer Engagement Data&quot;,
+    &quot;description&quot;: &quot;A collection of customer engagement data from various platforms.&quot;,
+    &quot;owner&quot;: &quot;John Doe&quot;,
+    &quot;ownerEmail&quot;: &quot;john.doe@example.com&quot;,
+    &quot;source&quot;: &quot;CRM system and social media APIs&quot;,
+    &quot;frequency&quot;: &quot;daily&quot;,
+    &quot;schema&quot;: {
+      &quot;columns&quot;: [
+        {
+          &quot;name&quot;: &quot;customerId&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;Unique identifier for each customer&quot;
+        },
+        {
+          &quot;name&quot;: &quot;engagementScore&quot;,
+          &quot;type&quot;: &quot;numeric&quot;,
+          &quot;description&quot;: &quot;A weighted score representing customer engagement&quot;
+        },
+        {
+          &quot;name&quot;: &quot;platform&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;The platform on which the engagement occurred&quot;
+        },
+        // ... other columns
+      ]
+    },
+    &quot;dataQuality&quot;: {
+      &quot;accuracy&quot;: &quot;98%&quot;,
+      &quot;completeness&quot;: &quot;95%&quot;,
+      &quot;consistency&quot;: &quot;90%&quot;
+    },
+    &quot;lastUpdated&quot;: &quot;2023-11-01T12:00:00Z&quot;
+  }
+}
+
+</code></pre>
+<p>请注意，这个 JSON 对象也是一个模板，实际的元数据可能会根据具体的数据集而有所不同。在实际应用中，数据集的元数据可能会包含更多的详细信息，例如数据集的大小、数据的生成过程、数据处理的步骤等。</p>
 
 
     
@@ -262,16 +175,16 @@
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
       
-          <a href="17118891531585.html" 
-          title="Previous Post: Data Product Canvas">&laquo; Data Product Canvas</a>
+          <a href="17118897042956.html" 
+          title="Previous Post: 用代码描述数据集的元数据">&laquo; 用代码描述数据集的元数据</a>
       
         </p>
         </div>
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
       
-          <a  href="17118887373917.html" 
-          title="Next Post: 数据产品的内部结构">数据产品的内部结构 &raquo;</a>
+          <a  href="17118893429905.html" 
+          title="Next Post: 用代码描述数据产品">用代码描述数据产品 &raquo;</a>
       
       </p>
         </div>
@@ -503,7 +416,7 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
   color: inherit;
   text-decoration: none;
 }
-</style>
+</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script><script>!function(){if("undefined"!=typeof Prism&&"undefined"!=typeof document){var e=[],t={},n=function(){};Prism.plugins.toolbar={};var a=Prism.plugins.toolbar.registerButton=function(n,a){var r;r="function"==typeof a?a:function(e){var t;return"function"==typeof a.onClick?((t=document.createElement("button")).type="button",t.addEventListener("click",(function(){a.onClick.call(this,e)}))):"string"==typeof a.url?(t=document.createElement("a")).href=a.url:t=document.createElement("span"),a.className&&t.classList.add(a.className),t.textContent=a.text,t},n in t?console.warn('There is a button with the key "'+n+'" registered already.'):e.push(t[n]=r)},r=Prism.plugins.toolbar.hook=function(a){var r=a.element.parentNode;var l=a.element.classList;if(l.contains('language-mermaid') || l.contains('language-echarts') || l.contains('language-plantuml')){return;} if(r&&/pre/i.test(r.nodeName)&&!r.parentNode.classList.contains("code-toolbar")){var o=document.createElement("div");o.classList.add("code-toolbar"),r.parentNode.insertBefore(o,r),o.appendChild(r);var i=document.createElement("div");i.classList.add("toolbar");var l=e,d=function(e){for(;e;){var t=e.getAttribute("data-toolbar-order");if(null!=t)return(t=t.trim()).length?t.split(/\s*,\s*/g):[];e=e.parentElement}}(a.element);d&&(l=d.map((function(e){return t[e]||n}))),l.forEach((function(e){var t=e(a);if(t){var n=document.createElement("div");n.classList.add("toolbar-item"),n.appendChild(t),i.appendChild(n)}})),o.appendChild(i)}};a("label",(function(e){var t=e.element.parentNode;if(t&&/pre/i.test(t.nodeName)&&t.hasAttribute("data-label")){var n,a,r=t.getAttribute("data-label");try{a=document.querySelector("template#"+r)}catch(e){}return a?n=a.content:(t.hasAttribute("data-url")?(n=document.createElement("a")).href=t.getAttribute("data-url"):n=document.createElement("span"),n.textContent=r),n}})),Prism.hooks.add("complete",r)}}();</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.css"><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script><style>div.code-toolbar > .toolbar > .toolbar-item > a, div.code-toolbar > .toolbar > .toolbar-item > button, div.code-toolbar > .toolbar > .toolbar-item > span {padding: 4px .5em; background: #f5f2f0; background: rgba(224, 224, 224, 0.4);}</style>
 
 <style type="text/css">
 figure{margin: 0;padding: 0;}

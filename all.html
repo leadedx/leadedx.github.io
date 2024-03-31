@@ -104,6 +104,366 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
+                <a class="clearlink" href="17118900696788.html">
+                
+                  <h1>用代码描述数据产品的数据接口</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>在数据产品的上下文中，输入端口（Input Port）和输出端口（Output Port）是用于数据传输的关键组件。以下是一个 JSON 示例，用于描述数据产品的输入和输出端口：</p>
+<pre><code class="language-json">{
+  &quot;inputPorts&quot;: [
+    {
+      &quot;id&quot;: &quot;input-port-1&quot;,
+      &quot;title&quot;: &quot;Raw Data Ingestion&quot;,
+      &quot;description&quot;: &quot;Incoming raw data from various sources.&quot;,
+      &quot;source&quot;: &quot;Data ingestion pipelines&quot;,
+      &quot;format&quot;: &quot;JSON and CSV&quot;,
+      &quot;schema&quot;: {
+        &quot;columns&quot;: [
+          {
+            &quot;name&quot;: &quot;timestamp&quot;,
+            &quot;type&quot;: &quot;datetime&quot;,
+            &quot;description&quot;: &quot;The time when the data was generated&quot;
+          },
+          {
+            &quot;name&quot;: &quot;source&quot;,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;The source of the data&quot;
+          },
+          // ... other columns
+        ]
+      },
+      &quot;security&quot;: {
+        &quot;access&quot;: &quot;restricted&quot;,
+        &quot;authentication&quot;: &quot;OAuth 2.0&quot;
+      }
+    }
+    // ... other input ports
+  ],
+  &quot;outputPorts&quot;: [
+    {
+      &quot;id&quot;: &quot;output-port-1&quot;,
+      &quot;title&quot;: &quot;Transformed Data&quot;,
+      &quot;description&quot;: &quot;Transformed data ready for consumption.&quot;,
+      &quot;destination&quot;: &quot;Data lake and BI tools&quot;,
+      &quot;format&quot;: &quot;Parquet and CSV&quot;,
+      &quot;schema&quot;: {
+        &quot;columns&quot;: [
+          {
+            &quot;name&quot;: &quot;transformed_timestamp&quot;,
+            &quot;type&quot;: &quot;datetime&quot;,
+            &quot;description&quot;: &quot;The time when the data was transformed&quot;
+          },
+          {
+            &quot;name&quot;: &quot;transformed_source&quot;,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;The source of the transformed data&quot;
+          },
+          // ... other columns
+        ]
+      },
+      &quot;security&quot;: {
+        &quot;access&quot;: &quot;public&quot;,
+        &quot;authentication&quot;: &quot;None&quot;
+      }
+    }
+    // ... other output ports
+  ]
+}
+</code></pre>
+<p>在这个 JSON 对象中，我们定义了一个数据产品的输入和输出端口，包括：</p>
+<ul>
+<li><code>inputPorts</code>：数据产品的输入端口列表
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：输入端口的友好名称</li>
+<li><code>description</code>：输入端口的描述</li>
+<li><code>source</code>：输入端口的数据来源</li>
+<li><code>format</code>：输入端口的数据格式</li>
+<li><code>schema</code>：输入端口的数据结构定义</li>
+<li><code>security</code>：输入端口的安全配置</li>
+</ul>
+</li>
+<li><code>outputPorts</code>：数据产品的输出端口列表
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：输出端口的友好名称</li>
+<li><code>description</code>：输出端口的描述</li>
+<li><code>destination</code>：输出端口的数据目的地</li>
+<li><code>format</code>：输出端口的数据格式</li>
+<li><code>schema</code>：输出端口的数据结构定义</li>
+<li><code>security</code>：输出端口的安全配置<br />
+请注意，这个 JSON 对象也是一个模板，实际的输入和输出端口元数据可能会根据具体的数据产品而有所不同。在实际应用中，端口的元数据可能会包含更多的详细信息，例如端口的吞吐量、数据处理能力、性能指标等。</li>
+</ul>
+</li>
+</ul>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2024/03/31</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='datamesh.html'>Data Mesh</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="17118898908130.html">
+                
+                  <h1>用代码描述数据产品中的程序代码</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>在数据产品中，代码（或称为元代码）是指描述数据产品及其组件的代码。这通常用于自动化数据产品的生命周期管理，包括数据摄取、处理、存储和共享。以下是一个 JSON 示例，用于描述数据产品中的代码：</p>
+<pre><code class="language-json">{
+  &quot;code&quot;: {
+    &quot;id&quot;: &quot;code-123&quot;,
+    &quot;title&quot;: &quot;Data Transformation Script&quot;,
+    &quot;description&quot;: &quot;A script for transforming raw data into a format suitable for analysis.&quot;,
+    &quot;owner&quot;: &quot;Engineering Team&quot;,
+    &quot;ownerEmail&quot;: &quot;engineering@example.com&quot;,
+    &quot;source&quot;: &quot;Custom-built script using Python&quot;,
+    &quot;frequency&quot;: &quot;hourly&quot;,
+    &quot;executionTime&quot;: &quot;5 minutes&quot;,
+    &quot;lastRun&quot;: &quot;2023-11-01T12:00:00Z&quot;,
+    &quot;dependencies&quot;: [
+      &quot;Dataset-A&quot;,
+      &quot;Dataset-B&quot;
+    ],
+    &quot;output&quot;: &quot;Transformed data stored in Dataset-C&quot;
+  }
+}
+</code></pre>
+<p>在这个 JSON 对象中，我们定义了一个数据产品中的代码，包括：</p>
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：代码的友好名称</li>
+<li><code>description</code>：代码的描述</li>
+<li><code>owner</code>：代码的所有者</li>
+<li><code>source</code>：代码的来源或使用的编程语言</li>
+<li><code>frequency</code>：代码的执行频率</li>
+<li><code>executionTime</code>：代码执行所需的时间</li>
+<li><code>lastRun</code>：代码上一次运行的时间戳</li>
+<li><code>dependencies</code>：代码依赖的其他数据产品或组件</li>
+<li><code>output</code>：代码的输出，即处理后的数据存储位置<br />
+请注意，这个 JSON 对象也是一个模板，实际的代码元数据可能会根据具体的代码而有所不同。在实际应用中，代码的元数据可能会包含更多的详细信息，例如代码的版本控制、执行日志、错误处理机制等。</li>
+</ul>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2024/03/31</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='datamesh.html'>Data Mesh</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="17118897042956.html">
+                
+                  <h1>用代码描述数据集的元数据</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>在描述数据集的元数据时，我们通常会包括数据集的基本信息、数据源、数据质量、数据更新频率、数据结构以及与数据集相关的任何其他关键信息。以下是一个 JSON 示例，用于描述一个数据集的元数据：</p>
+<pre><code class="language-json">{
+  &quot;metadata&quot;: {
+    &quot;id&quot;: &quot;dataset-789&quot;,
+    &quot;title&quot;: &quot;Sales Data&quot;,
+    &quot;description&quot;: &quot;A comprehensive dataset containing sales transactions from various stores.&quot;,
+    &quot;owner&quot;: &quot;Jane Smith&quot;,
+    &quot;ownerEmail&quot;: &quot;jane.smith@example.com&quot;,
+    &quot;source&quot;: &quot;Point of Sale (POS) systems and online sales platforms&quot;,
+    &quot;frequency&quot;: &quot;daily&quot;,
+    &quot;dataType&quot;: &quot;structured&quot;,
+    &quot;format&quot;: &quot;CSV&quot;,
+    &quot;size&quot;: &quot;100GB&quot;,
+    &quot;quality&quot;: {
+      &quot;accuracy&quot;: &quot;99%&quot;,
+      &quot;completeness&quot;: &quot;98%&quot;,
+      &quot;consistency&quot;: &quot;95%&quot;
+    },
+    &quot;updated&quot;: &quot;2023-11-01T12:00:00Z&quot;,
+    &quot;accessibility&quot;: {
+      &quot;internal&quot;: true,
+      &quot;external&quot;: false
+    },
+    &quot;columns&quot;: [
+      {
+        &quot;name&quot;: &quot;transactionId&quot;,
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;Unique identifier for each transaction&quot;
+      },
+      {
+        &quot;name&quot;: &quot;storeId&quot;,
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;Identifier for the store where the transaction occurred&quot;
+      },
+      {
+        &quot;name&quot;: &quot;productId&quot;,
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;Identifier for the product being sold&quot;
+      },
+      // ... other columns
+    ]
+  }
+}
+</code></pre>
+<p>在这个 JSON 对象中，我们定义了一个数据集的元数据，包括：</p>
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：数据集的友好名称</li>
+<li><code>description</code>：数据集的描述</li>
+<li><code>owner</code>：数据集的所有者</li>
+<li><code>source</code>：数据集的来源</li>
+<li><code>frequency</code>：数据集更新的频率</li>
+<li><code>dataType</code>：数据集的数据类型</li>
+<li><code>format</code>：数据集的格式</li>
+<li><code>size</code>：数据集的大小</li>
+<li><code>quality</code>：数据集的质量指标</li>
+<li><code>updated</code>：数据集最后更新的时间戳</li>
+<li><code>accessibility</code>：数据集的访问权限</li>
+<li><code>columns</code>：数据集的结构定义，包括列名、数据类型和描述<br />
+请注意，这个 JSON 对象也是一个模板，实际的元数据可能会根据具体的数据集而有所不同。在实际应用中，数据集的元数据可能会包含更多的详细信息，例如数据集的生成过程、数据处理的步骤、数据的处理方法等。</li>
+</ul>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2024/03/31</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='datamesh.html'>Data Mesh</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="17118895145158.html">
+                
+                  <h1>用代码描述数据产品的数据集</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>在一个数据产品中，数据集（Dataset）是核心组成部分，它包含了实际的数据内容。数据集的描述通常包括元数据，这些元数据提供了关于数据集的结构、内容、来源和质量的信息。以下是一个简单的 JSON 示例，用于描述一个数据集：</p>
+<pre><code class="language-json">{
+  &quot;dataset&quot;: {
+    &quot;id&quot;: &quot;dataset-456&quot;,
+    &quot;title&quot;: &quot;Customer Engagement Data&quot;,
+    &quot;description&quot;: &quot;A collection of customer engagement data from various platforms.&quot;,
+    &quot;owner&quot;: &quot;John Doe&quot;,
+    &quot;ownerEmail&quot;: &quot;john.doe@example.com&quot;,
+    &quot;source&quot;: &quot;CRM system and social media APIs&quot;,
+    &quot;frequency&quot;: &quot;daily&quot;,
+    &quot;schema&quot;: {
+      &quot;columns&quot;: [
+        {
+          &quot;name&quot;: &quot;customerId&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;Unique identifier for each customer&quot;
+        },
+        {
+          &quot;name&quot;: &quot;engagementScore&quot;,
+          &quot;type&quot;: &quot;numeric&quot;,
+          &quot;description&quot;: &quot;A weighted score representing customer engagement&quot;
+        },
+        {
+          &quot;name&quot;: &quot;platform&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;The platform on which the engagement occurred&quot;
+        },
+        // ... other columns
+      ]
+    },
+    &quot;dataQuality&quot;: {
+      &quot;accuracy&quot;: &quot;98%&quot;,
+      &quot;completeness&quot;: &quot;95%&quot;,
+      &quot;consistency&quot;: &quot;90%&quot;
+    },
+    &quot;lastUpdated&quot;: &quot;2023-11-01T12:00:00Z&quot;
+  }
+}
+
+</code></pre>
+<p>请注意，这个 JSON 对象也是一个模板，实际的元数据可能会根据具体的数据集而有所不同。在实际应用中，数据集的元数据可能会包含更多的详细信息，例如数据集的大小、数据的生成过程、数据处理的步骤等。</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2024/03/31</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='datamesh.html'>Data Mesh</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
                 <a class="clearlink" href="17118893429905.html">
                 
                   <h1>用代码描述数据产品</h1>
@@ -112,7 +472,8 @@
                       <div class="a-content-text">
                         
                         	<p>在代码中描述一个数据产品通常会使用一种结构化语言或格式，比如 JSON。以下是一个简单的示例，使用 JSON 格式来描述一个数据产品的元数据：</p>
-<pre><code class="language-{">  &quot;dataProduct&quot;: {
+<pre><code class="language-json">{
+  &quot;dataProduct&quot;: {
     &quot;id&quot;: &quot;product-123&quot;,
     &quot;title&quot;: &quot;Customer Engagement Metrics&quot;,
     &quot;description&quot;: &quot;A comprehensive set of metrics for tracking customer engagement across multiple platforms.&quot;,
@@ -148,9 +509,23 @@
     &quot;lastModified&quot;: &quot;2023-11-01T12:00:00Z&quot;
   }
 }
-
 </code></pre>
-<p>请注意，这个 JSON 对象只是一个模板，实际的元数据可能会根据具体的数据产品而有所不同。在实际应用中，数据产品的元数据可能会包含更多的详细信息，例如数据质量指标、依赖关系、数据版本等。</p>
+<p>在这个 JSON 对象中，我们定义了一个数据产品的元数据，包括：</p>
+<ul>
+<li><code>id</code>：唯一标识符</li>
+<li><code>title</code>：数据产品的友好名称</li>
+<li><code>description</code>：数据产品的描述</li>
+<li><code>owner</code>：数据产品的所有者</li>
+<li><code>businessUnit</code>：数据产品所属的业务单元</li>
+<li><code>status</code>：数据产品的当前状态（例如：active, inactive）</li>
+<li><code>dataSource</code>：数据来源</li>
+<li><code>frequency</code>：数据更新频率</li>
+<li><code>schema</code>：数据结构的定义</li>
+<li><code>termsOfUse</code>：数据的使用条款</li>
+<li><code>access</code>：数据的访问权限</li>
+<li><code>lastModified</code>：数据产品最后修改的时间戳<br />
+请注意，这个 JSON 对象只是一个模板，实际的元数据可能会根据具体的数据产品而有所不同。在实际应用中，数据产品的元数据可能会包含更多的详细信息，例如数据质量指标、依赖关系、数据版本等。</li>
+</ul>
 
                         
                       </div>
@@ -710,505 +1085,6 @@ Messflix 是一家电影和电视节目流媒体平台，面临有效利用其�
                 </div>
               </div><!-- article -->
         
-			<div class="article">
-                <a class="clearlink" href="17118797639579.html">
-                
-                  <h1>macOS通过Homebrew安装PostgreSQL</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>在macOS上安装和配置PostgreSQL是一个相对简单的过程，可以通过多种方法进行。以下是详细的步骤和信息，帮助您在macOS上安装和配置PostgreSQL。</p>
-<h3><a id="1%E5%AE%89%E8%A3%85-postgresql" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 安装PostgreSQL</h3>
-<h4><a id="%E4%BD%BF%E7%94%A8homebrew%E5%AE%89%E8%A3%85" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用Homebrew安装</h4>
-<p>Homebrew是macOS上的一个流行包管理器，可以用来安装PostgreSQL。以下是使用Homebrew安装PostgreSQL的步骤：</p>
-<ul>
-<li>
-<p><strong>安装Homebrew</strong>:</p>
-<pre><code class="language-bash">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
-</code></pre>
-<p>运行上述命令以安装Homebrew。</p>
-</li>
-<li>
-<p><strong>查找可用的PostgreSQL版本</strong>:</p>
-<pre><code class="language-bash">brew search postgresql
-</code></pre>
-<p>这将列出所有可用的PostgreSQL版本。</p>
-</li>
-<li>
-<p><strong>安装指定版本的PostgreSQL</strong>:</p>
-<pre><code class="language-bash">brew install postgresql@15
-</code></pre>
-<p>上述命令将安装PostgreSQL 15版本。您可以替换<code>15</code>为您需要的任何版本号。</p>
-</li>
-</ul>
-<h4><a id="%E4%BD%BF%E7%94%A8dmg%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用dmg安装包安装</h4>
-<ul>
-<li>
-<p><strong>下载PostgreSQL</strong>:<br />
-访问<a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">EnterpriseDB的下载页面</a>，下载适用于macOS的PostgreSQL安装包。</p>
-</li>
-<li>
-<p><strong>创建postgres用户</strong> (如果需要):</p>
-<pre><code class="language-bash">sudo dscl . -create /Users/postgres UserShell /bin/bash
-sudo dscl . -create /Users/postgres UniqueID &quot;5001&quot;
-sudo dscl . -create /Users/postgres RealName &quot;postgres&quot;
-sudo dscl . -passwd /Users/postgres 1024
-</code></pre>
-<p>上述命令将创建一个名为<code>postgres</code>的用户，设置用户ID为5001，并设置初始密码为<code>1024</code>。</p>
-</li>
-<li>
-<p><strong>启动安装向导</strong>:<br />
-双击下载的dmg文件并启动安装向导。</p>
-</li>
-<li>
-<p><strong>按照安装向导进行安装</strong>:</p>
-<ul>
-<li>选择安装目录</li>
-<li>选择要安装的组件</li>
-<li>指定数据存储目录</li>
-<li>设置<code>postgres</code>用户密码</li>
-<li>指定服务器监听端口（默认为5432）</li>
-<li>选择区域设置</li>
-<li>查看并确认安装信息</li>
-<li>开始安装</li>
-</ul>
-</li>
-</ul>
-<h3><a id="2%E9%85%8D%E7%BD%AE-postgresql" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 配置PostgreSQL</h3>
-<h4><a id="%E4%BD%BF%E7%94%A8homebrew%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用Homebrew安装后的配置</h4>
-<ul>
-<li>
-<p><strong>启动PostgreSQL服务</strong>:</p>
-<pre><code class="language-bash">brew services start postgresql@15
-</code></pre>
-<p>上述命令将启动PostgreSQL服务。确保使用您安装的版本号替换<code>15</code>。</p>
-</li>
-<li>
-<p><strong>添加环境变量</strong>:</p>
-<pre><code class="language-bash">echo 'export PATH=&quot;/opt/homebrew/opt/postgresql@15/bin:$PATH&quot;' &gt;&gt; ~/.zshrc
-source ~/.zshrc
-</code></pre>
-<p>上述命令将PostgreSQL的bin目录添加到您的PATH环境变量中，以便在任何位置都能访问<code>psql</code>和其他PostgreSQL工具。</p>
-</li>
-</ul>
-<h4><a id="%E4%BD%BF%E7%94%A8dmg%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用dmg安装包安装后的配置</h4>
-<ul>
-<li><strong>添加环境变量</strong>:
-<pre><code class="language-bash">echo 'export PATH=&quot;/Library/PostgreSQL/15/bin:$PATH&quot;' &gt;&gt; ~/.zshrc
-source ~/.zshrc
-</code></pre>
-上述命令将PostgreSQL的bin目录添加到您的PATH环境变量中。</li>
-</ul>
-<h3><a id="3%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 基础使用</h3>
-<ul>
-<li>
-<p><strong>连接到PostgreSQL</strong>:</p>
-<pre><code class="language-bash">psql -U postgres
-</code></pre>
-<p>使用上述命令连接到PostgreSQL数据库。如果您创建了<code>postgres</code>用户，您需要使用该用户的密码进行登录。</p>
-</li>
-<li>
-<p><strong>创建新数据库</strong>:</p>
-<pre><code class="language-sql">CREATE DATABASE mydatabase;
-</code></pre>
-<p>在PostgreSQL提示符下运行上述SQL命令以创建新数据库。</p>
-</li>
-<li>
-<p><strong>切换数据库</strong>:</p>
-<pre><code class="language-sql">\c mydatabase
-</code></pre>
-<p>使用<code>\c</code>命令切换到指定的数据库。</p>
-</li>
-</ul>
-<h3><a id="4%E5%8A%A0%E8%BD%BD%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 加载示例数据库</h3>
-<ul>
-<li>
-<p><strong>下载示例数据库</strong>:<br />
-访问<a href="https://www.rockdata.net/zh-cn/tutorial/sample-database/">Rockdata.net的示例数据库页面</a>下载示例数据库。</p>
-</li>
-<li>
-<p><strong>恢复示例数据库</strong>:<br />
-使用pgAdmin或<code>psql</code>工具恢复下载的示例数据库。</p>
-</li>
-</ul>
-<h3><a id="%E7%BB%93%E8%AE%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>结论</h3>
-<p>以上步骤和信息涵盖了在macOS上安装、配置和使用PostgreSQL的基本过程。无论是通过Homebrew还是dmg安装包，都可以方便地在macOS上设置和运行PostgreSQL。如果您在安装或配置过程中遇到任何问题，请参考官方文档或搜索相关社区和论坛获取帮助。</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2024/03/31</span>
-                    
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="17118725977785.html">
-                
-                  <h1>macOS Homebrew 部署 Flash</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>在 macOS 上使用 Homebrew 部署 Flask 是一个简单且直接的过程。Homebrew 是一个流行的包管理器，它可以让你轻松地安装和管理 macOS 上的软件包。以下是使用 Homebrew 在 macOS 上部署 Flask 的步骤：</p>
-<ol>
-<li>
-<p><strong>安装 Homebrew</strong>（如果尚未安装）：<br />
-打开终端（Terminal）并粘贴以下命令来安装 Homebrew：</p>
-<pre><code class="language-sh">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
-</code></pre>
-<p>按照提示完成安装过程。</p>
-</li>
-<li>
-<p><strong>更新 Homebrew</strong>（可选，但推荐）：<br />
-更新 Homebrew 以确保你可以访问最新的软件包版本：</p>
-<pre><code class="language-sh">brew update
-</code></pre>
-</li>
-<li>
-<p><strong>安装 Python</strong>（如果你还没有安装）：<br />
-Homebrew 会自动安装最新版本的 Python。你可以通过以下命令安装 Python：</p>
-<pre><code class="language-sh">brew install python
-</code></pre>
-</li>
-<li>
-<p><strong>安装 Flask</strong>：<br />
-使用 pip（Python 的包管理器）来安装 Flask。由于 Homebrew 安装的 Python 可能不是系统默认的 Python 版本，你可能需要使用 <code>pip3</code> 来确保为正确的 Python 版本安装 Flask：</p>
-<pre><code class="language-sh">pip3 install flask
-</code></pre>
-</li>
-<li>
-<p><strong>验证 Flask 安装</strong>：<br />
-安装完成后，你可以通过运行以下命令来检查 Flask 是否已正确安装：</p>
-<pre><code class="language-sh">flask --version
-</code></pre>
-<p>如果安装成功，该命令将输出 Flask 的版本号。</p>
-</li>
-<li>
-<p><strong>创建 Flask 应用</strong>：<br />
-使用 Flask 命令行工具创建一个新的 Flask 应用：</p>
-<pre><code class="language-sh">flask new myapp
-</code></pre>
-<p>这将在当前目录下创建一个名为 <code>myapp</code> 的新文件夹，其中包含 Flask 应用的基本结构。</p>
-</li>
-<li>
-<p><strong>运行 Flask 应用</strong>：<br />
-进入你的 Flask 应用目录并启动开发服务器：</p>
-<pre><code class="language-sh">cd myapp
-flask run
-</code></pre>
-<p>默认情况下，Flask 应用将在 <code>http://127.0.0.1:5000/</code> 上运行。打开你的 Web 浏览器并访问这个地址，你应该能看到 Flask 的欢迎页面。</p>
-</li>
-<li>
-<p><strong>部署到生产环境</strong>：<br />
-对于生产环境部署，你可能想要使用 Gunicorn 作为 WSGI 服务器，并配合 Nginx 或 Apache 作为反向代理。你可以使用 Homebrew 安装这些工具：</p>
-<pre><code class="language-sh">brew install gunicorn
-brew install nginx
-</code></pre>
-<p>然后，根据你选择的 WSGI 服务器和反向代理服务器的文档来配置和启动它们。</p>
-</li>
-</ol>
-<p>请注意，这些步骤提供了一个基本的 Flask 部署流程。在生产环境中，你可能需要进行额外的配置和优化，以确保应用的稳定性和安全性。此外，你可能还需要设置环境变量、数据库连接和其他生产环境特有的配置。</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2024/03/31</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Python.html'>Python</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="17118142266384.html">
-                
-                  <h1>leadedx.github.io</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>创领智数是一家服务能源电力企业数字化转型的科技企业，创领智数以能源电力企业信息系统研发和业务能力为基础，组建了专业的数字化咨询设计、数据工程交付团队，为能源电力企业提供数据管理、数据资产运营、数据安全等解决方案和产品，以及数据中台建设、数据治理、数据产品研发等数据工程技术服务。<br />
-创领智数核心团队结合多年能源电力信息化、数字化项目实践，结合VeriSM模型、Data Mesh\DAMA、DataOps等方法论，以助力客户数据要素赋能领导决策、业务管理创新、基层效能提升为目标，为客户构建以数据治理和数据运营双轮驱动的数字化转型整体框架，支撑能源电力客户制定数据发展战略和实施路径。</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2024/03/30</span>
-                    
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="shu-ju-chan-pin-shi-shen-meyua.html">
-                
-                  <h1>数据产品是什么？</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p><a href="https://www.innoq.com/en/articles/2023/07/what-is-a-data-product/">原文地址</a></p>
-<h2><a id="kimi%E5%BD%92%E7%BA%B3%E6%80%BB%E7%BB%93" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kimi 归纳总结</h2>
-<p>此文的核心内容是对数据产品的概念、架构、实现以及数据网格管理器的介绍和解释。以下是对这些核心内容的总结归纳：</p>
-<ol>
-<li>
-<p><strong>数据产品定义</strong>：数据产品是一种技术实现，它包含所有必要的组件来处理和存储领域数据，以供分析或数据密集型用例。它是从消费者的角度设计的，以提供最佳的用户体验，并可能具有消费者愿意支付的价值。</p>
-</li>
-<li>
-<p><strong>数据产品与数据即产品的区别</strong>：数据产品遵循数据即产品的原则，但它们并不是同义词。数据产品更侧重于技术实现和内部数据处理，而数据即产品强调的是从消费者需求出发的产品设计理念。</p>
-</li>
-<li>
-<p><strong>数据产品架构</strong>：数据产品由多个组件构成，包括输出端口、输入端口、发现端口、所有权、转换代码、数据存储、测试、文档、成本管理和策略即代码等。这些组件共同工作，确保数据产品的质量和可用性。</p>
-</li>
-<li>
-<p><strong>数据产品示例</strong>：文中提供了几个数据产品的例子，如搜索查询、文章管理、订单处理和实时业务仪表板等，展示了数据产品在实际业务中的应用。</p>
-</li>
-<li>
-<p><strong>数据网格管理器</strong>：这是一个工具，用于发现、管理和治理数据产品。它利用数据产品的元数据构建一个全面的数据产品清单，帮助用户导航复杂的数据网格，并找到相关的、值得信赖的数据产品。数据网格管理器还支持数据合同的全生命周期管理，并通过REST-API与数据平台集成，自动化IAM权限的创建。</p>
-</li>
-<li>
-<p><strong>数据产品实现</strong>：文中还介绍了如何使用AWS S3和Athena技术栈实现数据产品，包括使用Terraform模块配置必要的服务，以及如何通过CI/CD流水线进行部署和元数据管理。</p>
-</li>
-</ol>
-<p>整体而言，这篇文章详细阐述了数据产品的理论基础、组成部分、实际应用案例以及如何通过数据网格管理器进行有效管理。这些内容对于理解和实施现代数据驱动的业务策略具有重要意义。</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%8D%B3%E4%BA%A7%E5%93%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据产品与数据即产品</h2>
-<p>“产品”一词来源于近年来进入软件开发的产品思维方法。Zhamak Dehghani 在数据网格的第二核心原则中应用了这个术语：数据即产品。这意味着软件，或者说现在数据，始终是从消费者的角度进行设计的，以便他们获得最佳的用户体验。就像实物产品一样，这些产品应该为满足消费者的需求而持续开发。它们应该以易于理解的方式（直观地或通过说明书）向客户解释，应该优化以便以最适合用户的方式轻松访问，也许还在组织内部进行宣传以展示潜力。因此，它们也可能有一个消费者愿意支付的价格。现在，数据被视为对公司有价值的资产，而不仅仅是软件开发的副产品。</p>
-<p>数据产品这一术语源自数据即产品原则，并遵循其理念，但不应视为同义词。让我们尝试一个定义：</p>
-<blockquote>
-<p>“数据产品是一个逻辑单元，包含了处理和存储领域数据以供分析或数据密集型用例的所有组件，并通过输出端口将其提供给其他团队。”<br />
-—— JOCHEN CHRIST<br />
-datamesh-architecture.com</p>
-</blockquote>
-<p>因此，数据产品是一种技术性的东西，由数据产品开发者实现。它使用数据技术来存储和处理大量数据集，通常是数百万条记录以上。数据产品的大小设计是为了涵盖连贯的领域概念或用例，它们本身就具有价值。最大尺寸由一个团队可以处理的范围定义。数据产品可以大致与微服务或自包含系统相比较，但使用的是数据技术，并服务于分析需求。尽管称之为产品，但数据产品的消费通常是其他内部团队，而不是外部客户。<br />
-接下来是第二部分的翻译：</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E7%A4%BA%E4%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据产品示例</h2>
-<p>产品搜索团队提供了一个名为“搜索查询”的数据产品，其中包含了用户在搜索栏输入的所有查询、结果数量以及用户点击的条目信息。<br />
-文章管理团队提供了一个名为“文章”的数据产品，包含文章的主数据，包括当前状态和历史记录。<br />
-结账团队提供了一个名为“订单”的数据产品，包含自2020年以来的所有订单。它有两个输出端口：一个包含个人身份信息（PII），一个删除了个人身份信息。<br />
-履约团队有一个名为“货架空位”的数据产品，包含过去3个月未售出的所有文章。<br />
-管理支持团队使用其他数据产品创建了一个实时业务仪表板数据产品供CEO使用。它不共享数据，也没有输出端口。<br />
-推荐团队使用其他数据产品来训练一个用于推荐的机器学习模型。机器学习模型以Tensorflow SavedModel目录的形式共享在对象存储上。营销团队使用这个模型在通讯中为特定客户做出推荐。</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E6%9E%B6%E6%9E%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据产品架构</h2>
-<p>数据产品包含多个组件，构建成一个连贯的单元，通常在一个Git仓库中定义。下图展示了数据产品的典型组件。<br />
-<img src="media/17117975915421/17117981379407.jpg" alt="" /><br />
-<strong>数据产品组件</strong></p>
-<p>数据产品应用了信息隐藏的设计原则。它有对外的接口和内部组件。组件的实际实现可能因用例和数据平台而异。</p>
-<h3><a id="%E8%BE%93%E5%87%BA%E7%AB%AF%E5%8F%A3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>输出端口</h3>
-<p>输出端口代表数据产品的主要API：它们代表以表格、文件或主题形式对结构化数据集的只读访问。一个数据产品可以有多个输出端口：它们可能以不同技术提供相同的数据集或同一技术中的不同数据集，例如，一个输出端口包含个人身份信息数据，第二个输出端口删除了个人身份信息。当需要结构性变更以随时间发展数据产品时，也可以添加新的输出端口。<br />
-<img src="media/17117975915421/17117981487528.jpg" alt="" /><br />
-<strong>作为输出端口的表格示例</strong></p>
-<p>输出端口的主要接口技术是SQL。它允许简单访问大型数据集，并受到几乎所有分析工具的支持。输出端口通常实现为SQL视图，作为抽象层，使得在不影响数据消费者的情况下可以更改底层数据结构。输出端口的其他接口技术包括文件，或用于流处理的主题，或作为与操作系统的异步API。</p>
-<p>输出端口定义了所提供数据集的模型。这个模型在一个模式中定义，包含所有表格、属性和类型。典型技术包括SQL DDL、dbt模型、Protobuf、Avro或JSON模式。模型也可以在数据目录条目中描述。</p>
-<pre><code class="language-models:">    - name: stock_last_updated_v1
-      description: &gt;
-        Current state of the stock.
-        One record per SKU and location with the last updated timestamp.
-      columns:
-        - name: sku
-          type: string
-          description: Stock Keeping Unit (SKU), the business key of an article.
-          tests:
-            - not_null
-        - name: location
-          type: string
-          description: The ID of the warehouse location.
-          tests:
-            - not_null
-        - name: available
-          type: number
-          description: The number of articles with this SKU that are available at this location.
-          tests:
-            - not_null
-            - dbt_utils.expression_is_true:
-                expression: &quot;col_a &gt;= 0&quot;
-        - name: updated_at
-          type: timestamptz
-          description: The business timestamp in UTC when the available was changed.
-          tests:
-            - not_null
-</code></pre>
-<p>如果数据产品仅用于团队内部的分析用例，输出端口是可选的或可能是私有的。</p>
-<p>通过数据合同管理对输出端口的访问。</p>
-<h3><a id="%E8%BE%93%E5%85%A5%E7%AB%AF%E5%8F%A3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>输入端口</h3>
-<p>数据产品可以有两种类型的数据源：操作系统或其他数据产品。</p>
-<p>在数据网格中，开发操作系统的团队也在数据产品中提供其相关的领域数据。通常这是通过异步主题实现的，最好是通过使用定义的领域事件。然而，最终如何将领域数据摄取到其数据产品中，取决于领域团队的决定。</p>
-<p>数据产品也可以通过其输出端口使用其他数据产品，当它们有商定的数据合同时。它们可以由同一个团队或其他团队拥有。这对于面向消费者的数据处理产品或聚合数据产品是典型的，但源数据处理产品也可能链接其他领域数据，当有用时，例如，查询主数据。</p>
-<h3><a id="%E5%8F%91%E7%8E%B0%E7%AB%AF%E5%8F%A3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>发现端口</h3>
-<p>数据消费者需要找到对他们相关的数据产品。由于数据通常具有特定领域的涵义，因此提供数据模型语义的详细描述非常重要。</p>
-<p>进一步的元数据，如联系方式、成熟度水平、通过其他人使用的数据产品、数据质量测试或服务水平目标，对于数据消费者来说是重要的，以便他们可以决定一个数据产品是否值得信赖且适合他们的用例。</p>
-<p>使用CI/CD流水线步骤自动将元数据发布到数据目录和数据产品清单中，如数据网格管理器，是一个好的做法。</p>
-<h3><a id="%E6%89%80%E6%9C%89%E6%9D%83" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>所有权</h3>
-<p>一个数据产品由一个理解业务领域、业务流程和数据的单个团队开发和维护。该团队负责提供承诺的数据质量和服务水平目标。一个数据产品有一个专门的联系人，即团队的产品所有者，他最终负责数据产品及其质量。</p>
-<p>产品所有者负责数据产品的生命周期和演变，结合（潜在）消费者的需求和领域内部的分析需求。他们还设定了对使用数据产品收取的价格。</p>
-<h3><a id="%E8%BD%AC%E6%8D%A2%E4%BB%A3%E7%A0%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>转换代码</h3>
-<p>数据需要被清洗、聚合、组合和转换，以实现输出端口模式或回答分析问题。</p>
-<p>使用什么技术，以及代码如何内部组织，是数据产品的一个实现细节。它取决于数据平台，实现细节由开发团队决定。</p>
-<p>在许多情况下，使用SQL查询进行简单转换，使用Apache Spark进行复杂流水线。</p>
-<p>使用调度和编排工具，如Airflow，来运行转换代码。</p>
-<h3><a id="%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据存储</h3>
-<p>数据产品通常需要在某种数据存储中存储大量数据，如对象存储中的表格或文件。数据存储通过数据平台作为自助服务提供。一个数据产品有自己的私有领域，与其他数据产品隔离。</p>
-<p>使用什么技术和数据如何内部组织，是数据产品的一个实现细节。它取决于数据平台，由开发团队决定。在许多情况下，使用列式存储技术。</p>
-<h3><a id="%E6%B5%8B%E8%AF%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>测试</h3>
-<p>数据产品提供管理和高质量的数据集，所以就像任何软件工程学科一样，测试是必不可少的。有不同类型的测试：</p>
-<p>单元测试测试转换代码本身。它们使用固定的输入数据，并定义预期的输出数据。</p>
-<p>期望测试在部署期间对实际数据模型进行，并验证输入端口、中间模型和输出端口的源数据符合定义的期望。</p>
-<p>质量测试定期在真实数据上运行，以监控服务水平目标。</p>
-<h3><a id="%E6%96%87%E6%A1%A3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>文档</h3>
-<p>当领域数据与其他团队共享时，描述数据的语义和数据创建的业务背景非常重要。</p>
-<p>除了对数据模型属性的描述，良好的文档还提供了一个介绍，关于数据集可以期待什么，以及哪些数据可能有趣，以及如何访问它们的初步提示。</p>
-<p>实现文档的一个好方法是提供一个带有示例查询的交互式笔记本（Jupyter、Google Collab、Databricks Notebook）。</p>
-<h3><a id="%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>成本管理</h3>
-<p>数据技术在规模化使用时很快变得昂贵。因此，监控数据产品的成本非常重要。它们可能是向数据消费者开具的价格的基础，如数据合同中所商定的。</p>
-<h3><a id="%E7%AD%96%E7%95%A5%E5%8D%B3%E4%BB%A3%E7%A0%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>策略即代码</h3>
-<p>全局策略是数据网格中的游戏规则，由联邦治理组定义，如命名约定、数据分类方案或访问控制。</p>
-<p>虽然大多数策略应在数据平台级别实现，但某些策略需要在数据产品级别配置，特别是当需要领域知识或产品所有者需要决定权限时。例如，领域数据的列级分类、PII标记或访问控制。</p>
-<h3><a id="cicd%E6%B5%81%E6%B0%B4%E7%BA%BF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>CI/CD流水线</h3>
-<p>数据产品有自己的CI/CD流水线和基础设施资源定义。CI/CD流水线在转换代码或数据模型更改时触发，执行测试，并将数据产品部署到数据平台，与全球策略保持一致。数据平台团队可能为数据产品团队提供模块或模板以供使用。</p>
-<h3><a id="%E5%8F%AF%E8%A7%82%E5%AF%9F%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>可观察性</h3>
-<p>数据产品可以具有额外的端口和功能，这些端口和功能不是由数据消费者直接使用，但对于数据产品的运营非常重要。这些包括用于监控、日志记录和管理员功能的端口。</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E8%A7%84%E8%8C%83" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据产品规范</h2>
-<p>为了描述数据产品的元数据，在数据产品的仓库中通常有一个数据产品规范文件，或者通过数据平台的部署过程生成。</p>
-<pre><code class="language-dataProductSpecification:" data-meta="0.0.1">info:
-  id: &quot;shelf_warmers&quot;
-  name: &quot;Shelf Warmers&quot;
-  description: &quot;Shelf warmers are products that are not selling for 3 months and are taking up space on the shelf.&quot;
-  status: &quot;active&quot;
-  archetype: &quot;source-aligned&quot;
-  maturity: &quot;managed&quot;
-owner:
-  teamId: &quot;fulfillment&quot;
-inputPorts:
-  - id: &quot;stock-service&quot;
-    operationalSystemId: &quot;stock-service&quot;
-    type: &quot;Kafka Topic&quot;
-    location: &quot;fulfillment.stock.events.v1&quot;
-outputPorts:
-  - id: &quot;shelf_warmers_v1_sql&quot;
-    name: &quot;shelf_warmers_v1_sql&quot;
-    description: &quot;All articles that are not selling for 3 months and are taking up space on the shelf.&quot;
-    type: &quot;SQL&quot;
-    location: &quot;fulfillment.shelf_warmers_v1&quot;
-    links:
-      catalog: &quot;https://datacatalog.example.com/fulfillment/shelf_warmers/shelf_warmers_v1&quot;
-      jdbc_endpoint: &quot;jdbc:awsathena://AWSRegion=...&quot;
-    containsPii: false
-    serviceLevelObjectives: []
-    tags:
-    - &quot;AWS&quot;
-  - id: &quot;shelf_warmers_v1_s3&quot;
-    name: &quot;shelf_warmers_v1_s3&quot;
-    description: &quot;All articles that are not selling for 3 months and are taking up space on the shelf. Provided as parquet files on s3.&quot;
-    type: &quot;S3&quot;
-    status: &quot;active&quot;
-links:
-  repository: &quot;https://git.example.com/fulfillment/dataproducts/shelf_warmers&quot;
-  dataCatalog: &quot;https://datacatalog.example.com/fulfillment/shelf_warmers&quot;
-tags: [&quot;AWS&quot;, &quot;S3&quot;, &quot;Athena&quot;]
-</code></pre>
-<h2><a id="%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E5%AE%9E%E7%8E%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据产品实现</h2>
-<p>现在让我们来看一个例子，如何使用AWS S3和Athena技术栈实现一个实际的数据产品。</p>
-<p>在这个例子中，数据平台团队提供了一个Terraform模块，该模块在数据平台上配置所有必要的服务以运行数据产品，这些服务符合治理组中定义的政策和惯例。</p>
-<p>数据产品开发者为每个数据产品都有一个Git仓库。他们使用提供的Terraform模块，并为其数据产品进行配置。在同一仓库中，他们将转换代码定义为SQL查询和包含输出端口模型的JSON模式文件，以及数据模型的详细描述。</p>
-<pre><code class="language-#" data-meta="dataproduct.tf">module shelf_warmers {
-  source = &quot;git@github.com:datamesh-architecture/terraform-dataproduct-aws-athena.git&quot;
-  version = &quot;0.2.1&quot;
-
-  domain   = &quot;fulfillment&quot;
-  name     = &quot;shelf_warmers&quot;
-  description = &quot;Shelf warmers are products that are not selling for 3 months and are taking up space on the shelf.&quot;
-
-  schedule = &quot;0 0 * * ? *&quot; # Run at 00:00 am (UTC) every day
-
-  transform = {
-    query = &quot;sql/transform.sql&quot;
-  }
-
-  output = {
-    format   = &quot;PARQUET&quot;
-    schema   = &quot;schema/shelf_warmers.schema.json&quot;
-    roles_allowed = [&quot;coo&quot;] # Policy as code
-  }
-}
-</code></pre>
-<p>通过通常由CI/CD流水线触发的terraform apply，所有所需资源都被配置，如S3存储桶、AWS Athena资源和lambda函数。此外，在AWS IAM中也创建了权限。</p>
-<p>该流水线还将元数据推送到数据目录和数据产品清单中。</p>
-<p>在GitHub上找到一个Terraform模块实现的示例。</p>
-<h2><a id="%E6%95%B0%E6%8D%AE%E7%BD%91%E6%A0%BC%E7%AE%A1%E7%90%86%E5%99%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据网格管理器</h2>
-<p>在我们的数据网格项目中，我们注意到，缺乏良好的工具来发现、管理和治理数据产品。这就是为什么我们创建了数据网格管理器。它使用数据产品的元数据构建一个全面的数据产品清单。这个清单是导航复杂数据网格的强大入口，可以找到对数据消费者相关的值得信赖的数据产品。数据网格地图可视化了数据网格，并帮助理解数据网格拓扑。</p>
-<p>数据网格管理器还支持数据合同的全生命周期作为自助服务：请求并接受对数据产品的访问，以同意双边数据合同。定期的重新评估日期允许数据合同被续订或终止，例如，当一个数据产品版本被弃用时。</p>
-<p>通过REST-API，数据网格管理器可以完全集成到所有数据平台中，并在创建或更新数据合同时触发数据平台中自动化创建IAM权限。</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2024/03/30</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='datamesh.html'>Data Mesh</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
               
 
 
@@ -1284,33 +1160,41 @@ tags: [&quot;AWS&quot;, &quot;S3&quot;, &quot;Athena&quot;]
 	      
 		      
 			      <li class="post">
+			        <a href="17118900696788.html">用代码描述数据产品的数据接口</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17118898908130.html">用代码描述数据产品中的程序代码</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17118897042956.html">用代码描述数据集的元数据</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17118895145158.html">用代码描述数据产品的数据集</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="17118893429905.html">用代码描述数据产品</a>
 			      </li>
 		     
 		  
 		      
-			      <li class="post">
-			        <a href="17118891531585.html">Data Product Canvas</a>
-			      </li>
-		     
 		  
 		      
-			      <li class="post">
-			        <a href="17118888075897.html">数据产品画布</a>
-			      </li>
-		     
 		  
 		      
-			      <li class="post">
-			        <a href="17118887373917.html">数据产品的内部结构</a>
-			      </li>
-		     
 		  
 		      
-			      <li class="post">
-			        <a href="17118884631387.html">Data Mesh 实践</a>
-			      </li>
-		     
 		  
 		      
 		  
