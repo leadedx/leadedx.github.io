@@ -4,13 +4,152 @@
   <title><![CDATA[leadedx]]></title>
   <link href="https://leadedx.github.io/atom.xml" rel="self"/>
   <link href="https://leadedx.github.io/"/>
-  <updated>2024-03-31T20:40:54+08:00</updated>
+  <updated>2024-03-31T20:47:09+08:00</updated>
   <id>https://leadedx.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Data Product Canvas]]></title>
+    <link href="https://leadedx.github.io/17118891531585.html"/>
+    <updated>2024-03-31T20:45:53+08:00</updated>
+    <id>https://leadedx.github.io/17118891531585.html</id>
+    <content type="html"><![CDATA[
+<p>The Data Product Canvas is a tool used to organize and describe data products, ensuring that all critical aspects are considered throughout the process from conception to implementation. It provides a structured way to document the various components and characteristics of a data product. Here’s an overview of the typical contents of a Data Product Canvas .</p>
+<p>Below is a table that outlines the typical contents of a Data Product Canvas.</p>
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Name</td>
+<td>The name of the data product</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Description</td>
+<td>A detailed description of the data product, including its purpose and functionality</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Data Product Owner</td>
+<td>The person or team responsible for the data product</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Business Capability/Domain</td>
+<td>The business domain or capability area to which the data product belongs</td>
+</tr>
+<tr>
+<td>5</td>
+<td>System</td>
+<td>The systems or platforms associated with the data product</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Classification</td>
+<td>The categorization of the data product, such as source-aligned, consumer-aligned, etc.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Lifecycle Classification</td>
+<td>The lifecycle stage of the data product, such as experimental or stable</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Input Interface</td>
+<td>The interface through which the data product receives data</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Output Ports</td>
+<td>The ports through which the data product provides data</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Security</td>
+<td>The security rules and policies governing the data product</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Inbound Flow</td>
+<td>The transactions or data flows entering the data product</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Outbound Flow</td>
+<td>The transactions or data flows exiting the data product</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Volume</td>
+<td>The amount of data processed or stored by the data product</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Datasets</td>
+<td>One or more datasets that constitute the data product</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Business Metadata</td>
+<td>Metadata describing the business context and use cases of the data product</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Technical Metadata</td>
+<td>Metadata describing the technical details of the data product</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Operational Metadata</td>
+<td>Metadata describing the operational aspects of the data product</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Physical Architecture</td>
+<td>Description of the physical storage and data structure of the data product</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Semantic Metadata</td>
+<td>Metadata linking the physical model of the data product to standardized vocabularies</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Local Lineage</td>
+<td>Information about the direct data sources of the data product</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Complete Lineage</td>
+<td>The entire sequence of links showing how data is created within the data product</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Quality Metrics</td>
+<td>Metrics related to data quality, such as the number of correct and incorrect data</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Operational Metrics</td>
+<td>Metrics related to the availability of the data product, number of users, etc.</td>
+</tr>
+</tbody>
+</table>
+<p>This table provides a structured overview of the components and characteristics that should be included in a Data Product Canvas, ensuring that all key aspects of a data product are documented and considered during its development and management.</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[数据产品画布]]></title>
