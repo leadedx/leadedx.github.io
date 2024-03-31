@@ -4,13 +4,63 @@
   <title><![CDATA[leadedx]]></title>
   <link href="https://leadedx.github.io/atom.xml" rel="self"/>
   <link href="https://leadedx.github.io/"/>
-  <updated>2024-03-31T20:47:09+08:00</updated>
+  <updated>2024-03-31T20:50:14+08:00</updated>
   <id>https://leadedx.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[用代码描述数据产品]]></title>
+    <link href="https://leadedx.github.io/17118893429905.html"/>
+    <updated>2024-03-31T20:49:02+08:00</updated>
+    <id>https://leadedx.github.io/17118893429905.html</id>
+    <content type="html"><![CDATA[
+<p>在代码中描述一个数据产品通常会使用一种结构化语言或格式，比如 JSON。以下是一个简单的示例，使用 JSON 格式来描述一个数据产品的元数据：</p>
+<pre><code class="language-{">  &quot;dataProduct&quot;: {
+    &quot;id&quot;: &quot;product-123&quot;,
+    &quot;title&quot;: &quot;Customer Engagement Metrics&quot;,
+    &quot;description&quot;: &quot;A comprehensive set of metrics for tracking customer engagement across multiple platforms.&quot;,
+    &quot;owner&quot;: &quot;John Doe&quot;,
+    &quot;ownerEmail&quot;: &quot;john.doe@example.com&quot;,
+    &quot;businessUnit&quot;: &quot;Marketing&quot;,
+    &quot;status&quot;: &quot;active&quot;,
+    &quot;dataSource&quot;: &quot;CRM and Social Media APIs&quot;,
+    &quot;frequency&quot;: &quot;daily&quot;,
+    &quot;schema&quot;: {
+      &quot;columns&quot;: [
+        {
+          &quot;name&quot;: &quot;engagementScore&quot;,
+          &quot;type&quot;: &quot;numeric&quot;,
+          &quot;description&quot;: &quot;A weighted score representing customer engagement&quot;
+        },
+        {
+          &quot;name&quot;: &quot;platform&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;The platform on which the engagement occurred&quot;
+        },
+        // ... other columns
+      ]
+    },
+    &quot;termsOfUse&quot;: {
+      &quot;license&quot;: &quot;open&quot;,
+      &quot;restrictions&quot;: &quot;No commercial use without permission&quot;
+    },
+    &quot;access&quot;: {
+      &quot;internal&quot;: true,
+      &quot;external&quot;: false
+    },
+    &quot;lastModified&quot;: &quot;2023-11-01T12:00:00Z&quot;
+  }
+}
+
+</code></pre>
+<p>请注意，这个 JSON 对象只是一个模板，实际的元数据可能会根据具体的数据产品而有所不同。在实际应用中，数据产品的元数据可能会包含更多的详细信息，例如数据质量指标、依赖关系、数据版本等。</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Data Product Canvas]]></title>

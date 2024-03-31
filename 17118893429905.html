@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  Data Mesh 实践 - leadedx
+  用代码描述数据产品 - leadedx
   
   </title>
   
@@ -104,7 +104,7 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-          <h1>Data Mesh 实践</h1>
+          <h1>用代码描述数据产品</h1>
      
         <div class="read-more clearfix">
           <span class="date">2024/03/31</span>
@@ -124,36 +124,46 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <p><strong>Data Mesh 简介：</strong><br />
-Data Mesh 是 2019 年兴起的概念，它彻底改变了数据和技术领域。Data Mesh 将数据从软件组件的副产品转变为一种一等实体。这种方法与通过微服务、DevOps 和微前端进化的软件组件相一致。Data Mesh 旨在大规模提取数据的价值，无论是用于商业智能、机器学习还是其他用例。它不仅仅是一种技术转变，而是一种社会技术范式，强调人员、流程和组织的协调。<br />
-<strong>Data Mesh 核心原则：</strong><br />
-Data Mesh 遵循四个核心原则：</p>
-<ol>
-<li><strong>领域所有权：</strong> 数据生产者对其数据负责，就像他们对其软件负责一样。</li>
-<li><strong>领域数据作为产品：</strong> 数据被视为具有明确所有权、治理和生命周期管理的产品。</li>
-<li><strong>联邦计算治理：</strong> 在整个组织中实施一致的策略和标准，同时允许在数据管理方面自主。</li>
-<li><strong>自助数据平台：</strong> 通过工具和基础设施赋能用户，使他们能够独立访问和利用数据，而不依赖于中央团队。<br />
-<strong>实施 Data Mesh：</strong><br />
-实施 Data Mesh 包括几个步骤：</li>
-</ol>
-<ul>
-<li><strong>评估适用性：</strong> 评估 Data Mesh 是否与您的组织业务需求相符。</li>
-<li><strong>奠定基础：</strong> 准备 Data Mesh 开发，了解现有的数据景观和组织结构。</li>
-<li><strong>开发最小 Data Mesh：</strong> 从小规模实施开始，学习和迭代。</li>
-<li><strong>迭代开发：</strong> 根据反馈和不断变化的需求，持续扩展和改进 Data Mesh 实施。<br />
-<strong>Messflix LLC 案例研究：</strong><br />
-Messflix 是一家电影和电视节目流媒体平台，面临有效利用其数据的挑战。该公司有一个复杂的数据景观，包括数据湖、分析平台和各种软件组件。数据团队是数据处理的中心，造成了瓶颈。实施 Data Mesh 可以帮助 Messflix 通过分散数据转换，使数据对不同的业务单位更易于访问和有价值。<br />
-<strong>Data Mesh 的业务和组织驱动因素：</strong></li>
-<li><strong>业务战略：</strong> 评估是否成为数据驱动是否是公司战略的一部分，以及是否有特定的业务案例需要复杂的数据需求。</li>
-<li><strong>社会技术复杂性：</strong> 对于数据需求复杂且具有社会技术复杂结构的组织，Data Mesh 是有益的。</li>
-<li><strong>数据成熟度：</strong> 公司应具有一定的数据成熟度，才能有效实施 Data Mesh。</li>
-<li><strong>软件工程成熟度：</strong> 在 CI/CD、DevOps 和产品导向开发等领域的成熟度很高，对于成功实施 Data Mesh 是必不可少的。<br />
-<strong>技术挑战：</strong></li>
-<li><strong>工具和基础设施：</strong> 为领域专注和中央平台数据团队提供正确的工具。</li>
-<li><strong>共享和协同：</strong> 确保本地开发的工具和解决方案可以在领域之间共享，避免效率低下。</li>
-<li><strong>监控和控制：</strong> 开发一致的监控、警报和日志记录程序，以维护数据质量和安全。<br />
-总之，Data Mesh 是一种变革性的方法，需要仔细考虑业务需求、组织结构和技术能力。它是关于创建一个灵活、分散的、以数据驱动的生态系统，赋能团队有效地利用数据。</li>
-</ul>
+      <p>在代码中描述一个数据产品通常会使用一种结构化语言或格式，比如 JSON。以下是一个简单的示例，使用 JSON 格式来描述一个数据产品的元数据：</p>
+<pre><code class="language-{">  &quot;dataProduct&quot;: {
+    &quot;id&quot;: &quot;product-123&quot;,
+    &quot;title&quot;: &quot;Customer Engagement Metrics&quot;,
+    &quot;description&quot;: &quot;A comprehensive set of metrics for tracking customer engagement across multiple platforms.&quot;,
+    &quot;owner&quot;: &quot;John Doe&quot;,
+    &quot;ownerEmail&quot;: &quot;john.doe@example.com&quot;,
+    &quot;businessUnit&quot;: &quot;Marketing&quot;,
+    &quot;status&quot;: &quot;active&quot;,
+    &quot;dataSource&quot;: &quot;CRM and Social Media APIs&quot;,
+    &quot;frequency&quot;: &quot;daily&quot;,
+    &quot;schema&quot;: {
+      &quot;columns&quot;: [
+        {
+          &quot;name&quot;: &quot;engagementScore&quot;,
+          &quot;type&quot;: &quot;numeric&quot;,
+          &quot;description&quot;: &quot;A weighted score representing customer engagement&quot;
+        },
+        {
+          &quot;name&quot;: &quot;platform&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;The platform on which the engagement occurred&quot;
+        },
+        // ... other columns
+      ]
+    },
+    &quot;termsOfUse&quot;: {
+      &quot;license&quot;: &quot;open&quot;,
+      &quot;restrictions&quot;: &quot;No commercial use without permission&quot;
+    },
+    &quot;access&quot;: {
+      &quot;internal&quot;: true,
+      &quot;external&quot;: false
+    },
+    &quot;lastModified&quot;: &quot;2023-11-01T12:00:00Z&quot;
+  }
+}
+
+</code></pre>
+<p>请注意，这个 JSON 对象只是一个模板，实际的元数据可能会根据具体的数据产品而有所不同。在实际应用中，数据产品的元数据可能会包含更多的详细信息，例如数据质量指标、依赖关系、数据版本等。</p>
 
 
     
@@ -164,16 +174,13 @@ Messflix 是一家电影和电视节目流媒体平台，面临有效利用其�
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
       
-          <a href="17118887373917.html" 
-          title="Previous Post: 数据产品的内部结构">&laquo; 数据产品的内部结构</a>
-      
         </p>
         </div>
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
       
-          <a  href="17118880625718.html" 
-          title="Next Post: Data Mesh in Action：全面指南解读去中心化数据架构">Data Mesh in Action：全面指南解读去中心化数据架构 &raquo;</a>
+          <a  href="17118891531585.html" 
+          title="Next Post: Data Product Canvas">Data Product Canvas &raquo;</a>
       
       </p>
         </div>
@@ -397,7 +404,7 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
   color: inherit;
   text-decoration: none;
 }
-</style>
+</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script><script>!function(){if("undefined"!=typeof Prism&&"undefined"!=typeof document){var e=[],t={},n=function(){};Prism.plugins.toolbar={};var a=Prism.plugins.toolbar.registerButton=function(n,a){var r;r="function"==typeof a?a:function(e){var t;return"function"==typeof a.onClick?((t=document.createElement("button")).type="button",t.addEventListener("click",(function(){a.onClick.call(this,e)}))):"string"==typeof a.url?(t=document.createElement("a")).href=a.url:t=document.createElement("span"),a.className&&t.classList.add(a.className),t.textContent=a.text,t},n in t?console.warn('There is a button with the key "'+n+'" registered already.'):e.push(t[n]=r)},r=Prism.plugins.toolbar.hook=function(a){var r=a.element.parentNode;var l=a.element.classList;if(l.contains('language-mermaid') || l.contains('language-echarts') || l.contains('language-plantuml')){return;} if(r&&/pre/i.test(r.nodeName)&&!r.parentNode.classList.contains("code-toolbar")){var o=document.createElement("div");o.classList.add("code-toolbar"),r.parentNode.insertBefore(o,r),o.appendChild(r);var i=document.createElement("div");i.classList.add("toolbar");var l=e,d=function(e){for(;e;){var t=e.getAttribute("data-toolbar-order");if(null!=t)return(t=t.trim()).length?t.split(/\s*,\s*/g):[];e=e.parentElement}}(a.element);d&&(l=d.map((function(e){return t[e]||n}))),l.forEach((function(e){var t=e(a);if(t){var n=document.createElement("div");n.classList.add("toolbar-item"),n.appendChild(t),i.appendChild(n)}})),o.appendChild(i)}};a("label",(function(e){var t=e.element.parentNode;if(t&&/pre/i.test(t.nodeName)&&t.hasAttribute("data-label")){var n,a,r=t.getAttribute("data-label");try{a=document.querySelector("template#"+r)}catch(e){}return a?n=a.content:(t.hasAttribute("data-url")?(n=document.createElement("a")).href=t.getAttribute("data-url"):n=document.createElement("span"),n.textContent=r),n}})),Prism.hooks.add("complete",r)}}();</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.css"><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script><style>div.code-toolbar > .toolbar > .toolbar-item > a, div.code-toolbar > .toolbar > .toolbar-item > button, div.code-toolbar > .toolbar > .toolbar-item > span {padding: 4px .5em; background: #f5f2f0; background: rgba(224, 224, 224, 0.4);}</style>
 
 <style type="text/css">
 figure{margin: 0;padding: 0;}
