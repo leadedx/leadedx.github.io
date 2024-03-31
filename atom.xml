@@ -4,13 +4,82 @@
   <title><![CDATA[leadedx]]></title>
   <link href="https://leadedx.github.io/atom.xml" rel="self"/>
   <link href="https://leadedx.github.io/"/>
-  <updated>2024-03-31T00:26:08+08:00</updated>
+  <updated>2024-03-31T16:23:38+08:00</updated>
   <id>https://leadedx.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[macOS Homebrew 部署 Flash]]></title>
+    <link href="https://leadedx.github.io/17118725977785.html"/>
+    <updated>2024-03-31T16:09:57+08:00</updated>
+    <id>https://leadedx.github.io/17118725977785.html</id>
+    <content type="html"><![CDATA[
+<p>在 macOS 上使用 Homebrew 部署 Flask 是一个简单且直接的过程。Homebrew 是一个流行的包管理器，它可以让你轻松地安装和管理 macOS 上的软件包。以下是使用 Homebrew 在 macOS 上部署 Flask 的步骤：</p>
+<ol>
+<li>
+<p><strong>安装 Homebrew</strong>（如果尚未安装）：<br />
+打开终端（Terminal）并粘贴以下命令来安装 Homebrew：</p>
+<pre><code class="language-sh">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
+<p>按照提示完成安装过程。</p>
+</li>
+<li>
+<p><strong>更新 Homebrew</strong>（可选，但推荐）：<br />
+更新 Homebrew 以确保你可以访问最新的软件包版本：</p>
+<pre><code class="language-sh">brew update
+</code></pre>
+</li>
+<li>
+<p><strong>安装 Python</strong>（如果你还没有安装）：<br />
+Homebrew 会自动安装最新版本的 Python。你可以通过以下命令安装 Python：</p>
+<pre><code class="language-sh">brew install python
+</code></pre>
+</li>
+<li>
+<p><strong>安装 Flask</strong>：<br />
+使用 pip（Python 的包管理器）来安装 Flask。由于 Homebrew 安装的 Python 可能不是系统默认的 Python 版本，你可能需要使用 <code>pip3</code> 来确保为正确的 Python 版本安装 Flask：</p>
+<pre><code class="language-sh">pip3 install flask
+</code></pre>
+</li>
+<li>
+<p><strong>验证 Flask 安装</strong>：<br />
+安装完成后，你可以通过运行以下命令来检查 Flask 是否已正确安装：</p>
+<pre><code class="language-sh">flask --version
+</code></pre>
+<p>如果安装成功，该命令将输出 Flask 的版本号。</p>
+</li>
+<li>
+<p><strong>创建 Flask 应用</strong>：<br />
+使用 Flask 命令行工具创建一个新的 Flask 应用：</p>
+<pre><code class="language-sh">flask new myapp
+</code></pre>
+<p>这将在当前目录下创建一个名为 <code>myapp</code> 的新文件夹，其中包含 Flask 应用的基本结构。</p>
+</li>
+<li>
+<p><strong>运行 Flask 应用</strong>：<br />
+进入你的 Flask 应用目录并启动开发服务器：</p>
+<pre><code class="language-sh">cd myapp
+flask run
+</code></pre>
+<p>默认情况下，Flask 应用将在 <code>http://127.0.0.1:5000/</code> 上运行。打开你的 Web 浏览器并访问这个地址，你应该能看到 Flask 的欢迎页面。</p>
+</li>
+<li>
+<p><strong>部署到生产环境</strong>：<br />
+对于生产环境部署，你可能想要使用 Gunicorn 作为 WSGI 服务器，并配合 Nginx 或 Apache 作为反向代理。你可以使用 Homebrew 安装这些工具：</p>
+<pre><code class="language-sh">brew install gunicorn
+brew install nginx
+</code></pre>
+<p>然后，根据你选择的 WSGI 服务器和反向代理服务器的文档来配置和启动它们。</p>
+</li>
+</ol>
+<p>请注意，这些步骤提供了一个基本的 Flask 部署流程。在生产环境中，你可能需要进行额外的配置和优化，以确保应用的稳定性和安全性。此外，你可能还需要设置环境变量、数据库连接和其他生产环境特有的配置。</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[leadedx.github.io]]></title>
