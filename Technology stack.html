@@ -1,0 +1,876 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  Technology stack - leadedx
+  
+  </title>
+  
+  
+  <link href="atom.xml" rel="alternate" title="leadedx" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript">
+  function before_search(){
+    var searchVal = 'site:leadedx.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
+</script>
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="_self" href="index.html">Home</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
+</form>
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; leadedx</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="_self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="datamesh.html">Data Mesh</a></li>
+        
+            <li><a href="System%20architecture.html">System Architecture</a></li>
+        
+            <li><a href="Python.html">Python</a></li>
+        
+            <li><a href="Books.html">Books</a></li>
+        
+            <li><a href="Technology%20stack.html">Technology stack</a></li>
+        
+            <li><a href="XaC.html">XaC</a></li>
+        
+            <li><a href="XaaS.html">XaaS</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+	$(function(){
+		$('#menu_item_index').addClass('is_active');
+	});
+</script>
+<div class="row">
+	<div class="large-8 medium-8 columns">
+		<div class="markdown-body home-categories">
+		
+			<div class="article">
+                <a class="clearlink" href="17119407945909.html">
+                
+                  <h1>MongoDB</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2><a id="mongodb%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>MongoDB是什么？</h2>
+<p>MongoDB 是一个基于分布式文件存储的开源数据库系统，属于 NoSQL（Not Only SQL，非关系型数据库）数据库的一种。它使用文档（document）来存储数据，这些文档可以包含多种数据类型，例如字符串、数字、数组等。MongoDB 以其高性能、高可用性和易扩展性而广受欢迎，特别适用于处理大量的数据和需要快速迭代的场景。</p>
+<p>以下是 MongoDB 的一些关键特性和优势：</p>
+<ol>
+<li>
+<p><strong>文档导向</strong>：MongoDB 存储数据的方式是使用 BSON（Binary JSON）格式的文档。这种灵活的数据模型使得 MongoDB 非常适合存储和查询具有不同结构的数据。</p>
+</li>
+<li>
+<p><strong>高性能</strong>：MongoDB 提供了高速的数据读写操作，尤其是在处理大量的数据和高并发请求时。</p>
+</li>
+<li>
+<p><strong>高可用性</strong>：通过复制集（replica sets）和自动故障转移，MongoDB 确保了数据的高可用性和持久性。</p>
+</li>
+<li>
+<p><strong>易扩展性</strong>：MongoDB 支持分片（sharding），允许将数据水平分布在多个服务器上，以此来扩展数据库的处理能力和存储容量。</p>
+</li>
+<li>
+<p><strong>灵活的查询</strong>：MongoDB 提供了强大的查询语言，支持丰富的查询操作，包括对文档的各个字段进行查询、更新和删除。</p>
+</li>
+<li>
+<p><strong>索引</strong>：MongoDB 支持多种类型的索引，包括单字段索引、复合索引、全文索引等，以提高查询效率。</p>
+</li>
+<li>
+<p><strong>聚合框架</strong>：MongoDB 提供了一个强大的聚合框架，用于处理复杂的数据处理和分析任务。</p>
+</li>
+<li>
+<p><strong>支持地理空间查询</strong>：MongoDB 支持对地理空间数据的存储和查询，这使得它非常适合用于地理位置相关的应用。</p>
+</li>
+<li>
+<p><strong>企业级特性</strong>：MongoDB Enterprise 版本提供了额外的企业级特性，如角色管理、审计、备份和恢复等。</p>
+</li>
+<li>
+<p><strong>社区和生态系统</strong>：MongoDB 拥有一个活跃的开发者社区和丰富的生态系统，提供了大量的工具和服务，如 MongoDB Atlas（云数据库服务）、MongoDB University（在线学习资源）等。</p>
+</li>
+</ol>
+<h2><a id="mongodb%E5%9C%A8-mata-mesh%E7%9A%84%E4%BD%9C%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>MongoDB 在Mata Mesh的作用</h2>
+<p>MongoDB 适用于各种类型的应用，包括 Web 应用、移动应用、大数据应用和物联网应用等。它的灵活性和可扩展性使得开发者可以快速构建和部署应用，同时随着业务的发展，数据库也可以轻松地进行扩展和维护。</p>
+<p>MongoDB 是一个开源的、基于文档的数据库管理系统，由 MongoDB Inc. 开发。它属于 NoSQL 数据库的一种，特别适合处理大量的非结构化和半结构化数据。MongoDB 使用 JSON 格式的文档来存储数据，这为数据的存储和查询提供了极大的灵活性。<br />
+MongoDB 的主要特点包括：</p>
+<ol>
+<li><strong>文档模型</strong>：数据以 JSON 文档的形式存储，这意味着字段可以动态地变化，不需要固定的表结构。</li>
+<li><strong>高可扩展性</strong>：MongoDB 支持水平扩展，可以通过添加更多的服务器来处理更大的数据集和更高的吞吐量。</li>
+<li><strong>高性能</strong>：提供了高速的数据读写能力，特别适合实时数据分析和高并发应用。</li>
+<li><strong>丰富的查询语言</strong>：支持丰富的查询操作，包括文本搜索和复杂的聚合查询。</li>
+<li><strong>复制和分片</strong>：支持数据的复制和分片，可以提高数据的可用性和分布性。</li>
+<li><strong>灵活性</strong>：由于文档模型的特点，MongoDB 非常适合那些数据模式经常变化或不确定的应用。</li>
+<li><strong>强大的生态系统</strong>：MongoDB 拥有一个活跃的开发者社区和丰富的生态系统，包括各种工具和集成。<br />
+在数据网格（Data Mesh）架构中，MongoDB 可以作为数据存储解决方案之一。它适合作为数据产品团队的存储选择，特别是当数据产品需要灵活的数据模型和高速的读写性能时。例如，它可以用于存储用户生成的数据、事件日志、配置信息等。通过 Terraform 等工具，MongoDB 实例可以自动化部署和管理，以支持自助式数据平台的需求。</li>
+</ol>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2024/04/01</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Technology%20stack.html'>Technology stack</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="17119391443998.html">
+                
+                  <h1>Apache Airflow</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2><a id="%E4%BB%80%E4%B9%88%E6%98%AFapache-airflow" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>什么是Apache Airflow</h2>
+<p>Apache Airflow 是一个开源的平台，用于编排和监控工作流。它允许用户以编程方式创作、调度和监控复杂的数据管道。Airflow 由 Airbnb 开发，并于 2014 年成为 Apache 软件基金会的孵化项目，后于 2019 年毕业成为顶级项目。<br />
+Airflow 的设计目标是使得工作流的创建、维护和扩展尽可能简单。它提供了丰富的用户界面和大量的内置操作符，可以轻松地创建、监控和调整工作流。以下是 Airflow 的一些核心特性和优势：</p>
+<ol>
+<li>
+<p><strong>工作流定义</strong>：Airflow 使用 Python 编写工作流定义，这意味着你可以利用 Python 的强大功能来创建复杂的工作流逻辑。</p>
+</li>
+<li>
+<p><strong>可扩展性</strong>：Airflow 的架构设计允许水平扩展，可以随着工作流数量和复杂性的增加而增加更多的工作节点。</p>
+</li>
+<li>
+<p><strong>弹性</strong>：Airflow 可以自动重试失败的任务，并且可以通过简单的配置来设置重试策略。</p>
+</li>
+<li>
+<p><strong>可调度性</strong>：Airflow 支持定时调度工作流，可以按照 Cron 计划任务的方式运行，也可以通过事件触发。</p>
+</li>
+<li>
+<p><strong>监控和告警</strong>：Airflow 提供了一个丰富的用户界面，用于监控工作流的状态和历史记录。它还支持集成外部告警系统，如电子邮件、Slack 等。</p>
+</li>
+<li>
+<p><strong>参数化</strong>：Airflow 允许工作流参数化，使得同一个工作流可以用于多种不同的场景和数据集。</p>
+</li>
+<li>
+<p><strong>社区支持</strong>：作为一个 Apache 顶级项目，Airflow 拥有一个活跃的社区，提供了大量的文档、教程和第三方插件。</p>
+</li>
+<li>
+<p><strong>集成</strong>：Airflow 可以与多种数据源和数据处理工具集成，如 Hadoop、Spark、Hive、Pig、Presto、MySQL、PostgreSQL、Redis 等。</p>
+</li>
+<li>
+<p><strong>可维护性</strong>：Airflow 的工作流定义代码可以版本控制，便于跟踪变更和协作。</p>
+</li>
+<li>
+<p><strong>数据管道</strong>：Airflow 支持创建复杂的数据管道，可以处理数据提取、转换和加载（ETL）任务，以及其他复杂的数据处理流程。</p>
+</li>
+</ol>
+<p>使用 Airflow，数据工程师和数据科学家可以专注于数据工作流的逻辑和优化，而不是被繁琐的调度和监控任务所困扰。Airflow 使得数据工作流的创建和管理变得简单、高效，同时保持了强大的功能和灵活性。</p>
+<h2><a id="%E5%9C%A8data-mesh%E7%9A%84%E4%BD%9C%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>在Data Mesh 的作用</h2>
+<p>Apache Airflow 是一个开源的数据流处理平台，由 Airbnb 开发并贡献给 Apache 软件基金会。它被设计为用于调度、运行和监控计算工作负载，尤其是复杂的数据处理任务。Airflow 使用 Python 作为其主要的脚本语言，并提供了丰富的界面，包括图形用户界面（GUI）和命令行界面（CLI），以便于用户监控和管理工作流。<br />
+Apache Airflow 的主要特点包括：</p>
+<ol>
+<li><strong>工作流定义</strong>：使用 Python 定义工作流，可以非常灵活地构建复杂的数据处理流程。</li>
+<li><strong>任务调度</strong>：支持多种调度模式，包括时间驱动和事件驱动，能够处理批处理和实时数据流。</li>
+<li><strong>可视化工作流</strong>：提供图形化界面，让用户能够直观地查看和调试工作流。</li>
+<li><strong>错误处理和重试机制</strong>：当任务失败时，可以自动重试或跳过，确保工作流的整体运行。</li>
+<li><strong>集成和扩展性</strong>：可以与多种数据存储、消息队列和计算引擎集成，支持自定义插件和扩展。</li>
+<li><strong>安全性</strong>：支持多种认证方式，包括基于角色的访问控制（RBAC）。</li>
+<li><strong>版本控制</strong>：允许对工作流进行版本控制，便于追踪和回滚更改。</li>
+</ol>
+<p>在数据网格（Data Mesh）架构中，Apache Airflow 可以作为数据生产者团队的数据处理和转换工具，帮助他们构建和执行数据处理工作流，从而提高数据处理效率和可管理性。通过 Terraform 模板，Apache Airflow 可以被快速部署，为各个团队提供了一个可扩展和可维护的数据处理环境。</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2024/04/01</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Technology%20stack.html'>Technology stack</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="17119385709099.html">
+                
+                  <h1>DataHub</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2><a id="datahub%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>DataHub是什么？</h2>
+<p>DataHub 是一个数据集成和数据管理平台，旨在帮助企业高效地进行数据收集、存储、处理和分析。它为企业提供了一个统一的数据视图，使得数据可以跨不同部门和业务线流通，从而提高数据的可用性和价值。<br />
+DataHub 的核心功能通常包括以下几个方面：</p>
+<ol>
+<li>
+<p><strong>数据集成</strong>：DataHub 支持与多种数据源的集成，包括关系型数据库、非关系型数据库、文件系统、消息队列、API等。通过这些集成，企业可以将分散在不同系统和平台的数据集中到DataHub中。</p>
+</li>
+<li>
+<p><strong>数据存储</strong>：DataHub 提供了灵活的数据存储解决方案，支持结构化和非结构化数据的存储。企业可以根据数据的特点和使用需求，选择合适的存储格式和存储引擎。</p>
+</li>
+<li>
+<p><strong>数据处理</strong>：DataHub 内置了数据处理引擎，可以对数据进行清洗、转换、聚合等操作。这些处理操作可以自动化执行，确保数据的质量和一致性。</p>
+</li>
+<li>
+<p><strong>数据管理</strong>：DataHub 提供了一套完整的数据管理工具，包括数据权限管理、数据生命周期管理、数据质量管理等。这些工具帮助企业确保数据的安全、合规和高效使用。</p>
+</li>
+<li>
+<p><strong>数据分析</strong>：DataHub 支持与多种数据分析工具的集成，如数据仓库、数据湖、BI工具等。企业可以通过这些工具对数据进行深入分析，从而获得业务洞察和决策支持。</p>
+</li>
+<li>
+<p><strong>数据可视化</strong>：DataHub 通常提供数据可视化功能，帮助用户直观地理解数据内容和趋势。通过图表、仪表板等形式，用户可以快速获取关键信息。</p>
+</li>
+<li>
+<p><strong>数据治理</strong>：DataHub 强调数据治理的重要性，提供了数据标准管理、数据质量管理、数据安全策略等治理工具。这些工具帮助企业建立和维护一个健康的数据生态系统。</p>
+</li>
+</ol>
+<p>DataHub 的优势在于其灵活性和可扩展性，能够适应不同规模和类型的企业需求。通过DataHub，企业可以打破数据孤岛，实现数据的互联互通，从而提高运营效率和竞争力。</p>
+<p>在实际应用中，DataHub 可以帮助企业解决以下问题：</p>
+<ul>
+<li>数据分散在不同的业务系统中，难以统一管理和分析。</li>
+<li>数据质量参差不齐，影响决策的准确性。</li>
+<li>数据处理和分析流程繁琐，效率低下。</li>
+<li>数据安全和合规性问题。</li>
+</ul>
+<p>通过使用DataHub，企业可以构建一个强大的数据平台，支持数据驱动的决策和创新。</p>
+<h2><a id="data-mesh" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Mesh</h2>
+<p>DataHub 是一个中心化的数据目录，它在自助式数据平台架构中起着关键作用。它主要用于管理和发现数据产品，为数据团队提供了一个易于使用的界面来注册、查找和使用数据产品。以下是 DataHub 的一些关键特点和功能：</p>
+<ol>
+<li><strong>数据产品注册</strong>：DataHub 允许数据团队将他们的数据产品注册到目录中，包括相关的元数据和描述信息。这有助于组织内的其他团队发现和理解这些数据产品。</li>
+<li><strong>易于使用的界面</strong>：与传统的基于 CSV 的数据目录相比，DataHub 提供了一个更直观、更易于浏览的用户界面。这降低了数据团队的门槛，使他们更容易管理和发现数据产品。</li>
+<li><strong>高级功能</strong>：DataHub 提供了一些高级功能，如可视化血统（lineage）和强大的搜索功能。这有助于用户更好地理解数据产品的来源和结构，以及如何在组织内使用这些数据产品。</li>
+<li><strong>集成和扩展性</strong>：DataHub 可以与其他工具和系统集成，如与 Terraform 集成，以自动注册和管理数据产品的基础设施。此外，它还可以扩展以包括其他功能，如数据质量监控和安全性控制。</li>
+<li><strong>去中心化的支持</strong>：尽管 DataHub 是一个中心化的数据目录，但它支持去中心化的数据管理原则。它允许各个团队在保持一定程度的自主性的同时，仍然能够共享和发现组织内的数据产品。</li>
+<li><strong>数据治理</strong>：DataHub 可以帮助组织实施数据治理策略，确保数据产品的质量和一致性，并跟踪数据的使用和访问权限。<br />
+总的来说，DataHub 是一个功能强大的数据目录工具，它简化了数据产品的管理和发现过程，提高了数据团队的工作效率，同时支持组织的数据治理和合规性要求。</li>
+</ol>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2024/04/01</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Technology%20stack.html'>Technology stack</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="17119371640134.html">
+                
+                  <h1>Terraform</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2><a id="%E4%BB%80%E4%B9%88%E6%98%AFterraform" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>什么是Terraform</h2>
+<p>Terraform 是一种开源的基础设施即代码（Infrastructure as Code，IaC）工具，由 HashiCorp 公司开发。它允许开发者以编程方式创建、管理和部署基础设施资源，例如虚拟机、数据库、网络等。<br />
+通过使用 Terraform，用户可以编写配置文件来描述所需的基础设施状态，Terraform 将负责自动执行必要的操作以实现这一状态。这种方式使得基础设施的管理和部署变得更加可预测、可重复和自动化。<br />
+Terraform 支持多种云服务提供商和资源，包括但不限于 AWS、Azure、Google Cloud Platform、VMware、OpenStack 等。此外，Terraform 还具有强大的社区支持和插件系统，用户可以根据需要编写和使用自己的插件。<br />
+使用 Terraform 的主要优势包括：</p>
+<ol>
+<li><strong>版本控制</strong>：通过版本控制系统（如 Git）管理基础设施配置，使得团队协作和变更追踪变得更加容易。</li>
+<li><strong>模块化</strong>：Terraform 允许用户创建可重用的模块，这有助于提高代码的可维护性和可读性。</li>
+<li><strong>跨平台</strong>：Terraform 支持多种云服务提供商和资源类型，使得用户可以在不同的环境中部署和管理基础设施。</li>
+<li><strong>自动化</strong>：Terraform 可以自动化基础设施的创建、更新和销毁过程，从而减少人为错误和提高效率。</li>
+<li><strong>一致性</strong>：通过确保每次部署都遵循相同的配置，Terraform 有助于保持基础设施的一致性。</li>
+<li><strong>可扩展性</strong>：随着项目的增长，Terraform 可以轻松地扩展以管理更多的资源和更复杂的基础设施。<br />
+总之，Terraform 是一种强大的工具，它通过将基础设施定义为代码，使得基础设施的管理和部署变得更加高效、可靠和自动化。</li>
+</ol>
+<h2><a id="%E5%9C%A8data-mesh%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>在Data Mesh中的作用</h2>
+<p>在您提供的信息中，Terraform似乎是在自助式数据平台背景下被提及的，特别是在Data Mesh架构中管理与数据产品存储和转换的相关内容。Terraform是一种基础设施即代码（Infrastructure as Code，IaC）工具，它允许使用代码自动部署和管理基础设施。<br />
+在您的平台背景下，Terraform用于：</p>
+<ol>
+<li><strong>数据存储配置</strong>：团队可以选择配置自己的数据存储。对于选择这样做的团队，Terraform模板用于创建和管理数据存储的基础设施，例如设置PostgreSQL数据库。这使团队可以更多地控制他们的数据存储解决方案。</li>
+<li><strong>数据转换工具</strong>：Terraform模板还用于设置数据转换过程。这可能包括部署如Apache Airflow之类的工具，用于安排和监控数据处理工作流。</li>
+<li><strong>基础设施即代码模板</strong>：Terraform因其易于使用和其HashiCorp配置语言（HCL）的清晰性而被选用。它允许团队用代码定义他们的基础设施需求，这使得复制、扩展和管理基础设施变得更容易。</li>
+<li><strong>自助式数据平台集成</strong>：Terraform模板存储在一个中心仓库中，如Git，这作为平台界面。这允许团队根据需要访问和应用这些模板，促进组织内的自助服务。</li>
+<li><strong>自动化和效率</strong>：通过使用Terraform，设置和管理基础设施的过程被自动化，减少了手动工作和潜在的错误。它还允许轻松更新和版本控制基础设施设置。</li>
+<li><strong>可扩展性和标准化</strong>：Terraform有助于在组织内不同团队和项目中保持可扩展性和标准化，因为相同的模板可以重用和共享。</li>
+<li><strong>与DataHub集成</strong>：使用Terraform模板创建的基础设施可以自动注册到DataHub，DataHub作为数据产品的中央目录，使团队更容易发现和使用这些资源。<br />
+总之，Terraform在您描述的数据平台架构中扮演着关键角色，为Data Mesh环境中的数据存储和转换提供了一个灵活和高效的基础设施管理自动化方式。</li>
+</ol>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2024/04/01</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Technology%20stack.html'>Technology stack</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+              
+
+
+			<div class="row">
+			  <div class="large-6 columns">
+			  <p class="text-left" style="padding-top:25px;">
+			   
+			  </p>
+			  </div>
+			  <div class="large-6 columns">
+			<p class="text-right" style="padding-top:25px;">
+			
+			</p>
+			  </div>
+			</div>
+		</div>
+	</div><!-- large 8 -->
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+          <div id="site-info" class="site-info">
+            
+                <h1>leadedx</h1>
+                <div class="site-des"></div>
+                <div class="social">
+
+
+
+
+
+
+
+
+
+<a target="_blank" class="github" target="_blank" href="https://github.com/leadedx/" title="GitHub">GitHub</a>
+
+  <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+          	</div>
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="datamesh.html"><strong>Data Mesh</strong></a>
+        
+            <a href="System%20architecture.html"><strong>System Architecture</strong></a>
+        
+            <a href="Python.html"><strong>Python</strong></a>
+        
+            <a href="Books.html"><strong>Books</strong></a>
+        
+            <a href="Technology%20stack.html"><strong>Technology stack</strong></a>
+        
+            <a href="XaC.html"><strong>XaC</strong></a>
+        
+            <a href="XaaS.html"><strong>XaaS</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="17119421683786.html">Data as Code</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17119419498283.html">X as Coce</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17119418550872.html">Data as a Service"（DaaS)</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17119418279854.html">X as a Service</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="17119407945909.html">MongoDB</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+<style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;}
+@media print{
+    pre, code, pre code {
+     overflow: visible !important;
+     white-space: pre-wrap !important;       /* css-3 */
+     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap !important;      /* Opera 4-6 */
+     white-space: -o-pre-wrap !important;    /* Opera 7 */
+     word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+
+
+div.code-toolbar {
+  position: relative;
+}
+
+div.code-toolbar > .toolbar {
+  position: absolute;
+  z-index: 10;
+  top: .3em;
+  right: .2em;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+div.code-toolbar:hover > .toolbar {
+  opacity: 1;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item {
+  display: inline-block;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a {
+  cursor: pointer;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+  color: inherit;
+  font-size: .8em;
+  padding: 4px .5em;
+  background: #f5f2f0;
+  background: rgba(224, 224, 224, 0.4);
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+  border-radius: .5em;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus {
+  color: inherit;
+  text-decoration: none;
+}
+</style>
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+
+
+  </body>
+</html>
